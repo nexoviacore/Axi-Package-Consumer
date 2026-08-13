@@ -21,6 +21,7 @@ namespace AxiExportPackage.Services
         private string signalrUrl;
         private string project;
         private string clientId;
+        private string dbtype;
 
         public PackageExportService(
             IConfiguration configuration,
@@ -42,11 +43,26 @@ namespace AxiExportPackage.Services
 
                 JObject queueJson = JObject.Parse(queueData);
 
-                signalrUrl = queueJson["signalrurl"]?.ToString()??_configuration["ExportPath:SignalRURL"]; 
-                project = queueJson["appName"].ToString();
-                clientId = queueJson["requestedBy"].ToString();
+                signalrUrl = queueJson["signalrurl"]?.ToString()??_configuration["ApiUrls:SignalRURL"]; 
 
-                packageName = queueJson["packageName"].ToString();
+                project = queueJson["appName"]?.ToString();
+
+                clientId = queueJson["requestedBy"]?.ToString();
+
+                dbtype = queueJson["dbtype"]?.ToString()??"Postgre";
+
+                packageName = queueJson["packageName"]?.ToString();
+
+                exportDir = PrepExportDir();
+
+                if (string.IsNullOrEmpty(clientId))
+                    throw new Exception("Username is missing");
+
+                if (string.IsNullOrEmpty(project))
+                    throw new Exception("App name is missing");
+
+                if (string.IsNullOrEmpty(packageName))
+                    throw new Exception("Package name is missing");
 
                 bool structureResult = await ExportStructures(queueData);
 
@@ -59,8 +75,6 @@ namespace AxiExportPackage.Services
 
                 bool dataResult = await ExportData(queueData);
 
-                //dataResult = true;
-
                 if (!dataResult)
                 {
                     _logger.LogError("ExportData failed.");
@@ -70,18 +84,12 @@ namespace AxiExportPackage.Services
 
                 bool gitResult = await PushToGitHub(queueData);
 
-                //gitResult = true;
-
                 if (!gitResult)
                 {
                     _logger.LogError("PushToGitHub failed.");
 
                     return;
-                }
-
-                
-                //signalr 
-                
+                }                
 
                 _logger.LogInformation("Package export completed successfully.");
             }
@@ -99,6 +107,9 @@ namespace AxiExportPackage.Services
 
                 string apiUrl = _configuration["ApiUrls:axiasbdefapi_url"];
 
+                if (string.IsNullOrWhiteSpace(apiUrl))
+                    throw new Exception("ASBDefSyncRest API URL is missing in appsettings. ApiUrls:axiasbdefapi_url is missing.");
+
                 JObject payload = PrepareStructuresPayload(queueData);
 
                _logger.LogInformation("ExportStructures payload \n"+payload);
@@ -112,13 +123,6 @@ namespace AxiExportPackage.Services
                     _logger.LogError("ExportStructures failed. Message : {Message}", response.Message);
 
                     throw new Exception($"AXI package {packageName} could not be published to Git.Review the export logs for details and try again. If the issue persists, contact your administrator.");
-                    
-
-                    /*SRPayload = prepSRPayload($"Failed to Publish AXI {packageName} Package to Git", $"AXI package {packageName} could not be published to Git. Please check the logs and try again.");//("ExportStructures failed", response.ResponseContent);
-
-                    await _signalR.SendSignalRMessage(signalrUrl,project,clientId,SRPayload);
-
-                    return false;*/
                 }
 
                 _logger.LogInformation("ExportStructures completed successfully.");
@@ -129,7 +133,7 @@ namespace AxiExportPackage.Services
             {
                 _logger.LogError(ex, "Error in ExportStructures.");
 
-                WriteErrorLog($"Failed to publish AXI {packageName} Package to Git", ex);
+                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Package to Git", ex);
 
                 //_signalR.SendSignalRMessage(signalrUrl, project, clientId, prepSRPayload("Error in ExportStructures API", ex.ToString()));
 
@@ -144,6 +148,9 @@ namespace AxiExportPackage.Services
                 _logger.LogInformation("ExportData started.");
 
                 string apiUrl = _configuration["ApiUrls:axiexportapi_url"];
+
+                if (string.IsNullOrWhiteSpace(apiUrl))
+                    throw new Exception("ExportDataPackages API URl is missing. ApiUrls:axiexportapi_url is missing.");
 
                 JObject payload = PrepareDataPayload(queueData);
 
@@ -174,7 +181,7 @@ namespace AxiExportPackage.Services
             {
                 _logger.LogError(ex, "Error in ExportData.");
 
-                WriteErrorLog($"Failed to publish AXI {packageName} Package to Git", ex);
+                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Package to Git", ex);
 
                 return false;
             }
@@ -189,6 +196,9 @@ namespace AxiExportPackage.Services
                 //signalrUrl = _configuration["ExportPath:SignalRURL"];
 
                 string apiUrl = _configuration["ApiUrls:axigitpushapi_url"];
+
+                if (string.IsNullOrWhiteSpace(apiUrl))
+                    throw new Exception("Git API URL is missing in appsettings. ApiUrls:axigitpushapi_url is missing.");
 
                 JObject payload = PrepareGitPayload(queueData);
 
@@ -223,7 +233,7 @@ namespace AxiExportPackage.Services
             {
                 _logger.LogError(ex, "Error in PushToGitHub.");
 
-                WriteErrorLog($"Failed to publish AXI {packageName} Package to Git", ex);
+                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Package to Git", ex);
 
                 return false;
             }
@@ -231,8 +241,7 @@ namespace AxiExportPackage.Services
 
         private JObject PrepareStructuresPayload(string queueData)
         {
-            JObject queueJson =
-        JObject.Parse(queueData);
+            JObject queueJson = JObject.Parse(queueData);
 
             JObject exportObject = new JObject();
 
@@ -257,39 +266,15 @@ namespace AxiExportPackage.Services
 
             exportObject["compressedfile"] = true;
 
+            exportObject["exppath"] = exportDir;
+
             /*
                 exppath
                 from appsettings.json
             */
             //exportObject["exppath"] = _configuration["ExportPath:exportdir"];
 
-            string expd = _configuration["ExportPath:exportdatapath"];
 
-            if(!string.IsNullOrWhiteSpace(expd)) 
-            {
-                exportObject["exppath"] = _configuration["ExportPath:exportdatapath"].ToString()+"\\AxiPackages";
-                exportDir = exportObject["exppath"].ToString();//_configuration["ExportPath:exportdatapath"].ToString() + "\\AxiPackages";
-                Directory.CreateDirectory(exportDir);
-            }
-
-            else
-            {
-                string getDir = Directory.GetCurrentDirectory();
-
-                string folderPath = Path.Combine(
-                    getDir,
-                    "AxiPackage",
-                    queueJson["appName"]?.ToString() ?? "DefaultApp",
-                    queueJson["requestedBy"]?.ToString() ?? "DefaultUser",
-                    queueJson["packageName"]?.ToString() ?? "DefaultPackage",
-                    queueJson["packageVersion"]?.ToString() ?? "1.0"
-                );
-
-                Directory.CreateDirectory(folderPath);
-
-                exportObject["exppath"] = folderPath;
-                exportDir = folderPath;
-            }
 
             /*
                 structs
@@ -312,6 +297,8 @@ namespace AxiExportPackage.Services
         {
             JObject data = JObject.Parse(queueData);
 
+            data["trace"] = true;
+
             data.Remove("actions");
             data.Remove("publish");
 
@@ -327,7 +314,24 @@ namespace AxiExportPackage.Services
 
             JObject payload = new JObject();
 
-            payload["physicalPath"] = exportDir;//_configuration["ExportPath:exportdir"];
+            //1 Dir back
+            var parent = Directory.GetParent(exportDir);
+
+            if (parent == null)
+                throw new Exception("Invalid export directory.");
+
+            exportDir = parent.FullName;
+
+            //2 Dir back
+            parent = Directory.GetParent(exportDir);
+
+            if (parent == null)
+                throw new Exception("Invalid export directory.");
+
+            exportDir = parent.FullName;
+
+
+            payload["physicalPath"] = exportDir;
 
             payload["targetRepo"] = data["publish"]["repository"];
 
@@ -468,13 +472,50 @@ namespace AxiExportPackage.Services
             {
                 // Call your custom log method here
                 //WriteErrorLog("Error in prepareSRPayload: ", ex.ToString());
-                _logger.LogError("Error in prepareSRPaylod ",ex);
+                _logger.LogError(ex,"Error in prepareSRPaylod ");
 
                 return null;
             }
         }
 
-        private void WriteErrorLog(string title, Exception ex)
+        public string PrepExportDir()
+        {
+            string expd = _configuration["ExportPath:exportdatapath"];
+
+            string exportFolderName = _configuration["ExportPath:PackageFolder"];
+
+            if (!string.IsNullOrWhiteSpace(expd) || !string.IsNullOrEmpty(expd))
+            {
+                string path = _configuration["ExportPath:exportdatapath"].ToString();
+
+                path = Path.Combine(path, exportFolderName, packageName,"Structures", dbtype);
+                
+                Directory.CreateDirectory(path);
+
+                return path;
+            }
+
+            else
+            {
+                string getDir = Directory.GetCurrentDirectory();
+
+                string folderPath = Path.Combine(
+                    getDir,
+                    project,
+                    clientId,
+                    exportFolderName,
+                    packageName,
+                    "Structures", dbtype
+
+                );
+
+                Directory.CreateDirectory(folderPath);
+
+                return folderPath;
+            }
+        }
+
+        private async Task WriteErrorLogAsync(string title, Exception ex)
         {
             try
             {
@@ -500,7 +541,7 @@ namespace AxiExportPackage.Services
 
                 File.AppendAllText(logFile, errorMessage);
 
-                _signalR.SendSignalRMessage(signalrUrl, project, clientId, prepSRPayload(title, ex.Message));
+                await _signalR.SendSignalRMessage(signalrUrl, project, clientId, prepSRPayload(title, ex.Message));
             }
             catch
             {
@@ -509,12 +550,5 @@ namespace AxiExportPackage.Services
                 // Avoid throwing exception from logger itself
             }
         }
-
-        /*private async Task WriteErrorLog(string title, string exceptions)
-        {
-            _logger.LogError(title+" "+exceptions);
-
-            _signalR.SendSignalRMessage(signalrUrl, project, clientId, prepSRPayload(title, exceptions));
-        }*/
     }
 }

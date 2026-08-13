@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-774823b0-76e4-48c0-8467-ce70adb7ae6d",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select null from dual"
+              }
+            }
+          }
+        },
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil1",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil1",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select null from dual"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"a__naeventimg\" (\r\n    \"recordid\" numeric(16,0),\r\n    \"img\" bytea,\r\n    \"blobno\" numeric(3,0),\r\n    \"ftype\" varchar(4)\r\n);\r\n$D#",
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"absc1\" (\r\n    \"absc1id\" numeric(16,0) NOT NULL,\r\n    \"cancel\" varchar(1),\r\n    \"sourceid\" numeric(16,0),\r\n    \"mapname\" varchar(20),\r\n    \"username\" varchar(50),\r\n    \"modifiedon\" timestamp without time zone,\r\n    \"createdby\" varchar(50),\r\n    \"createdon\" timestamp without time zone,\r\n    \"wkid\" varchar(15),\r\n    \"app_level\" numeric(3,0),\r\n    \"app_desc\" numeric(1,0),\r\n    \"app_slevel\" numeric(3,0),\r\n    \"cancelremarks\" varchar(150),\r\n    \"wfroles\" varchar(250),\r\n    \"inputfield1\" varchar(10)\r\n);\r\n$D#"
+    ]
+  }
+}

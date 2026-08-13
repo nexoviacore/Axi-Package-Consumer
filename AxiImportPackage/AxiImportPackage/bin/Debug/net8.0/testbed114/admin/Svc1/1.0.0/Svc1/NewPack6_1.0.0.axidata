@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "ddlscritps": [
+      "CREATE SEQUENCE IF NOT EXISTS \"{{schemaName}}\".emp_seq START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1;\r\n$D#",
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"employees\" (\r\n    \"emp_id\" integer,\r\n    \"emp_email\" varchar(100),\r\n    \"salary\" integer\r\n);\r\n$D#",
+      "ALTER TABLE \"{{schemaName}}\".employees ADD CONSTRAINT uk_emp_email UNIQUE (emp_email);\r\n$D#",
+      "CREATE OR REPLACE FUNCTION \"{{schemaName}}\".insert_into_outpatient()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\r\nBEGIN\r\n  INSERT INTO OutPatient (PatientId, PatientName, Date_Time, Doctor, Processed, token)\r\n  VALUES (NEW.patid, NEW.patname, NEW.timeofreg, NEW.doctor, false, NEW.token);\r\n\r\n  RETURN NEW;\r\nEND;\r\n$function$\n;\r\n$D#\r\nCREATE TRIGGER after_insert_maintable AFTER INSERT ON maint1 FOR EACH ROW EXECUTE FUNCTION insert_into_outpatient();\r\n$D#\r\n"
+    ]
+  }
+}

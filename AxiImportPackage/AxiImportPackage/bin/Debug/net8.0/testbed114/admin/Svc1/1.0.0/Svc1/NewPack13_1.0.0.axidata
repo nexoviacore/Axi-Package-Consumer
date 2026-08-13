@@ -1,0 +1,87 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-eb8560e1-d082-47b5-af8a-3231824eae29",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Employee Form-(empfr)",
+                "stransid": "empfr",
+                "txttransid": "empfr",
+                "active": "T",
+                "formula": "Name-(cname)|Equal to|srijesh|",
+                "formula_expr": "iif(name = {srijesh} ,{T},{F})"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "User names",
+                "notifytocnd": "9",
+                "usernames": "priyanka",
+                "isemailreq": "T"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "Form Notification New Data",
+                "notify_msg_new": "Form Notification New Data"
+              }
+            },
+            "dc4": {
+              "row1": {
+                "emailto": "User names",
+                "emailto_usernames": "srijesh"
+              }
+            },
+            "dc5": {},
+            "dc6": {}
+          }
+        },
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Employee Form Test-(empfr)",
+                "stransid": "empfr",
+                "txttransid": "empfr",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "F"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "test",
+                "notify_msg_new": "test"
+              }
+            },
+            "dc4": {},
+            "dc5": {},
+            "dc6": {}
+          }
+        }
+      ]
+    },
+    "dmlscripts": [
+      "INSERT INTO axfastlink (transid,caption,output,efont,istemplate) VALUES ('empfr','dosfast','dos','','');\r\n$D#INSERT INTO axpertreports (caption,design,blobno) VALUES ('dosfast',E'\\\\x04110000789CE5586D6FDB3610FE3E60FF4150817E6A58526F949078456CD74D81787563CF1BB6EE03679F6D619268505412EFD7EFA8372B76B2646836B46800C7BA87A7E3BD3C77947CF6E6364DAC6B50792CB39ECD08B52DC816721967EB9E5DE8D549685BB916D9522432839E9D49FBCD0FDF7F77365BA9DB2BD84AA5AD7973B7431D87388431DB1A4A3D165AC5B54ECF1E892407DB7A9FC5A338413B9FA672A56F84824F23916BAB52CB6D6BA2E03A869B0F5B8D2673D22FB4C6EF9EEDFA9C1FADFE2A658A4E1B3CCE74839602A89E3D849528127DDFF2876CBA0140BF30DE6AEF6679A0406818E2A7677B7EE851C219F3C3C0A53C3AD41D42BE5071299019DCA2B9438D4B0C6EB011D9BAB6C6087738E341104698D86979F7252E17C2684C44BE10498536ABC66E6DFC0F58C7D9CB17CC3DC57FF4747F05D992D85815CB3A43C7450E3A2F2594630DA965C0A98976D8FFE563016A672A54613F8A14BAF8EBCACCEB3B76CA6A1B64826E5AF52D28DAD6C5BB225E42DE463F3F902F205E6FF08A518A99BE845595F299DC96DF3FC74BBDA9571B8FCBBD6A7FAC43F7AC9F725047E02091399401C9422D706DA60A24DB288664799EC418C8DEA3FE603893834229A4F9AEE5659D8DBA6CA56FEFD79954302CB613A1449AB7AAD38F97B5B12924B0D05686EEBCCA4522D4EED512B6D64AC9D48274BB52CC7A8E3FC35FB9351EA25F3EA7DE20F083807BD4C1BC799CFA5E30E2943AD4A3E73E0D187702160C039F7BF871B84B51ADAD6BB792FBDA56A4ED54D75CB2C7CB3B115B5075111DE693A8869AB23B3C225E8D4DE3BFA06C56C382B150C8655379EC18A3DB05901D5DB12F7106A45D64209322CDEA7D5B7922F3B8EABAC6BD11160EC86C57916D1C2B25D5582EC1885DBA55E1CF629D34F17710668894246805F195EEAB22DF54D03BB1250D931BB9A5780354DEDF81AEAAE4D043079BAC793E717DCF0D0E1B8685248C78E0B77D831C201E8D228737E1D4018D2195731C94753446C430CE9344DECC91B252BDBDADC672D528D5360EEE1B0491E737DB31E2BAA11FEDDBD4678485CCD97BEA04C4F3036E5224334D70D2A9DCCC99169089C4417CC202CEB943C31A6E6E3F61518D547E9EAB58243532D5BBA4E2CBDD24613742A68D4ADB9155B9DFA6DB44EE00F076955A35E11BCA77EAD92DFC18C73328D30F4DA65AE0FF2FBB4B89E3068E775476C7C353C3F3A2FBEAFE402FE07EA5F42F26BF75256F06B2C874A73B1EA693F3289D223C3969C89DE3697F44A37DE4FF48A38A45CCFF5C169516B028A42F167F36B61D24E7051E166B9C311B3100F308712FDBE6B5D275AB74C03FE3454BBF8733E83EA1211909432CF3B792C26979883E2177DEA3B9732397507C72FB66723784AD503A45EC60F4ED47DA9D272CD0224E3A936F0F7C41071EE7247079C4BEA4C9E73FE7E4DB47FE5F1DA0F4887B9F45B3DFDAB491972F5CEFD43CFC9617BF3FA16D83671D795F7DEEAA778627678F3FEBD0FBEAB387AF5A07A9ABDF6EDA41D679E5D9BFE0981F2F3A108A7F032C36243E',1);"
+    ]
+  }
+}

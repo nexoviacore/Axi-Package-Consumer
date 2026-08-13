@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"employees\" (\r\n    \"emp_id\" integer,\r\n    \"emp_email\" varchar(100),\r\n    \"salary\" integer\r\n);\r\n$D#"
+    ]
+  }
+}

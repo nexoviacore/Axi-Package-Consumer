@@ -1,0 +1,6 @@
+2026-07-10 16:08:53.410 +05:30 [INF] Application starting...
+2026-07-10 16:08:54.469 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-10 16:08:54.496 +05:30 [INF] Hosting environment: Development
+2026-07-10 16:08:54.502 +05:30 [INF] Content root path: D:\AxiImport-InstallPackage\AxiImportPackage\bin\Debug\net8.0
+2026-07-10 16:08:54.525 +05:30 [INF] RabbitMQ consumer started.
+2026-07-10 16:09:00.751 +05:30 [INF] Application is shutting down...

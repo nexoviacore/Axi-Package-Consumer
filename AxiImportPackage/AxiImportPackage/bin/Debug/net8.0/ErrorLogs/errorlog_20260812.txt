@@ -1,0 +1,116 @@
+[2026-08-12 10:46:33] Method: Error in InstallPackage
+Message: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 10:46:36] Method: Error in InstallPackage
+Message: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 10:48:04] Method: Error in InstallPackage
+Message: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 10:49:51] Method: Error in InstallPackage
+Message: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 10:49:56] Method: Error in InstallPackage
+Message: The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 10:55:47] Method: Error in InstallPackage
+Message: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 10:55:53] Method: Error in InstallPackage
+Message: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:16] Method: Error in InstallPackage
+Message: The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:17] Method: Error in InstallPackage
+Message: The AXI ERP 0099 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:24] Method: Error in InstallPackage
+Message: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:26] Method: Error in InstallPackage
+Message: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:29] Method: Error in InstallPackage
+Message: The AXI PackageAxiNEWTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:31] Method: Error in InstallPackage
+Message: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:34] Method: Error in InstallPackage
+Message: The AXI NewPack2 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:37] Method: Error in InstallPackage
+Message: The AXI NewPack3 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:39] Method: Error in InstallPackage
+Message: The AXI NewPack4 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:52] Method: Error in InstallPackage
+Message: The AXI Sales New QA package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:55] Method: Error in InstallPackage
+Message: The AXI Sales New QA V2 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:57] Method: Error in InstallPackage
+Message: The AXI Sales Order - AXI V1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:02:59] Method: Error in InstallPackage
+Message: The AXI Sales Order - AXI package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:03:01] Method: Error in InstallPackage
+Message: The AXI ERP Check01 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:03:04] Method: Error in InstallPackage
+Message: The AXI sales88_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:38:51] Method: Error in InstallPackage
+Message: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:38:59] Method: Error in InstallPackage
+Message: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:39:03] Method: Error in InstallPackage
+Message: The AXI PackageAxiNEWTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:39:05] Method: Error in InstallPackage
+Message: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:39:08] Method: Error in InstallPackage
+Message: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:39:10] Method: Error in InstallPackage
+Message: The AXI ERP 0099 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------
+[2026-08-12 16:39:13] Method: Error in InstallPackage
+Message: The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+--------------------------------------------------

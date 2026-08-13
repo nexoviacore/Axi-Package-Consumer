@@ -1,0 +1,77 @@
+[2026-07-30 10:18:31] Method: Error in InstallPackage
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 105
+--------------------------------------------------
+[2026-07-30 10:25:00] Method: Error in InstallPackage
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 105
+--------------------------------------------------
+[2026-07-30 10:26:52] Method: Error in InstallPackage
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 105
+--------------------------------------------------
+[2026-07-30 10:28:00] Method: Error in InstallPackage
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 105
+--------------------------------------------------
+[2026-07-30 15:08:27] Method: Error in InstallPackage
+Message: License activation failed: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.UpdateAxiControl() in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 720
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 117
+--------------------------------------------------
+[2026-07-30 17:37:08] Method: Error in InstallPackage
+Message: The AXI Payroll package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 122
+--------------------------------------------------
+[2026-07-30 17:42:33] Method: Error in InstallPackage
+Message: The AXI Payroll package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 18:45:04] Method: Error in InstallPackage
+Message: The AXI ExportTest4 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 114
+--------------------------------------------------
+[2026-07-30 18:46:43] Method: Error in InstallPackage
+Message: The AXI Payroll package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 18:47:48] Method: Error in InstallPackage
+Message: The AXI Inventory Control package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 114
+--------------------------------------------------
+[2026-07-30 18:49:01] Method: Error in InstallPackage
+Message: The AXI Inventory Control package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 18:50:53] Method: Error in InstallPackage
+Message: The AXI Inventory Control package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:35:12] Method: Error in InstallPackage
+Message: The AXI Account Receivable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:36:26] Method: Error in InstallPackage
+Message: The AXI Account Receivable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:37:51] Method: Error in InstallPackage
+Message: The AXI Account Receivable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:37:52] Method: Error in InstallPackage
+Message: The AXI Account Receivable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:38:15] Method: Error in InstallPackage
+Message: The AXI Account Receivable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:40:04] Method: Error in InstallPackage
+Message: The AXI Account Receivable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 126
+--------------------------------------------------
+[2026-07-30 19:59:56] Method: Error in InstallPackage
+Message: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 113
+--------------------------------------------------

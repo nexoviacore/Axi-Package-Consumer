@@ -1,0 +1,638 @@
+2026-05-22 14:30:11.051 +05:30 [INF] Application starting...
+2026-05-22 14:30:28.930 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 14:30:28.950 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 14:30:28.957 +05:30 [INF] Hosting environment: Development
+2026-05-22 14:30:28.994 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 16:36:39.954 +05:30 [INF] Application starting...
+2026-05-22 16:36:46.505 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 16:36:46.509 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 16:36:56.209 +05:30 [INF] Message received from queue.
+2026-05-22 16:36:56.212 +05:30 [INF] Hosting environment: Development
+2026-05-22 16:36:56.220 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 16:37:14.165 +05:30 [INF] Package export process started.
+2026-05-22 16:37:17.112 +05:30 [INF] PushToGitHub started.
+2026-05-22 16:37:37.641 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:37:38.160 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:37:38.175 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:37:38.930 +05:30 [INF] Received HTTP response headers after 747.4795ms - 404
+2026-05-22 16:37:38.987 +05:30 [INF] End processing HTTP request after 850.3151ms - 404
+2026-05-22 16:37:56.992 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 16:37:56.999 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 16:38:14.993 +05:30 [INF] ImportStructures started.
+2026-05-22 16:38:45.552 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:38:46.295 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:38:46.302 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:38:57.281 +05:30 [INF] Received HTTP response headers after 10971.5487ms - 200
+2026-05-22 16:38:57.288 +05:30 [INF] End processing HTTP request after 10993.8255ms - 200
+2026-05-22 16:39:18.186 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:39:27.282 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 16:46:19.867 +05:30 [INF] Application starting...
+2026-05-22 16:46:22.170 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 16:46:22.179 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 16:46:25.139 +05:30 [INF] Message received from queue.
+2026-05-22 16:46:25.149 +05:30 [INF] Hosting environment: Development
+2026-05-22 16:46:25.173 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 16:46:32.379 +05:30 [INF] Package export process started.
+2026-05-22 16:46:32.383 +05:30 [INF] PushToGitHub started.
+2026-05-22 16:46:35.950 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:46:36.006 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:46:36.021 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:46:36.778 +05:30 [INF] Received HTTP response headers after 744.2403ms - 404
+2026-05-22 16:46:36.846 +05:30 [INF] End processing HTTP request after 865.4291ms - 404
+2026-05-22 16:46:36.866 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 16:46:36.873 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 16:46:39.736 +05:30 [INF] ImportStructures started.
+2026-05-22 16:46:50.154 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:46:50.161 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:46:50.164 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:46:56.638 +05:30 [INF] Received HTTP response headers after 6470.6819ms - 200
+2026-05-22 16:46:56.644 +05:30 [INF] End processing HTTP request after 6484.1242ms - 200
+2026-05-22 16:46:56.654 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:46:56.663 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 16:47:07.791 +05:30 [INF] ExportData started.
+2026-05-22 16:47:28.806 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:47:29.402 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:47:29.406 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:47:30.229 +05:30 [INF] Received HTTP response headers after 819.3342ms - 400
+2026-05-22 16:47:30.234 +05:30 [INF] End processing HTTP request after 831.9988ms - 400
+2026-05-22 16:48:44.618 +05:30 [INF] Application starting...
+2026-05-22 16:48:46.140 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 16:48:46.142 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 16:48:49.040 +05:30 [INF] Message received from queue.
+2026-05-22 16:48:49.046 +05:30 [INF] Hosting environment: Development
+2026-05-22 16:48:49.051 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 16:48:50.118 +05:30 [INF] Package export process started.
+2026-05-22 16:48:50.128 +05:30 [INF] PushToGitHub started.
+2026-05-22 16:48:53.269 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:48:53.337 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:48:53.356 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:48:53.908 +05:30 [INF] Received HTTP response headers after 539.8101ms - 404
+2026-05-22 16:48:53.972 +05:30 [INF] End processing HTTP request after 676.5189ms - 404
+2026-05-22 16:48:54.017 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 16:48:54.071 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 16:48:56.941 +05:30 [INF] ImportStructures started.
+2026-05-22 16:48:59.575 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:48:59.580 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:48:59.584 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:49:05.464 +05:30 [INF] Received HTTP response headers after 5877.3339ms - 200
+2026-05-22 16:49:05.469 +05:30 [INF] End processing HTTP request after 5890.8242ms - 200
+2026-05-22 16:49:05.476 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:49:05.481 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 16:49:07.238 +05:30 [INF] ExportData started.
+2026-05-22 16:49:12.050 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:49:12.053 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:49:12.057 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:49:12.241 +05:30 [INF] Received HTTP response headers after 175.3652ms - 200
+2026-05-22 16:49:12.248 +05:30 [INF] End processing HTTP request after 194.6569ms - 200
+2026-05-22 16:49:12.256 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 16:49:12.296 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 16:49:12.316 +05:30 [ERR] ExportData failed.
+2026-05-22 16:51:26.488 +05:30 [INF] Application starting...
+2026-05-22 16:51:29.933 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 16:51:29.936 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 16:51:29.968 +05:30 [INF] Hosting environment: Development
+2026-05-22 16:51:29.977 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 16:51:57.487 +05:30 [INF] Message received from queue.
+2026-05-22 16:51:59.117 +05:30 [INF] Package export process started.
+2026-05-22 16:51:59.124 +05:30 [INF] PushToGitHub started.
+2026-05-22 16:52:02.338 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:52:02.374 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:52:02.392 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 16:52:03.045 +05:30 [INF] Received HTTP response headers after 642.3589ms - 404
+2026-05-22 16:52:03.102 +05:30 [INF] End processing HTTP request after 745.9176ms - 404
+2026-05-22 16:52:03.113 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 16:52:03.120 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 16:52:06.485 +05:30 [INF] ImportStructures started.
+2026-05-22 16:52:08.596 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:52:08.601 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:52:08.604 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:52:14.697 +05:30 [INF] Received HTTP response headers after 6090.755ms - 200
+2026-05-22 16:52:14.705 +05:30 [INF] End processing HTTP request after 6104.9935ms - 200
+2026-05-22 16:52:14.716 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 16:52:14.725 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 16:52:22.317 +05:30 [INF] ExportData started.
+2026-05-22 16:53:08.364 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:53:08.983 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:53:08.996 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 16:53:09.365 +05:30 [INF] Received HTTP response headers after 364.5056ms - 200
+2026-05-22 16:53:09.375 +05:30 [INF] End processing HTTP request after 392.2036ms - 200
+2026-05-22 16:53:14.142 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 16:53:14.150 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 16:53:14.152 +05:30 [ERR] ExportData failed.
+2026-05-22 17:23:27.800 +05:30 [INF] Application starting...
+2026-05-22 17:23:31.513 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 17:23:31.512 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 17:23:31.541 +05:30 [INF] Hosting environment: Development
+2026-05-22 17:23:31.545 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 17:23:50.115 +05:30 [INF] Message received from queue.
+2026-05-22 17:23:50.883 +05:30 [INF] Package export process started.
+2026-05-22 17:23:50.889 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:23:53.464 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:23:53.485 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:23:53.492 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:23:53.887 +05:30 [INF] Received HTTP response headers after 389.1543ms - 404
+2026-05-22 17:23:53.896 +05:30 [INF] End processing HTTP request after 420.1829ms - 404
+2026-05-22 17:23:53.905 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:23:53.913 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:23:55.538 +05:30 [INF] ImportStructures started.
+2026-05-22 17:23:59.707 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:23:59.711 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:23:59.714 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:24:21.957 +05:30 [INF] Received HTTP response headers after 22240.8909ms - 200
+2026-05-22 17:24:21.962 +05:30 [INF] End processing HTTP request after 22252.2547ms - 200
+2026-05-22 17:24:21.969 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs, Response : {"result":[{"status":"failed"}]}
+2026-05-22 17:24:21.974 +05:30 [ERR] ImportStructures failed. Message : API returned failed status.
+2026-05-22 17:24:21.978 +05:30 [ERR] ImportStructures failed.
+2026-05-22 17:24:45.615 +05:30 [INF] Message received from queue.
+2026-05-22 17:24:46.209 +05:30 [INF] Package export process started.
+2026-05-22 17:24:46.222 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:24:48.945 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:24:48.957 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:24:48.963 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:24:49.156 +05:30 [INF] Received HTTP response headers after 190.5764ms - 404
+2026-05-22 17:24:49.169 +05:30 [INF] End processing HTTP request after 212.0839ms - 404
+2026-05-22 17:24:49.173 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:24:49.177 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:24:51.271 +05:30 [INF] ImportStructures started.
+2026-05-22 17:24:53.649 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:24:53.652 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:24:53.657 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:25:00.458 +05:30 [INF] Received HTTP response headers after 6798.7487ms - 200
+2026-05-22 17:25:00.464 +05:30 [INF] End processing HTTP request after 6812.3223ms - 200
+2026-05-22 17:25:00.467 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:25:00.469 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:25:06.501 +05:30 [INF] ExportData started.
+2026-05-22 17:25:13.475 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:25:13.479 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:25:13.480 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:25:13.612 +05:30 [INF] Received HTTP response headers after 128.2801ms - 200
+2026-05-22 17:25:13.619 +05:30 [INF] End processing HTTP request after 140.3817ms - 200
+2026-05-22 17:25:13.634 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 17:25:13.640 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:25:13.643 +05:30 [ERR] ExportData failed.
+2026-05-22 17:27:04.191 +05:30 [INF] Application starting...
+2026-05-22 17:27:06.798 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 17:27:06.798 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 17:27:06.818 +05:30 [INF] Hosting environment: Development
+2026-05-22 17:27:06.824 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 17:27:13.401 +05:30 [INF] Message received from queue.
+2026-05-22 17:27:14.189 +05:30 [INF] Package export process started.
+2026-05-22 17:27:14.194 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:27:17.508 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:27:17.554 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:27:17.569 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:27:18.181 +05:30 [INF] Received HTTP response headers after 599.1029ms - 404
+2026-05-22 17:27:18.200 +05:30 [INF] End processing HTTP request after 674.9417ms - 404
+2026-05-22 17:27:18.213 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:27:18.220 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:27:21.252 +05:30 [INF] ImportStructures started.
+2026-05-22 17:27:23.439 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:27:23.446 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:27:23.450 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:27:30.032 +05:30 [INF] Received HTTP response headers after 6576.4239ms - 200
+2026-05-22 17:27:30.035 +05:30 [INF] End processing HTTP request after 6592.9997ms - 200
+2026-05-22 17:27:30.041 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:27:30.044 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:27:31.863 +05:30 [INF] ExportData started.
+2026-05-22 17:27:41.271 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:27:41.274 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:27:41.278 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:27:41.431 +05:30 [INF] Received HTTP response headers after 149.4387ms - 200
+2026-05-22 17:27:41.439 +05:30 [INF] End processing HTTP request after 164.8368ms - 200
+2026-05-22 17:27:41.455 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 17:27:41.462 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:27:41.466 +05:30 [ERR] ExportData failed.
+2026-05-22 17:28:14.402 +05:30 [INF] Message received from queue.
+2026-05-22 17:28:15.061 +05:30 [INF] Package export process started.
+2026-05-22 17:28:15.067 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:28:17.423 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:28:17.425 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:28:17.432 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:28:17.688 +05:30 [INF] Received HTTP response headers after 251.6471ms - 404
+2026-05-22 17:28:17.697 +05:30 [INF] End processing HTTP request after 271.7718ms - 404
+2026-05-22 17:28:17.727 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:28:17.742 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:28:19.174 +05:30 [INF] ImportStructures started.
+2026-05-22 17:28:21.431 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:28:21.450 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:28:21.454 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:28:27.637 +05:30 [INF] Received HTTP response headers after 6177.3138ms - 200
+2026-05-22 17:28:27.641 +05:30 [INF] End processing HTTP request after 6191.1685ms - 200
+2026-05-22 17:28:27.647 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:28:27.653 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:28:29.157 +05:30 [INF] ExportData started.
+2026-05-22 17:31:14.574 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:31:15.125 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:31:15.132 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:31:15.276 +05:30 [INF] Received HTTP response headers after 138.152ms - 200
+2026-05-22 17:31:15.280 +05:30 [INF] End processing HTTP request after 154.8387ms - 200
+2026-05-22 17:31:29.644 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 17:31:29.660 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:31:29.668 +05:30 [ERR] ExportData failed.
+2026-05-22 17:31:29.787 +05:30 [ERR] Error processing RMQ message.
+RabbitMQ.Client.Exceptions.AlreadyClosedException: Already closed: The AMQP operation was interrupted: AMQP close-reason, initiated by Library, code=541, text='Unexpected Exception: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..', classId=0, methodId=0, exception=System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Read(Byte[] buffer, Int32 offset, Int32 count)
+   at System.IO.BufferedStream.ReadByteSlow()
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(Stream reader, Byte[] frameHeaderBuffer, ArrayPool`1 pool, UInt32 maxMessageSize)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   at RabbitMQ.Client.Impl.SessionBase.Transmit(OutgoingCommand& cmd)
+   at RabbitMQ.Client.Impl.ModelBase.ModelSend(MethodBase method, ContentHeaderBase header, ReadOnlyMemory`1 body)
+   at RabbitMQ.Client.Framing.Impl.Model.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   at RabbitMQ.Client.Impl.RecoveryAwareModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   at RabbitMQ.Client.Impl.AutorecoveringModel.BasicAck(UInt64 deliveryTag, Boolean multiple)
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.<ExecuteAsync>b__7_0(Object model, BasicDeliverEventArgs ea) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 90
+2026-05-22 17:31:31.187 +05:30 [INF] Message received from queue.
+2026-05-22 17:31:31.873 +05:30 [INF] Package export process started.
+2026-05-22 17:31:31.876 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:31:33.626 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:31:33.638 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:31:33.645 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:31:33.866 +05:30 [INF] Received HTTP response headers after 176.2107ms - 404
+2026-05-22 17:31:33.884 +05:30 [INF] End processing HTTP request after 246.3734ms - 404
+2026-05-22 17:31:33.893 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:31:33.906 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:31:34.428 +05:30 [INF] ImportStructures started.
+2026-05-22 17:31:37.754 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:31:37.762 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:31:37.768 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:31:43.300 +05:30 [INF] Received HTTP response headers after 5526.7706ms - 200
+2026-05-22 17:31:43.307 +05:30 [INF] End processing HTTP request after 5544.667ms - 200
+2026-05-22 17:31:43.312 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:31:43.318 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:31:48.215 +05:30 [INF] ExportData started.
+2026-05-22 17:31:55.561 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:31:56.107 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:31:56.112 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:31:56.249 +05:30 [INF] Received HTTP response headers after 132.8297ms - 200
+2026-05-22 17:31:56.253 +05:30 [INF] End processing HTTP request after 145.9354ms - 200
+2026-05-22 17:32:14.487 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 17:32:14.494 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:32:14.497 +05:30 [ERR] ExportData failed.
+2026-05-22 17:32:45.495 +05:30 [INF] Message received from queue.
+2026-05-22 17:32:45.961 +05:30 [INF] Package export process started.
+2026-05-22 17:32:45.963 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:32:48.771 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:32:48.773 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:32:48.778 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:32:48.945 +05:30 [INF] Received HTTP response headers after 163.3692ms - 404
+2026-05-22 17:32:48.950 +05:30 [INF] End processing HTTP request after 176.8822ms - 404
+2026-05-22 17:32:48.956 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:32:48.984 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:32:50.148 +05:30 [INF] ImportStructures started.
+2026-05-22 17:32:54.001 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:32:54.010 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:32:54.015 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:33:00.562 +05:30 [INF] Received HTTP response headers after 6537.4928ms - 200
+2026-05-22 17:33:00.567 +05:30 [INF] End processing HTTP request after 6557.1856ms - 200
+2026-05-22 17:33:00.573 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:33:00.577 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:33:03.165 +05:30 [INF] ExportData started.
+2026-05-22 17:33:10.187 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:33:10.820 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:33:10.824 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:33:11.022 +05:30 [INF] Received HTTP response headers after 193.9412ms - 200
+2026-05-22 17:33:11.031 +05:30 [INF] End processing HTTP request after 210.7047ms - 200
+2026-05-22 17:33:33.685 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 17:33:33.713 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:33:33.716 +05:30 [ERR] ExportData failed.
+2026-05-22 17:33:42.152 +05:30 [INF] Message received from queue.
+2026-05-22 17:33:42.647 +05:30 [INF] Package export process started.
+2026-05-22 17:33:42.651 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:33:45.067 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:33:45.069 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:33:45.073 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:33:45.248 +05:30 [INF] Received HTTP response headers after 173.0018ms - 404
+2026-05-22 17:33:45.266 +05:30 [INF] End processing HTTP request after 197.2709ms - 404
+2026-05-22 17:33:45.275 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:33:45.290 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:33:46.337 +05:30 [INF] ImportStructures started.
+2026-05-22 17:33:48.220 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:33:48.222 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:33:48.229 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:33:53.945 +05:30 [INF] Received HTTP response headers after 5713.058ms - 200
+2026-05-22 17:33:53.950 +05:30 [INF] End processing HTTP request after 5727.5152ms - 200
+2026-05-22 17:33:53.955 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:33:53.958 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:34:13.943 +05:30 [INF] ExportData started.
+2026-05-22 17:34:34.290 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:34:34.310 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:34:34.312 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:34:46.043 +05:30 [INF] Received HTTP response headers after 11729.2943ms - 200
+2026-05-22 17:34:46.054 +05:30 [INF] End processing HTTP request after 11743.7034ms - 200
+2026-05-22 17:34:46.067 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 17:34:46.081 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:34:46.089 +05:30 [ERR] ExportData failed.
+2026-05-22 17:35:39.874 +05:30 [INF] Message received from queue.
+2026-05-22 17:35:40.481 +05:30 [INF] Package export process started.
+2026-05-22 17:35:40.483 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:35:42.845 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:35:42.847 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:35:42.854 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:35:43.122 +05:30 [INF] Received HTTP response headers after 264.3567ms - 404
+2026-05-22 17:35:43.182 +05:30 [INF] End processing HTTP request after 334.1328ms - 404
+2026-05-22 17:35:43.195 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:35:43.204 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:35:44.423 +05:30 [INF] ImportStructures started.
+2026-05-22 17:35:46.379 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:35:46.385 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:35:46.389 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:35:52.296 +05:30 [INF] Received HTTP response headers after 5895.1344ms - 200
+2026-05-22 17:35:52.300 +05:30 [INF] End processing HTTP request after 5915.2398ms - 200
+2026-05-22 17:35:52.305 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:35:52.310 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:35:54.345 +05:30 [INF] ExportData started.
+2026-05-22 17:36:00.961 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:36:01.454 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:36:01.463 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:36:05.155 +05:30 [INF] Received HTTP response headers after 3688.429ms - 200
+2026-05-22 17:36:05.160 +05:30 [INF] End processing HTTP request after 3706.1087ms - 200
+2026-05-22 17:36:34.201 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Payload section not found"}
+2026-05-22 17:36:37.046 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:36:37.050 +05:30 [ERR] ExportData failed.
+2026-05-22 17:40:51.206 +05:30 [INF] Application starting...
+2026-05-22 17:40:53.232 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 17:40:53.232 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 17:40:53.247 +05:30 [INF] Hosting environment: Development
+2026-05-22 17:40:53.252 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 17:41:01.495 +05:30 [INF] Message received from queue.
+2026-05-22 17:41:02.030 +05:30 [INF] Package export process started.
+2026-05-22 17:41:02.036 +05:30 [INF] PushToGitHub started.
+2026-05-22 17:41:05.086 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:41:05.134 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:41:05.153 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 17:41:05.683 +05:30 [INF] Received HTTP response headers after 520.791ms - 404
+2026-05-22 17:41:06.146 +05:30 [INF] End processing HTTP request after 1037.2141ms - 404
+2026-05-22 17:41:06.156 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 17:41:06.166 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 17:41:08.136 +05:30 [INF] ImportStructures started.
+2026-05-22 17:41:10.317 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:41:10.340 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:41:10.352 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:41:16.363 +05:30 [INF] Received HTTP response headers after 6004.2543ms - 200
+2026-05-22 17:41:16.369 +05:30 [INF] End processing HTTP request after 6036.4892ms - 200
+2026-05-22 17:41:16.377 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 17:41:16.382 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 17:41:18.158 +05:30 [INF] ExportData started.
+2026-05-22 17:41:24.268 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:41:24.274 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:41:24.278 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 17:41:26.710 +05:30 [INF] Received HTTP response headers after 2428.4868ms - 200
+2026-05-22 17:41:26.720 +05:30 [INF] End processing HTTP request after 2446.1543ms - 200
+2026-05-22 17:41:26.737 +05:30 [ERR] API business failure. Url : http://localhost:7001/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Validation Fail: Field 'viewctrl' (Row No: 1) with value '1'; AxValidate.Dto.OperationResult;Validation Fail: Field 'editctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult;Validation Fail: Field 'dupchk' (Row No: 1) with value 'Allsvcadmin'; Duplicate values are not allowed in Role and Form"}
+2026-05-22 17:41:26.749 +05:30 [ERR] ExportData failed. Message : API returned failed status.
+2026-05-22 17:41:26.753 +05:30 [ERR] ExportData failed.
+2026-05-22 19:54:39.831 +05:30 [INF] Application starting...
+2026-05-22 19:54:44.692 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 19:54:44.701 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 19:54:44.720 +05:30 [INF] Hosting environment: Development
+2026-05-22 19:54:44.727 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 19:55:13.310 +05:30 [INF] Message received from queue.
+2026-05-22 19:55:14.478 +05:30 [INF] Package export process started.
+2026-05-22 19:55:14.486 +05:30 [INF] PushToGitHub started.
+2026-05-22 19:56:31.805 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 19:56:33.312 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 19:56:33.325 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 19:56:33.977 +05:30 [INF] Received HTTP response headers after 644.07ms - 404
+2026-05-22 19:56:33.993 +05:30 [INF] End processing HTTP request after 704.2159ms - 404
+2026-05-22 19:56:38.111 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 19:56:38.151 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 19:56:40.494 +05:30 [INF] ImportStructures started.
+2026-05-22 19:56:45.633 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 19:56:48.297 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 19:56:48.304 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 19:56:57.224 +05:30 [INF] Received HTTP response headers after 8913.2688ms - 200
+2026-05-22 19:56:57.229 +05:30 [INF] End processing HTTP request after 8936.0671ms - 200
+2026-05-22 19:57:01.047 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 19:57:01.053 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 19:57:02.799 +05:30 [INF] ExportData started.
+2026-05-22 19:57:05.702 +05:30 [INF] Calling API : http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 19:57:06.940 +05:30 [INF] Start processing HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 19:57:06.946 +05:30 [INF] Sending HTTP request POST http://localhost:7001/AxiDataPackage/ImportData
+2026-05-22 19:57:11.042 +05:30 [INF] HTTP request failed after 4070.2656ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7001)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-05-22 19:57:11.745 +05:30 [INF] HTTP request failed after 4801.8856ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7001)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-05-22 19:57:12.423 +05:30 [ERR] Exception while calling API : http://localhost:7001/AxiDataPackage/ImportData
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7001)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\ApiService.cs:line 40
+2026-05-22 19:57:12.707 +05:30 [ERR] ExportData failed. Message : No connection could be made because the target machine actively refused it. (localhost:7001)
+2026-05-22 19:57:12.719 +05:30 [ERR] ExportData failed.
+2026-05-22 19:59:36.938 +05:30 [INF] Application starting...
+2026-05-22 19:59:43.641 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 19:59:43.642 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 19:59:45.996 +05:30 [INF] Hosting environment: Development
+2026-05-22 19:59:45.993 +05:30 [INF] Message received from queue.
+2026-05-22 19:59:46.003 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 19:59:47.013 +05:30 [INF] Package export process started.
+2026-05-22 19:59:47.022 +05:30 [INF] PushToGitHub started.
+2026-05-22 19:59:49.888 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 19:59:51.583 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 19:59:51.598 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 19:59:53.473 +05:30 [INF] HTTP request failed after 1852.638ms
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-05-22 19:59:53.692 +05:30 [INF] HTTP request failed after 2142.0365ms
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-05-22 19:59:54.789 +05:30 [ERR] Exception while calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.EstablishSslConnectionAsync(SslClientAuthenticationOptions sslOptions, HttpRequestMessage request, Boolean async, Stream stream, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\ApiService.cs:line 40
+2026-05-22 19:59:54.902 +05:30 [ERR] GitPull failed. Message : The SSL connection could not be established, see inner exception.
+2026-05-22 19:59:59.554 +05:30 [INF] ImportStructures started.
+2026-05-22 20:00:01.877 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:00:10.036 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:00:10.040 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:00:16.025 +05:30 [INF] Received HTTP response headers after 5977.7251ms - 200
+2026-05-22 20:00:16.030 +05:30 [INF] End processing HTTP request after 6007.6385ms - 200
+2026-05-22 20:00:16.042 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:00:16.047 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 20:00:18.034 +05:30 [INF] ImportData started.
+2026-05-22 20:00:22.502 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-22 20:00:24.683 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-22 20:00:24.688 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-22 20:00:25.185 +05:30 [INF] Received HTTP response headers after 492.7132ms - 400
+2026-05-22 20:00:25.189 +05:30 [INF] End processing HTTP request after 505.1078ms - 400
+2026-05-22 20:00:25.193 +05:30 [ERR] API failed. Url : http://localhost:7000/AxiDataPackage/ImportData, StatusCode : "BadRequest", Response : {"errors":{"ImportDir":["The ImportDir field is required."]},"type":"https://tools.ietf.org/html/rfc9110#section-15.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-948322814e64b9efbd7eef33800239b4-73f565d9845552d3-00"}
+2026-05-22 20:00:25.206 +05:30 [ERR] ImportData failed. Message : API call failed.
+2026-05-22 20:00:25.209 +05:30 [ERR] ImportData failed.
+2026-05-22 20:01:37.082 +05:30 [INF] Application starting...
+2026-05-22 20:01:40.281 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 20:01:40.281 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 20:01:40.303 +05:30 [INF] Hosting environment: Development
+2026-05-22 20:01:40.308 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 20:01:51.729 +05:30 [INF] Application starting...
+2026-05-22 20:01:52.382 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-22 20:01:52.382 +05:30 [INF] RabbitMQ consumer started.
+2026-05-22 20:01:52.403 +05:30 [INF] Hosting environment: Development
+2026-05-22 20:01:52.414 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-22 20:01:57.682 +05:30 [INF] Message received from queue.
+2026-05-22 20:01:57.954 +05:30 [INF] Package export process started.
+2026-05-22 20:01:57.962 +05:30 [INF] PushToGitHub started.
+2026-05-22 20:01:58.181 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 20:01:58.231 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 20:01:58.254 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-22 20:01:58.807 +05:30 [INF] Received HTTP response headers after 537.8318ms - 404
+2026-05-22 20:01:58.822 +05:30 [INF] End processing HTTP request after 617.7135ms - 404
+2026-05-22 20:01:58.831 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-22 20:01:58.837 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-22 20:01:58.842 +05:30 [INF] ImportStructures started.
+2026-05-22 20:01:58.852 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:01:58.855 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:01:58.858 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:02:04.487 +05:30 [INF] Received HTTP response headers after 5623.9084ms - 200
+2026-05-22 20:02:04.492 +05:30 [INF] End processing HTTP request after 5638.1196ms - 200
+2026-05-22 20:02:04.500 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-22 20:02:04.505 +05:30 [INF] ImportStructures completed successfully.
+2026-05-22 20:02:04.510 +05:30 [INF] ImportData started.
+2026-05-22 20:02:04.516 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-22 20:02:04.521 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-22 20:02:04.529 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-22 20:02:04.724 +05:30 [INF] Received HTTP response headers after 186.1877ms - 200
+2026-05-22 20:02:04.727 +05:30 [INF] End processing HTTP request after 206.0856ms - 200
+2026-05-22 20:02:04.735 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-22 20:02:04.741 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-05-22 20:02:04.744 +05:30 [ERR] ImportData failed.

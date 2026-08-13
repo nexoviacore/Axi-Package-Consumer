@@ -1,0 +1,60 @@
+[2026-07-20 17:24:24] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:27:25] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:31:02] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:31:41] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:35:15] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:36:10] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:38:22] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 17:38:32] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 18:48:03] Method: Failed to Install Package: AxInsTestPackage
+Message: The AXI AxInsTestPackage package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 19:03:42] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 19:08:16] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 19:13:17] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 19:43:32] Method: Failed to Install Package: PackageAxiTesting
+Message: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 19:44:17] Method: Failed to Install Package: AxiPayroll
+Message: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------
+[2026-07-20 19:59:22] Method: Failed to Install Package: Axi
+Message: The AXI Axi package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 255
+--------------------------------------------------

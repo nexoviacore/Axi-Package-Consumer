@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-b8aeb334-cae0-4d12-b49f-f41327516d3b",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select null from dual"
+              }
+            }
+          }
+        },
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil1",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil1",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select null from dual"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"acttsfield5\" (\r\n    \"recordid\" numeric(16,0),\r\n    \"img\" bytea,\r\n    \"blobno\" numeric(3,0),\r\n    \"ftype\" varchar(4)\r\n);\r\n$D#",
+      "CREATE OR REPLACE FUNCTION \"{{schemaName}}\".insert_into_outpatient()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\r\nBEGIN\r\n  INSERT INTO OutPatient (PatientId, PatientName, Date_Time, Doctor, Processed, token)\r\n  VALUES (NEW.patid, NEW.patname, NEW.timeofreg, NEW.doctor, false, NEW.token);\r\n\r\n  RETURN NEW;\r\nEND;\r\n$function$\n;\r\n$D#\r\nCREATE TRIGGER after_insert_maintable AFTER INSERT ON maint1 FOR EACH ROW EXECUTE FUNCTION insert_into_outpatient();\r\n$D#\r\n"
+    ]
+  }
+}

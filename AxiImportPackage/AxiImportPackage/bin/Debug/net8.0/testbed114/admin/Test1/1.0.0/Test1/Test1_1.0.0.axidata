@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"fgfom1\" (\r\n    \"fgfom1id\" numeric(16,0) NOT NULL,\r\n    \"cancel\" varchar(1),\r\n    \"sourceid\" numeric(16,0),\r\n    \"mapname\" varchar(20),\r\n    \"username\" varchar(50),\r\n    \"modifiedon\" timestamp without time zone,\r\n    \"createdby\" varchar(50),\r\n    \"createdon\" timestamp without time zone,\r\n    \"wkid\" varchar(15),\r\n    \"app_level\" numeric(3,0),\r\n    \"app_desc\" numeric(1,0),\r\n    \"app_slevel\" numeric(3,0),\r\n    \"cancelremarks\" varchar(150),\r\n    \"wfroles\" varchar(250),\r\n    \"field1\" varchar(50),\r\n    \"field2\" numeric(10,0)\r\n);\r\n$D#"
+    ]
+  }
+}

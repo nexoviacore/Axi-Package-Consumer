@@ -1,0 +1,89 @@
+2026-07-22 11:22:41.317 +05:30 [INF] Application starting...
+2026-07-22 11:23:05.073 +05:30 [FTL] Application terminated unexpectedly.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.InitializeRabbitMq() in D:\AxiImport-InstallPackage\AxiImportPackage\RabbitMqConsumer.cs:line 43
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer..ctor(IConfiguration configuration, ILogger`1 logger, IServiceScopeFactory scopeFactory) in D:\AxiImport-InstallPackage\AxiImportPackage\RabbitMqConsumer.cs:line 30
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\AxiImport-InstallPackage\AxiImportPackage\Program.cs:line 40
+2026-07-22 11:24:11.684 +05:30 [INF] Application starting...
+2026-07-22 11:24:13.274 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-22 11:24:13.371 +05:30 [INF] RabbitMQ consumer started.
+2026-07-22 11:24:14.049 +05:30 [INF] Hosting environment: Development
+2026-07-22 11:24:14.056 +05:30 [INF] Content root path: D:\AxiImport-InstallPackage\AxiImportPackage\bin\Debug\net8.0
+2026-07-22 11:28:57.535 +05:30 [INF] Message received from queue.
+2026-07-22 11:28:57.537 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260722055854-764\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-07-22 11:28:57.802 +05:30 [INF] InstallPackage process started.###
+2026-07-22 11:28:57.956 +05:30 [INF] InstallPackage started.
+2026-07-22 11:28:58.164 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-22 11:28:58.266 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-22 11:28:58.358 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-22 11:28:58.380 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-22 11:29:58.567 +05:30 [INF] Received HTTP response headers after 60175.9349ms - 200
+2026-07-22 11:29:58.578 +05:30 [INF] End processing HTTP request after 60290.4647ms - 200
+2026-07-22 11:29:58.586 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-22 11:29:58.591 +05:30 [INF] Result : success, Command : Install Package "AxiPayroll" , Message : Command Executed Successfully
+2026-07-22 11:29:58.596 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" 
+2026-07-22 11:29:58.600 +05:30 [INF] InstallPackage completed successfully.
+2026-07-22 11:29:58.658 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Package Installed Successfully: AxiPayroll","message":"The AXI AxiPayroll package has been installed successfully and is now ready to use.","dt":"07/22/26 11:29:58 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-22 11:29:58.666 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-22 11:29:58.670 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-22 11:29:58.675 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-22 11:29:59.154 +05:30 [INF] Received HTTP response headers after 474.5711ms - 200
+2026-07-22 11:29:59.160 +05:30 [INF] End processing HTTP request after 490.5734ms - 200
+2026-07-22 11:29:59.222 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-22 11:29:59.231 +05:30 [INF] InstallPackage completed successfully.

@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"mform1\" (\r\n    \"mform1id\" numeric(16,0) NOT NULL,\r\n    \"cancel\" varchar(1),\r\n    \"sourceid\" numeric(16,0),\r\n    \"mapname\" varchar(20),\r\n    \"username\" varchar(50),\r\n    \"modifiedon\" timestamp without time zone,\r\n    \"createdby\" varchar(50),\r\n    \"createdon\" timestamp without time zone,\r\n    \"wkid\" varchar(15),\r\n    \"app_level\" numeric(3,0),\r\n    \"app_desc\" numeric(1,0),\r\n    \"app_slevel\" numeric(3,0),\r\n    \"cancelremarks\" varchar(150),\r\n    \"wfroles\" varchar(250),\r\n    \"usern\" varchar(50),\r\n    \"pass\" varchar(50),\r\n    \"curr\" varchar(20)\r\n);\r\n$D#",
+      "ALTER TABLE \"{{schemaName}}\".employees ADD CONSTRAINT uk_emp_email UNIQUE (emp_email);\r\n$D#"
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+2026-05-20 14:47:33.402 +05:30 [INF] Application starting...
+2026-05-20 14:47:35.157 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 14:47:35.154 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 14:47:35.172 +05:30 [INF] Hosting environment: Development
+2026-05-20 14:47:35.179 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 17:08:24.020 +05:30 [INF] Application starting...
+2026-05-20 17:08:36.103 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 17:08:36.133 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 17:08:36.161 +05:30 [INF] Hosting environment: Development
+2026-05-20 17:08:36.192 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 17:11:01.458 +05:30 [INF] Message received from queue.
+2026-05-20 17:11:15.423 +05:30 [INF] Package export process started.
+2026-05-20 17:11:30.801 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:12:39.760 +05:30 [INF] Calling API : https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/push
+2026-05-20 17:12:41.414 +05:30 [INF] Start processing HTTP request POST https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/push
+2026-05-20 17:12:41.432 +05:30 [INF] Sending HTTP request POST https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/push
+2026-05-20 17:13:43.283 +05:30 [INF] Application starting...
+2026-05-20 17:13:47.685 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 17:13:47.691 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 17:13:54.707 +05:30 [INF] Message received from queue.
+2026-05-20 17:13:54.722 +05:30 [INF] Hosting environment: Development
+2026-05-20 17:13:54.742 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 17:13:59.420 +05:30 [INF] Package export process started.
+2026-05-20 17:14:03.657 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:14:31.650 +05:30 [INF] Calling API : https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:14:32.373 +05:30 [INF] Start processing HTTP request POST https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:14:32.389 +05:30 [INF] Sending HTTP request POST https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:18:14.913 +05:30 [ERR] Exception while calling API : https://3f3c-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+ ---> System.TimeoutException: A task was canceled.
+ ---> System.Threading.Tasks.TaskCanceledException: A task was canceled.
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpClient.HandleFailure(Exception e, Boolean telemetryStarted, HttpResponseMessage response, CancellationTokenSource cts, CancellationToken cancellationToken, CancellationTokenSource pendingRequestsCts)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload, String APIName) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\ApiService.cs:line 41
+2026-05-20 17:18:16.376 +05:30 [ERR] GitPull failed. Message : The request was canceled due to the configured HttpClient.Timeout of 100 seconds elapsing.
+2026-05-20 17:42:16.112 +05:30 [INF] Application starting...
+2026-05-20 17:42:19.319 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 17:42:19.445 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 17:42:33.348 +05:30 [INF] Message received from queue.
+2026-05-20 17:42:33.390 +05:30 [INF] Hosting environment: Development
+2026-05-20 17:42:33.396 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 17:42:36.221 +05:30 [INF] Package export process started.
+2026-05-20 17:42:43.433 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:43:25.061 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:43:25.698 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:43:25.718 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:43:27.134 +05:30 [INF] Received HTTP response headers after 1401.8796ms - 200
+2026-05-20 17:43:27.170 +05:30 [INF] End processing HTTP request after 1504.6812ms - 200
+2026-05-20 17:43:51.451 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: AxiPackages\\pgbase114\\admin\\AxiTestPackage\\1.0.0\\AxiTestPackage"}
+2026-05-20 17:44:03.713 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 17:44:03.716 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 17:46:54.265 +05:30 [INF] Message received from queue.
+2026-05-20 17:47:02.875 +05:30 [INF] Package export process started.
+2026-05-20 17:47:18.581 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:48:03.686 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:48:04.399 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:48:04.412 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:48:05.286 +05:30 [INF] Received HTTP response headers after 870.9288ms - 200
+2026-05-20 17:48:05.290 +05:30 [INF] End processing HTTP request after 891.016ms - 200
+2026-05-20 17:49:58.501 +05:30 [INF] Application starting...
+2026-05-20 17:50:03.190 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 17:50:03.198 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 17:50:08.335 +05:30 [INF] Message received from queue.
+2026-05-20 17:50:08.348 +05:30 [INF] Hosting environment: Development
+2026-05-20 17:50:08.353 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 17:50:09.531 +05:30 [INF] Package export process started.
+2026-05-20 17:50:10.994 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:50:47.443 +05:30 [INF] Application starting...
+2026-05-20 17:50:50.632 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 17:50:50.639 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 17:50:57.990 +05:30 [INF] Message received from queue.
+2026-05-20 17:50:57.996 +05:30 [INF] Hosting environment: Development
+2026-05-20 17:50:58.005 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 17:51:01.641 +05:30 [INF] Package export process started.
+2026-05-20 17:51:11.338 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:51:32.786 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:51:33.460 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:51:33.480 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:51:34.666 +05:30 [INF] Received HTTP response headers after 1171.2342ms - 200
+2026-05-20 17:51:34.690 +05:30 [INF] End processing HTTP request after 1259.6296ms - 200
+2026-05-20 17:53:03.997 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\Axi_Test\\1.0.0\\Axi_Test"}
+2026-05-20 17:53:04.035 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 17:53:04.044 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 17:53:52.085 +05:30 [INF] Message received from queue.
+2026-05-20 17:53:52.830 +05:30 [INF] Package export process started.
+2026-05-20 17:53:53.677 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:54:18.214 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:54:18.705 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:54:18.709 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:54:19.505 +05:30 [INF] Received HTTP response headers after 787.0202ms - 400
+2026-05-20 17:54:19.509 +05:30 [INF] End processing HTTP request after 804.0267ms - 400
+2026-05-20 17:54:28.914 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "BadRequest", Response : {"success":false,"message":"Package 'AxiPackages' not found in repository."}
+2026-05-20 17:54:44.247 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-20 17:54:44.272 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 17:54:56.115 +05:30 [INF] Message received from queue.
+2026-05-20 17:54:56.530 +05:30 [INF] Package export process started.
+2026-05-20 17:54:57.120 +05:30 [INF] PushToGitHub started.
+2026-05-20 17:55:05.680 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:55:06.172 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:55:06.174 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 17:55:06.929 +05:30 [INF] Received HTTP response headers after 752.1259ms - 200
+2026-05-20 17:55:06.944 +05:30 [INF] End processing HTTP request after 777.0472ms - 200
+2026-05-20 17:55:27.655 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:02:58.954 +05:30 [INF] Application starting...
+2026-05-20 18:03:05.435 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 18:03:05.442 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 18:03:11.105 +05:30 [INF] Message received from queue.
+2026-05-20 18:03:11.108 +05:30 [INF] Hosting environment: Development
+2026-05-20 18:03:11.215 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 18:03:12.473 +05:30 [INF] Package export process started.
+2026-05-20 18:03:12.480 +05:30 [INF] PushToGitHub started.
+2026-05-20 18:03:14.042 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:03:14.120 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:03:14.217 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:03:15.294 +05:30 [INF] Received HTTP response headers after 1004.6845ms - 200
+2026-05-20 18:03:15.307 +05:30 [INF] End processing HTTP request after 1228.2437ms - 200
+2026-05-20 18:03:15.322 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:03:15.328 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 18:03:15.331 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 18:03:36.877 +05:30 [INF] Application starting...
+2026-05-20 18:03:39.017 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 18:03:39.020 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 18:03:39.047 +05:30 [INF] Hosting environment: Development
+2026-05-20 18:03:39.055 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 18:03:47.665 +05:30 [INF] Message received from queue.
+2026-05-20 18:03:49.552 +05:30 [INF] Package export process started.
+2026-05-20 18:03:49.570 +05:30 [INF] PushToGitHub started.
+2026-05-20 18:03:52.299 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:03:52.372 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:03:52.407 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:03:54.058 +05:30 [INF] Received HTTP response headers after 1553.3138ms - 200
+2026-05-20 18:03:54.217 +05:30 [INF] End processing HTTP request after 1865.9433ms - 200
+2026-05-20 18:03:54.273 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:03:54.283 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 18:03:54.294 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 18:04:19.531 +05:30 [INF] Message received from queue.
+2026-05-20 18:04:23.803 +05:30 [INF] Package export process started.
+2026-05-20 18:04:33.243 +05:30 [INF] PushToGitHub started.
+2026-05-20 18:04:39.317 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:04:39.322 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:04:39.327 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:04:39.721 +05:30 [INF] Received HTTP response headers after 391.1415ms - 200
+2026-05-20 18:04:39.730 +05:30 [INF] End processing HTTP request after 409.5367ms - 200
+2026-05-20 18:04:39.734 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:04:39.738 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 18:04:39.746 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 18:05:03.470 +05:30 [INF] Application starting...
+2026-05-20 18:05:04.292 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 18:05:04.290 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 18:05:04.313 +05:30 [INF] Hosting environment: Development
+2026-05-20 18:05:04.318 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 18:05:08.472 +05:30 [INF] Message received from queue.
+2026-05-20 18:05:08.636 +05:30 [INF] Package export process started.
+2026-05-20 18:05:08.643 +05:30 [INF] PushToGitHub started.
+2026-05-20 18:05:08.783 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:05:08.828 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:05:08.845 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:05:09.954 +05:30 [INF] Received HTTP response headers after 1098.1605ms - 200
+2026-05-20 18:05:09.970 +05:30 [INF] End processing HTTP request after 1169.7638ms - 200
+2026-05-20 18:05:09.985 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:05:09.993 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 18:05:09.998 +05:30 [ERR] PushToGitHub failed.
+2026-05-20 18:07:12.979 +05:30 [INF] Application starting...
+2026-05-20 18:07:14.939 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 18:07:14.913 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 18:07:14.967 +05:30 [INF] Hosting environment: Development
+2026-05-20 18:07:14.980 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 18:07:29.378 +05:30 [INF] Message received from queue.
+2026-05-20 18:07:48.118 +05:30 [INF] Package export process started.
+2026-05-20 18:07:53.963 +05:30 [INF] PushToGitHub started.
+2026-05-20 18:08:59.620 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:09:00.352 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:09:00.376 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:09:01.460 +05:30 [INF] Received HTTP response headers after 1069.8629ms - 200
+2026-05-20 18:09:01.483 +05:30 [INF] End processing HTTP request after 1152.264ms - 200
+2026-05-20 18:09:06.610 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:09:14.675 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 18:09:25.681 +05:30 [INF] ImportStructures started.
+2026-05-20 18:12:48.952 +05:30 [INF] Application starting...
+2026-05-20 18:12:51.016 +05:30 [INF] RabbitMQ consumer started.
+2026-05-20 18:12:51.013 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-20 18:13:08.837 +05:30 [INF] Message received from queue.
+2026-05-20 18:13:08.865 +05:30 [INF] Hosting environment: Development
+2026-05-20 18:13:08.883 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-20 18:13:09.805 +05:30 [INF] Package export process started.
+2026-05-20 18:13:10.358 +05:30 [INF] PushToGitHub started.
+2026-05-20 18:13:13.353 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:13:13.394 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:13:13.409 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-20 18:13:14.443 +05:30 [INF] Received HTTP response headers after 1022.331ms - 200
+2026-05-20 18:13:14.475 +05:30 [INF] End processing HTTP request after 1101.6997ms - 200
+2026-05-20 18:13:14.498 +05:30 [ERR] API business failure. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, Response : {"success":true,"message":"Package pulled successfully to: D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\pgbase114\\admin\\AxiPackage\\1.0.0\\AxiPackage"}
+2026-05-20 18:13:14.505 +05:30 [ERR] GitPull failed. Message : API returned failed status.
+2026-05-20 18:13:24.276 +05:30 [INF] ImportStructures started.
+2026-05-20 18:15:57.347 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-20 18:15:58.597 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-20 18:15:58.600 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-20 18:17:29.364 +05:30 [INF] Received HTTP response headers after 90758.4947ms - 200
+2026-05-20 18:17:29.369 +05:30 [INF] End processing HTTP request after 90774.65ms - 200
+2026-05-20 18:17:53.200 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-20 18:17:55.766 +05:30 [INF] ImportStructures completed successfully.
+2026-05-20 18:17:56.877 +05:30 [INF] Package import completed successfully.

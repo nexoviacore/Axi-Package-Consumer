@@ -1,0 +1,491 @@
+<root pform="yes" wflow="F" name="agdpf" caption="Autogenerate with Dynamic Prefix" runtimemod="F" runtimetstruct="F" cachedsave="F" vno="11.4" createdon="15/07/2025 5:38:44 PM" createdby="srijesh" updatedon="15/07/2025 17:38:44" updatedby="srijesh" defpage="y" peg="false" amendment="false" axoutboundqueues="false" autoprints="false" formnotify="false" pid="2114" dbtype="postgre">
+	<agdpf cat="tstruct">
+		<a1>agdpf</a1>
+		<a2>Autogenerate with Dynamic Prefix</a2>
+		<a4 fcaption=""></a4>
+		<a5 fcaption=""></a5>
+		<a6>False</a6>
+		<a9></a9>
+		<a10></a10>
+		<a11></a11>
+		<a12></a12>
+		<a13></a13>
+		<a14></a14>
+		<a15></a15>
+		<a16>t</a16>
+		<a17></a17>
+		<a18>False</a18>
+		<a19>
+			<l></l>
+		</a19>
+		<a20>True</a20>
+		<a24></a24>
+		<a25>False</a25>
+		<a26>False</a26>
+		<a27>False</a27>
+		<a28>None</a28>
+		<a29>Default</a29>
+		<a30>False</a30>
+		<a31 savemode="">
+			<apiqueuename></apiqueuename>
+			<savequeuename></savequeuename>
+		</a31>
+		<a59></a59>
+	</agdpf>
+	<dc1 cat="dc" ordno="">
+		<a1>dc1</a1>
+		<a2>Autogenerate with Dynamic Prefix</a2>
+		<a3>1</a3>
+		<a4></a4>
+		<a5>agdpf1</a5>
+		<a6>False</a6>
+		<a7>True</a7>
+		<a9>False</a9>
+		<a14></a14>
+		<a15></a15>
+		<a16></a16>
+		<a17>True</a17>
+		<a26>True</a26>
+		<a27>False</a27>
+		<a59></a59>
+	</dc1>
+	<compname cat="field" dcno="1" dccap="Autogenerate with Dynamic Prefix" fieldtype="Simple Text" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>compname</a1>
+		<a2>Company Name</a2>
+		<a3>Character</a3>
+		<a4>50</a4>
+		<a5>0</a5>
+		<a6>Accept</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>True</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30>False</a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58><e>prefix</e></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</compname>
+	<branchnme cat="field" dcno="1" dccap="Autogenerate with Dynamic Prefix" fieldtype="Simple Text" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>branchnme</a1>
+		<a2>Branch Name</a2>
+		<a3>Character</a3>
+		<a4>50</a4>
+		<a5>0</a5>
+		<a6>Accept</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>True</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30>False</a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58><e>prefix</e></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</branchnme>
+	<prefix cat="field" dcno="1" dccap="Autogenerate with Dynamic Prefix" fieldtype="Simple Text" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>prefix</a1>
+		<a2>Prefix</a2>
+		<a3>Character</a3>
+		<a4>50</a4>
+		<a5>0</a5>
+		<a6>Calculate</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23></a23>
+			<a24></a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30></a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13>{:} + compname + {/} + branchnme + {/}</a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</prefix>
+	<dcdoi cat="field" dcno="1" dccap="Autogenerate with Dynamic Prefix" fieldtype="Auto Generate" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>dcdoi</a1>
+		<a2>Doc ID</a2>
+		<a3>Character</a3>
+		<a4>20</a4>
+		<a5>0</a5>
+		<a6>autogenerate</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23></a23>
+			<a24></a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30></a30>
+			<a40></a40>
+			<a41>
+				<l r="f">
+					<a42>Docid</a42>
+					<a53></a53>
+					<a43></a43>
+					<a44>3</a44>
+					<a45>true</a45>
+					<a54>7</a54>
+				</l>
+			</a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>True</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</dcdoi>
+	<docid cat="field" dcno="1" dccap="Autogenerate with Dynamic Prefix" fieldtype="Auto Generate" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>docid</a1>
+		<a2>Document ID</a2>
+		<a3>Character</a3>
+		<a4>100</a4>
+		<a5>0</a5>
+		<a6>autogenerate</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23></a23>
+			<a24></a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30></a30>
+			<a40></a40>
+			<a41>
+				<l r="f">
+					<a42></a42>
+					<a53>prefix</a53>
+					<a43></a43>
+					<a44>5</a44>
+					<a45>true</a45>
+					<a54>8</a54>
+				</l>
+			</a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>True</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</docid>
+	<comps cat="comps" dwbtb="true" btn="14">
+		<btn1 cat="btn" parent="x__heading" key="btn1" caption="First" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="First" action="" task="gofirst" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>first_page</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn1>
+		<btn2 cat="btn" parent="x__heading" key="btn2" caption="Previous" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Previous" action="" task="goprior" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>skip_previous</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn2>
+		<btn3 cat="btn" parent="x__heading" key="btn3" caption="Next" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Next" action="" task="gonext" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>skip_next</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn3>
+		<btn4 cat="btn" parent="x__heading" key="btn4" caption="Last" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Last" action="" task="golast" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>last_page</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn4>
+		<btn5 cat="btn" parent="x__heading" key="btn5" caption="New" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="New" action="" task="new" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>add</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn5>
+		<btn6 cat="btn" parent="x__heading" key="btn6" caption="Save" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Save" action="" task="save" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>save</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn6>
+		<btn7 cat="btn" parent="x__heading" key="btn7" caption="Search" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Search" action="" task="search" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>search</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn7>
+		<btn8 cat="btn" parent="x__heading" key="btn8" caption="Remove" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Remove" action="" task="remove" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>remove</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn8>
+		<btn9 cat="btn" parent="x__heading" key="btn9" caption="Print" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Print" action="" task="print" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>print</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn9>
+		<btn10 cat="btn" parent="x__heading" key="btn10" caption="Preview" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Preview" action="" task="preview" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>remove_red_eye</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn10>
+		<btn11 cat="btn" parent="x__heading" key="btn11" caption="Attach" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Attach" action="" task="attach" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>attach_file</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn11>
+		<btn12 cat="btn" parent="x__heading" key="btn12" caption="PDF" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="PDF" action="" task="pdf" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>picture_as_pdf</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn12>
+		<btn13 cat="btn" parent="x__heading" key="btn13" caption="List View" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="List View" action="" task="listview" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>list</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn13>
+		<btn14 cat="btn" parent="x__heading" key="btn14" caption="Draft" sname="tagdpf" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Draft" action="" task="draft" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>list</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn14>
+	</comps>
+	<iframes cat="iframes" layout="default"><Frame1 align="top" pop="no" tlhw="89,0,254,1103" hp="33"><pages><dc>dc1</dc></pages></Frame1></iframes>
+	<temp>
+		<menupos>default</menupos>
+		<menulist></menulist>
+		<listview>true</listview>
+		<layout>Default</layout>
+		<fcaption>Autogenerate with Dynamic Prefix</fcaption>
+		<defpage>true</defpage>
+		<includepage>F</includepage>
+		<changeddc></changeddc>
+	</temp>
+	<axpconfigs_agdpf cat="config">
+		<CONFIGNAME>searchcols</CONFIGNAME>
+		<CVALUE>compname,branchnme,prefix,dcdoi,docid</CVALUE>
+	</axpconfigs_agdpf>
+</root>

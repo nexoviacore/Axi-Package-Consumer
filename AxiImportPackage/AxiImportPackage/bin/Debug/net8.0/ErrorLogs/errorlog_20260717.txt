@@ -1,0 +1,8 @@
+[2026-07-17 10:20:05] Method: Failed to Install Package: 
+Message: The AXI  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 254
+--------------------------------------------------
+[2026-07-17 10:29:04] Method: Failed to Install Package: 
+Message: The AXI  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 254
+--------------------------------------------------

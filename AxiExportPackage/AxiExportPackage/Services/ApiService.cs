@@ -17,6 +17,7 @@ namespace AxiExportPackage.Services
         {
             _httpClient = httpClient;
             _logger = logger;
+            _httpClient.Timeout = TimeSpan.FromMinutes(15);
         }
 
         public async Task<ApiResponse> PostAsync(
@@ -26,17 +27,16 @@ namespace AxiExportPackage.Services
         {
             try
             {
-                string json =
-                    JsonConvert.SerializeObject(payload);
+                string json = JsonConvert.SerializeObject(payload);
 
                 var content = new StringContent(
                     json,
                     Encoding.UTF8,
                     "application/json");
 
-                _logger.LogInformation(
-                    "Calling API : {Url}",
-                    url);
+                _logger.LogInformation("Calling API : {Url}", url);
+
+                //_httpClient.Timeout = TimeSpan.FromMinutes(15);
 
                 HttpResponseMessage response =
                     await _httpClient.PostAsync(url, content);
@@ -66,8 +66,7 @@ namespace AxiExportPackage.Services
 
                 if (APIName.Equals("ExportStructures"))
                 {
-                    JObject responseJson =
-                    JObject.Parse(responseContent);
+                    JObject responseJson = JObject.Parse(responseContent);
 
                     string status =
                         responseJson["result"]?[0]?["status"]
@@ -136,17 +135,14 @@ namespace AxiExportPackage.Services
                 }
 
                 else {
-                    JObject responseJson =
-                    JObject.Parse(responseContent);
+                    JObject responseJson = JObject.Parse(responseContent);
 
                     bool success = (bool)responseJson["success"];
                     string message = (string)responseJson["message"];
 
                     if (success)
                     {
-                        _logger.LogInformation(
-                        "API success. Url : {Url}",
-                        url);
+                        _logger.LogInformation("API success.\n Url : {Url}",url);
 
                         return new ApiResponse
                         {

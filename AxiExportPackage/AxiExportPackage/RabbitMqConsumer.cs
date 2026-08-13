@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Linq.Expressions;
+using System.Text;
 using AxiExportPackage.Helpers;
 using AxiExportPackage.Services.Interfaces;
 using Microsoft.Extensions.Configuration;
@@ -33,18 +34,46 @@ namespace AxiExportPackage.Consumers
 
         private void InitializeRabbitMq()
         {
+            if (string.IsNullOrWhiteSpace(_configuration.GetSection("RabbitMQ").ToString()) || string.IsNullOrEmpty(_configuration.GetSection("RabbitMQ").ToString()))
+            {
+                throw new Exception("RabbitMQ configuration is missing or empty.");
+            }
+
+            string host = _configuration["RabbitMQ:Host"];
+            string userName = _configuration["RabbitMQ:UserName"];
+            string password = _configuration["RabbitMQ:Password"];
+            string portValue = _configuration["RabbitMQ:Port"];
+
+            string queueName = _configuration["RabbitMQ:QueueName"];
+
+            if (string.IsNullOrWhiteSpace(host))
+                throw new Exception("RabbitMQ:Host is missing or empty in appsettings.json");
+
+            if (string.IsNullOrWhiteSpace(userName))
+                throw new Exception("RabbitMQ:UserName is missing or empty in appsettings.json");
+
+            if (string.IsNullOrWhiteSpace(password))
+                throw new Exception("RabbitMQ:Password is missing or empty in appsettings.json");
+
+            if (string.IsNullOrWhiteSpace(portValue))
+                throw new Exception("RabbitMQ:Port is missing or empty in appsettings.json");
+
+            if (string.IsNullOrWhiteSpace(queueName))
+                throw new Exception("RabbitMQ:QueueName is missing or empty in appsettings.json");
+
+            if (!int.TryParse(portValue, out int port))
+                throw new Exception("RabbitMQ:Port is not a valid integer");
+
             var factory = new ConnectionFactory
             {
-                HostName = _configuration["RabbitMQ:Host"],
-                UserName = _configuration["RabbitMQ:UserName"],
-                Password = _configuration["RabbitMQ:Password"]
+                HostName = host,
+                Port = port,
+                UserName = userName,
+                Password = password
             };
 
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
-
-            string queueName =
-                _configuration["RabbitMQ:QueueName"];
 
             _channel.QueueDeclare(
                 queue: queueName,
@@ -52,16 +81,19 @@ namespace AxiExportPackage.Consumers
                 exclusive: false,
                 autoDelete: false,
                 arguments: null);
+        
         }
 
-        protected override Task ExecuteAsync(
-            CancellationToken stoppingToken)
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            string queueName =
-                _configuration["RabbitMQ:QueueName"];
+            string queueName = _configuration["RabbitMQ:QueueName"];
 
-            var consumer =
-                new EventingBasicConsumer(_channel);
+            _channel.BasicQos(
+                prefetchSize: 0,
+                prefetchCount: 1,
+                global: false);
+
+            var consumer = new EventingBasicConsumer(_channel);
 
             consumer.Received += async (model, ea) =>
             {
@@ -74,24 +106,15 @@ namespace AxiExportPackage.Consumers
                     message =
                         Encoding.UTF8.GetString(body);
 
-                    _logger.LogInformation(
-                        "Message received from queue.\n");
+                    _logger.LogInformation("Message received from queue.\n{message}",message);
 
-                    _logger.LogInformation(
-                        message);
+                    string queueData = QueueDataHelper.ExtractQueueData(message);
 
-                    string queueData =
-                        QueueDataHelper.ExtractQueueData(message);
+                    using IServiceScope scope = _scopeFactory.CreateScope();
 
-                    using IServiceScope scope =
-                        _scopeFactory.CreateScope();
+                    var exportService = scope.ServiceProvider.GetRequiredService<IPackageExportService>();
 
-                    var exportService =
-                        scope.ServiceProvider
-                        .GetRequiredService<IPackageExportService>();
-
-                    await exportService
-                        .ProcessPackageExport(queueData);
+                    await exportService.ProcessPackageExport(queueData);
 
                     _channel.BasicAck(
                         ea.DeliveryTag,
@@ -99,8 +122,7 @@ namespace AxiExportPackage.Consumers
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex,
-                        "Error processing RMQ message.");
+                    _logger.LogError(ex,"Error processing RMQ message.");
 
                     _channel.BasicNack(
                         ea.DeliveryTag,

@@ -1,0 +1,65 @@
+2026-07-23 19:12:19.489 +05:30 [INF] Application starting...
+2026-07-23 19:12:28.683 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-23 19:12:28.864 +05:30 [INF] RabbitMQ consumer started.
+2026-07-23 19:12:28.885 +05:30 [INF] Message received from queue.
+2026-07-23 19:12:30.014 +05:30 [INF] Hosting environment: Development
+2026-07-23 19:12:30.072 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260722121909-340\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-07-23 19:12:30.088 +05:30 [INF] Content root path: D:\AxiImport-InstallPackage\AxiImportPackage\bin\Debug\net8.0
+2026-07-23 19:12:31.125 +05:30 [INF] InstallPackage process started.###
+2026-07-23 19:12:31.132 +05:30 [INF] InstallPackage started.
+2026-07-23 19:12:31.216 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-23 19:12:31.332 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-23 19:12:31.376 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-23 19:12:31.391 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-23 19:13:34.432 +05:30 [INF] Received HTTP response headers after 63029.8736ms - 200
+2026-07-23 19:14:52.880 +05:30 [INF] End processing HTTP request after 141533.2384ms - 200
+2026-07-23 19:14:52.893 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-23 19:14:52.898 +05:30 [INF] Result : Fail, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-23 19:14:52.906 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-23 19:14:52.921 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-23 19:14:53.037 +05:30 [ERR] System.Exception: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.InstallData(String queueData) in D:\AxiImport-InstallPackage\AxiImportPackage\Services\PackageImportService.cs:line 257
+2026-07-23 19:14:53.211 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Failed to Install Package: AxiPayroll","message":"The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"07/23/26 7:14:53 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-23 19:14:53.224 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:14:53.228 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:14:53.239 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:14:53.261 +05:30 [ERR] InstallPackage Failed
+2026-07-23 19:14:53.912 +05:30 [INF] Received HTTP response headers after 668.0626ms - 200
+2026-07-23 19:14:53.917 +05:30 [INF] End processing HTTP request after 689.7698ms - 200
+2026-07-23 19:14:53.979 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:20:50.759 +05:30 [INF] Message received from queue.
+2026-07-23 19:20:50.780 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260722121909-340\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-07-23 19:20:50.796 +05:30 [INF] InstallPackage process started.###
+2026-07-23 19:20:50.807 +05:30 [INF] InstallPackage started.
+2026-07-23 19:20:50.818 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-23 19:20:50.837 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-23 19:20:50.851 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-23 19:20:50.864 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-23 19:22:28.215 +05:30 [INF] Received HTTP response headers after 97331.9335ms - 200
+2026-07-23 19:22:28.220 +05:30 [INF] End processing HTTP request after 97369.0017ms - 200
+2026-07-23 19:22:28.230 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-23 19:22:28.235 +05:30 [INF] Result : success, Command : Install Package "AxiPayroll" , Message : Command Executed Successfully
+2026-07-23 19:22:28.243 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" 
+2026-07-23 19:22:28.250 +05:30 [INF] InstallPackage completed successfully.
+2026-07-23 19:22:28.265 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Package Installed Successfully: AxiPayroll","message":"The AXI AxiPayroll package has been installed successfully and is now ready to use.","dt":"07/23/26 7:22:28 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-23 19:22:28.283 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:22:28.286 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:22:28.299 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:22:28.744 +05:30 [INF] Received HTTP response headers after 423.9876ms - 200
+2026-07-23 19:22:28.747 +05:30 [INF] End processing HTTP request after 461.5213ms - 200
+2026-07-23 19:22:28.752 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-23 19:22:28.762 +05:30 [INF] InstallPackage completed successfully.

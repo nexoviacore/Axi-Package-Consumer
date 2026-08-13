@@ -1,0 +1,40 @@
+[2026-06-08 12:41:14] Method: Failed to Install Package:  ADG1
+Message: The AXI  ADG1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 12:55:34] Method: Failed to Install Package:  AGD1
+Message: The AXI  AGD1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 13:17:25] Method: Failed to Install Package:  AllScripts1
+Message: The AXI  AllScripts1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 14:43:49] Method: Failed to Install Package:  AllScripts1
+Message: The AXI  AllScripts1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData)
+--------------------------------------------------
+[2026-06-08 14:45:05] Method: Failed to Install Package:  AllScripts1
+Message: The AXI  AllScripts1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData)
+--------------------------------------------------
+[2026-06-08 14:47:03] Method: Failed to Install Package:  AllScripts1
+Message: The AXI  AllScripts1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 14:50:18] Method: Failed to Install Package:  AllScripts1
+Message: The AXI  AllScripts1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 15:16:01] Method: Failed to Install Package:  ADG1
+Message: The AXI  ADG1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 19:19:22] Method: Failed to Install Package:  ADG1
+Message: The AXI  ADG1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-08 19:20:43] Method: Failed to Install Package:  AGD1
+Message: The AXI  AGD1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------

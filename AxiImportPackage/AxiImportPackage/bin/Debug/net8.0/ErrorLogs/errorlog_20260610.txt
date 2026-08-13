@@ -1,0 +1,8 @@
+[2026-06-10 14:18:06] Method: Failed to Install Package:  AxiCurrency1
+Message: The AXI  AxiCurrency1  package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator 
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportStructures(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 121
+--------------------------------------------------
+[2026-06-10 14:52:39] Method: Failed to Install Package: tngtm1
+Message: The AXI tngtm1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ImportData(String queueData) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\PackageImportService.cs:line 176
+--------------------------------------------------

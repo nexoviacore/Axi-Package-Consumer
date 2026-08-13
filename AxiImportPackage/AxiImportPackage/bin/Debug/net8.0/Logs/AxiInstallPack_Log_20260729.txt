@@ -1,0 +1,375 @@
+2026-07-29 19:20:01.586 +05:30 [INF] Application starting...
+2026-07-29 19:20:05.266 +05:30 [FTL] Application terminated unexpectedly.
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: AxiInstallConsumerPackage.Helpers.IPackageImportService Lifetime: Scoped ImplementationType: AxiInstallConsumerPackage.Services.PackageImportService': Unable to resolve service for type 'AxiInstallConsumerPackage.Services.RedisService' while attempting to activate 'AxiInstallConsumerPackage.Services.PackageImportService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: AxiInstallConsumerPackage.Helpers.IPackageImportService Lifetime: Scoped ImplementationType: AxiInstallConsumerPackage.Services.PackageImportService': Unable to resolve service for type 'AxiInstallConsumerPackage.Services.RedisService' while attempting to activate 'AxiInstallConsumerPackage.Services.PackageImportService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'AxiInstallConsumerPackage.Services.RedisService' while attempting to activate 'AxiInstallConsumerPackage.Services.PackageImportService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, ServiceIdentifier serviceIdentifier, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, ServiceIdentifier serviceIdentifier, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\AxiImportRedis\AxiImportPackage\Program.cs:line 38
+2026-07-29 19:21:36.534 +05:30 [INF] Application starting...
+2026-07-29 19:21:37.734 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-29 19:21:37.763 +05:30 [INF] Hosting environment: Development
+2026-07-29 19:21:37.775 +05:30 [INF] Content root path: D:\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-07-29 19:21:37.897 +05:30 [INF] RabbitMQ consumer started.
+2026-07-29 19:27:08.069 +05:30 [INF] Message received from queue.
+2026-07-29 19:27:08.564 +05:30 [INF] Payload {
+  "queuedata": "{\"requestId\":\"PKG-20260610084725-403\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}",
+  "queuejson": null,
+  "queuename": "axiinstallpackagesqueue",
+  "signalrclient": "",
+  "apidesc": null,
+  "timespandelay": 0,
+  "trace": false,
+  "responsequeuename": null,
+  "MsgExpirySecs": 0
+}
+2026-07-29 19:27:09.725 +05:30 [ERR] Error processing RMQ message.
+System.ArgumentNullException: Value cannot be null. (Parameter 'armbaseurl is missing in appsettings.json')
+   at AxiInstallConsumerPackage.Services.RedisService..ctor(IConfiguration configuration, ApiService apiService, ILogger`1 logger) in D:\AxiImportRedis\AxiImportPackage\Services\RedisService.cs:line 19
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.<ExecuteAsync>b__7_0(Object model, BasicDeliverEventArgs ea) in D:\AxiImportRedis\AxiImportPackage\RabbitMqConsumer.cs:line 88
+2026-07-29 19:30:22.205 +05:30 [INF] Application starting...
+2026-07-29 19:30:23.221 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-29 19:30:23.246 +05:30 [INF] Hosting environment: Development
+2026-07-29 19:30:23.255 +05:30 [INF] Content root path: D:\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-07-29 19:30:23.361 +05:30 [INF] RabbitMQ consumer started.
+2026-07-29 19:30:27.864 +05:30 [INF] Message received from queue.
+2026-07-29 19:30:27.866 +05:30 [INF] Payload {
+  "queuedata": "{\"requestId\":\"PKG-20260610084725-403\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}",
+  "queuejson": null,
+  "queuename": "axiinstallpackagesqueue",
+  "signalrclient": "",
+  "apidesc": null,
+  "timespandelay": 0,
+  "trace": false,
+  "responsequeuename": null,
+  "MsgExpirySecs": 0
+}
+2026-07-29 19:30:28.036 +05:30 [INF] InstallPackage process started.###
+2026-07-29 19:30:28.042 +05:30 [INF] InstallPackage started.
+2026-07-29 19:30:28.198 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-29 19:30:28.548 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:30:29.251 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:30:29.278 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:31:32.197 +05:30 [INF] Received HTTP response headers after 62872.5001ms - 200
+2026-07-29 19:31:32.235 +05:30 [INF] End processing HTTP request after 63008.2952ms - 200
+2026-07-29 19:31:32.250 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-29 19:31:32.253 +05:30 [INF] Result : Fail, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:31:32.257 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:31:32.267 +05:30 [INF] InProgressPakage Redis calling
+2026-07-29 19:31:32.271 +05:30 [INF] InProgress Redis key devpgbase114-InProgressPkgs_AxiPayroll and  value AxiPayroll
+2026-07-29 19:31:32.283 +05:30 [INF] WriteRedis {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-InProgressPkgs_AxiPayroll",
+  "InMemoryValue": "AxiPayroll",
+  "IsBinary": false,
+  "KeyExpiryInMins": 1
+}
+2026-07-29 19:31:32.287 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:31:32.302 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:31:32.306 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:31:34.308 +05:30 [INF] Received HTTP response headers after 1994.3502ms - 400
+2026-07-29 19:31:34.337 +05:30 [INF] End processing HTTP request after 2038.2736ms - 400
+2026-07-29 19:31:34.404 +05:30 [ERR] Exception while calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+System.ArgumentNullException: Value cannot be null. (Parameter 'value')
+   at Newtonsoft.Json.Linq.JToken.EnsureValue(JToken value)
+   at Newtonsoft.Json.Linq.JToken.op_Explicit(JToken value)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\AxiImportRedis\AxiImportPackage\Services\ApiService.cs:line 186
+2026-07-29 19:31:34.458 +05:30 [INF] Response : AxiInstallConsumerPackage.Models.ApiResponse
+2026-07-29 19:31:34.464 +05:30 [INF] InProgressPakage Redis calling
+2026-07-29 19:31:34.472 +05:30 [INF] WriteRedis {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-InstalledPkgs_AxiPayroll",
+  "InMemoryValue": "AxiPayroll",
+  "IsBinary": false,
+  "KeyExpiryInMins": 720
+}
+2026-07-29 19:31:34.481 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:31:34.485 +05:30 [ERR] Exception while calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+System.InvalidOperationException: This instance has already started one or more requests. Properties can only be modified before sending the first request.
+   at System.Net.Http.HttpClient.CheckDisposedOrStarted()
+   at System.Net.Http.HttpClient.set_Timeout(TimeSpan value)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\AxiImportRedis\AxiImportPackage\Services\ApiService.cs:line 40
+2026-07-29 19:31:34.514 +05:30 [INF] Response : AxiInstallConsumerPackage.Models.ApiResponse
+2026-07-29 19:31:34.518 +05:30 [INF] InstallPackage completed successfully.
+2026-07-29 19:31:34.761 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Package Installed Successfully: AxiPayroll","message":"The AXI AxiPayroll package has been installed successfully and is now ready to use.","dt":"07/29/26 7:31:34 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-29 19:31:34.774 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:31:34.784 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:31:34.789 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:31:34.854 +05:30 [INF] Received HTTP response headers after 52.1406ms - 200
+2026-07-29 19:31:34.878 +05:30 [INF] End processing HTTP request after 94.7537ms - 200
+2026-07-29 19:31:34.935 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:31:34.940 +05:30 [INF] InstallPackage completed successfully.
+2026-07-29 19:36:02.212 +05:30 [INF] Application starting...
+2026-07-29 19:36:03.260 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-29 19:36:03.287 +05:30 [INF] Hosting environment: Development
+2026-07-29 19:36:03.294 +05:30 [INF] Content root path: D:\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-07-29 19:36:03.360 +05:30 [INF] RabbitMQ consumer started.
+2026-07-29 19:36:06.091 +05:30 [INF] Message received from queue.
+2026-07-29 19:36:06.093 +05:30 [INF] Payload {
+  "queuedata": "{\"requestId\":\"PKG-20260610084725-403\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}",
+  "queuejson": null,
+  "queuename": "axiinstallpackagesqueue",
+  "signalrclient": "",
+  "apidesc": null,
+  "timespandelay": 0,
+  "trace": false,
+  "responsequeuename": null,
+  "MsgExpirySecs": 0
+}
+2026-07-29 19:36:06.364 +05:30 [INF] InstallPackage process started.###
+2026-07-29 19:36:06.389 +05:30 [INF] InstallPackage started.
+2026-07-29 19:36:06.628 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-29 19:36:06.798 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:36:06.900 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:36:06.925 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:36:51.753 +05:30 [INF] Received HTTP response headers after 44804.5702ms - 200
+2026-07-29 19:36:51.775 +05:30 [INF] End processing HTTP request after 44951.1959ms - 200
+2026-07-29 19:36:51.789 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-29 19:36:51.798 +05:30 [INF] Result : Fail, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:36:51.827 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:36:51.902 +05:30 [INF] InProgressPakage Redis calling
+2026-07-29 19:36:51.911 +05:30 [INF] InProgress Redis key devpgbase114-InProgressPkgs_AxiPayroll and  value AxiPayroll
+2026-07-29 19:36:51.922 +05:30 [INF] WriteRedis {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-InProgressPkgs_AxiPayroll",
+  "InMemoryValue": "AxiPayroll",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-07-29 19:36:51.943 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:36:52.007 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:36:52.040 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:36:52.646 +05:30 [INF] Received HTTP response headers after 586.3939ms - 200
+2026-07-29 19:36:52.650 +05:30 [INF] End processing HTTP request after 643.2314ms - 200
+2026-07-29 19:36:52.713 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:36:52.718 +05:30 [INF] Response : AxiInstallConsumerPackage.Models.ApiResponse
+2026-07-29 19:36:52.722 +05:30 [INF] InProgressPakage Redis calling
+2026-07-29 19:36:52.728 +05:30 [INF] WriteRedis {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-InstalledPkgs_AxiPayroll",
+  "InMemoryValue": "AxiPayroll",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "720"
+}
+2026-07-29 19:36:52.737 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:36:52.750 +05:30 [ERR] Exception while calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+System.InvalidOperationException: This instance has already started one or more requests. Properties can only be modified before sending the first request.
+   at System.Net.Http.HttpClient.CheckDisposedOrStarted()
+   at System.Net.Http.HttpClient.set_Timeout(TimeSpan value)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\AxiImportRedis\AxiImportPackage\Services\ApiService.cs:line 40
+2026-07-29 19:36:52.853 +05:30 [INF] Response : AxiInstallConsumerPackage.Models.ApiResponse
+2026-07-29 19:36:52.859 +05:30 [INF] InstallPackage completed successfully.
+2026-07-29 19:36:52.993 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Package Installed Successfully: AxiPayroll","message":"The AXI AxiPayroll package has been installed successfully and is now ready to use.","dt":"07/29/26 7:36:52 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-29 19:36:53.002 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:36:53.004 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:36:53.009 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:36:53.131 +05:30 [INF] Received HTTP response headers after 111.8277ms - 200
+2026-07-29 19:36:53.189 +05:30 [INF] End processing HTTP request after 184.6981ms - 200
+2026-07-29 19:36:53.204 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:36:53.209 +05:30 [INF] InstallPackage completed successfully.
+2026-07-29 19:44:24.271 +05:30 [INF] Application starting...
+2026-07-29 19:45:07.238 +05:30 [INF] Application starting...
+2026-07-29 19:45:08.789 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-29 19:45:08.843 +05:30 [INF] RabbitMQ consumer started.
+2026-07-29 19:45:08.970 +05:30 [INF] Hosting environment: Development
+2026-07-29 19:45:09.189 +05:30 [INF] Content root path: D:\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-07-29 19:45:12.891 +05:30 [INF] Message received from queue.
+2026-07-29 19:45:12.896 +05:30 [INF] Payload {
+  "queuedata": "{\"requestId\":\"PKG-20260610084725-403\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}",
+  "queuejson": null,
+  "queuename": "axiinstallpackagesqueue",
+  "signalrclient": "",
+  "apidesc": null,
+  "timespandelay": 0,
+  "trace": false,
+  "responsequeuename": null,
+  "MsgExpirySecs": 0
+}
+2026-07-29 19:45:13.270 +05:30 [INF] InstallPackage process started.###
+2026-07-29 19:45:13.276 +05:30 [INF] InstallPackage started.
+2026-07-29 19:45:13.337 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-29 19:45:13.449 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:45:13.485 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:45:13.500 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:46:02.009 +05:30 [INF] Received HTTP response headers after 48495.2226ms - 200
+2026-07-29 19:46:02.028 +05:30 [INF] End processing HTTP request after 48563.5083ms - 200
+2026-07-29 19:46:02.046 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-29 19:46:02.049 +05:30 [INF] Result : Fail, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:46:02.054 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:46:02.071 +05:30 [INF] InProgressPackage Redis calling
+2026-07-29 19:46:02.081 +05:30 [INF] InProgress Redis key devpgbase114-InProgressPkgs_AxiPayroll and  value AxiPayroll
+2026-07-29 19:46:02.086 +05:30 [INF] WriteRedis {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-InProgressPkgs_AxiPayroll",
+  "InMemoryValue": "AxiPayroll",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-07-29 19:46:02.097 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.104 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.113 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.511 +05:30 [INF] Received HTTP response headers after 392.7941ms - 200
+2026-07-29 19:46:02.519 +05:30 [INF] End processing HTTP request after 417.4281ms - 200
+2026-07-29 19:46:02.578 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.582 +05:30 [INF] Response : AxiInstallConsumerPackage.Models.ApiResponse
+2026-07-29 19:46:02.585 +05:30 [INF] Boolean : True
+2026-07-29 19:46:02.596 +05:30 [INF] InstallPackage Redis calling
+2026-07-29 19:46:02.605 +05:30 [INF] WriteRedis {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-InstalledPkgs_AxiPayroll",
+  "InMemoryValue": "AxiPayroll",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "720"
+}
+2026-07-29 19:46:02.618 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.650 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.655 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.723 +05:30 [INF] Received HTTP response headers after 63.4133ms - 200
+2026-07-29 19:46:02.727 +05:30 [INF] End processing HTTP request after 76.6155ms - 200
+2026-07-29 19:46:02.790 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-07-29 19:46:02.797 +05:30 [INF] Response : AxiInstallConsumerPackage.Models.ApiResponse
+2026-07-29 19:46:02.800 +05:30 [INF] InstallPackage completed successfully.
+2026-07-29 19:46:03.016 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Package Installed Successfully: AxiPayroll","message":"The AXI AxiPayroll package has been installed successfully and is now ready to use.","dt":"07/29/26 7:46:02 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-29 19:46:03.127 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:46:03.129 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:46:03.134 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:46:03.178 +05:30 [INF] Received HTTP response headers after 39.0112ms - 200
+2026-07-29 19:46:03.185 +05:30 [INF] End processing HTTP request after 56.7625ms - 200
+2026-07-29 19:46:03.247 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:46:03.251 +05:30 [INF] InstallPackage completed successfully.
+2026-07-29 19:49:50.993 +05:30 [INF] Application starting...
+2026-07-29 19:49:51.840 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-29 19:49:51.873 +05:30 [INF] Hosting environment: Development
+2026-07-29 19:49:51.886 +05:30 [INF] Content root path: D:\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-07-29 19:49:52.043 +05:30 [INF] RabbitMQ consumer started.
+2026-07-29 19:49:54.242 +05:30 [INF] Message received from queue.
+2026-07-29 19:49:54.248 +05:30 [INF] Payload {
+  "queuedata": "{\"requestId\":\"PKG-20260610084725-403\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}",
+  "queuejson": null,
+  "queuename": "axiinstallpackagesqueue",
+  "signalrclient": "",
+  "apidesc": null,
+  "timespandelay": 0,
+  "trace": false,
+  "responsequeuename": null,
+  "MsgExpirySecs": 0
+}
+2026-07-29 19:49:54.599 +05:30 [INF] InstallPackage process started.###
+2026-07-29 19:49:54.607 +05:30 [INF] InstallPackage started.
+2026-07-29 19:49:54.685 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-29 19:49:54.822 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:49:54.873 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:49:54.900 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:50:38.544 +05:30 [INF] Received HTTP response headers after 43618.7125ms - 200
+2026-07-29 19:50:38.582 +05:30 [INF] End processing HTTP request after 43739.5383ms - 200
+2026-07-29 19:50:38.605 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-29 19:50:38.619 +05:30 [INF] Result : Fail, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:50:38.641 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:50:38.670 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:50:38.682 +05:30 [ERR] InstallPackage Failed
+2026-07-29 19:50:38.687 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:50:38.700 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 103
+2026-07-29 19:50:39.033 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI AxiPayroll package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"07/29/26 7:50:38 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-07-29 19:50:39.046 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:50:39.052 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:50:39.063 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:50:39.622 +05:30 [INF] Received HTTP response headers after 552.3317ms - 200
+2026-07-29 19:50:39.634 +05:30 [INF] End processing HTTP request after 583.5781ms - 200
+2026-07-29 19:50:39.681 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-07-29 19:53:22.554 +05:30 [INF] Application starting...
+2026-07-29 19:53:25.054 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-29 19:53:25.081 +05:30 [INF] Hosting environment: Development
+2026-07-29 19:53:25.087 +05:30 [INF] Content root path: D:\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-07-29 19:53:25.120 +05:30 [INF] RabbitMQ consumer started.
+2026-07-29 19:53:28.106 +05:30 [INF] Message received from queue.
+2026-07-29 19:53:28.535 +05:30 [INF] Payload {
+  "queuedata": "{\"requestId\":\"PKG-20260610084725-403\",\"appName\":\"devpgbase114\",\"packageName\":\"AxiPayroll\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}",
+  "queuejson": null,
+  "queuename": "axiinstallpackagesqueue",
+  "signalrclient": "",
+  "apidesc": null,
+  "timespandelay": 0,
+  "trace": false,
+  "responsequeuename": null,
+  "MsgExpirySecs": 0
+}
+2026-07-29 19:53:30.259 +05:30 [INF] InstallPackage process started.###
+2026-07-29 19:53:36.042 +05:30 [INF] InstallPackage started.
+2026-07-29 19:53:36.659 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Package \"AxiPayroll\" ",
+  "trace": true
+}
+2026-07-29 19:53:36.996 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:53:37.087 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:53:37.103 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-07-29 19:54:44.722 +05:30 [INF] Received HTTP response headers after 67587.7298ms - 200
+2026-07-29 19:54:44.748 +05:30 [INF] End processing HTTP request after 67724.8087ms - 200
+2026-07-29 19:54:44.769 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Package \"AxiPayroll\" ","trace":true}
+2026-07-29 19:54:44.777 +05:30 [INF] Result : Fail, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:54:44.783 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "AxiPayroll" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-07-29 19:54:44.793 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request

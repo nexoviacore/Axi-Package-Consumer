@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "ddlscritps": [
+      "CREATE SEQUENCE IF NOT EXISTS \"{{schemaName}}\".seq_axipackagesddl_id START WITH 1 INCREMENT BY 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1;\r\n$D#",
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"axipackagesddl\" (\r\n    \"id\" integer DEFAULT nextval('seq_axipackagesddl_id'::regclass) NOT NULL,\r\n    \"package_name\" varchar(100) NOT NULL,\r\n    \"package_version\" varchar(20) NOT NULL,\r\n    \"package_author\" varchar(100),\r\n    \"package_status\" varchar(20) DEFAULT 'ACTIVE'::character varying NOT NULL,\r\n    \"created_on\" timestamp without time zone DEFAULT now() NOT NULL,\r\n    \"updated_on\" timestamp without time zone\r\n);\r\n$D#",
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"vw_axipackagesddl_active\" (\r\n    \"id\" integer,\r\n    \"package_name\" varchar(100),\r\n    \"package_version\" varchar(20),\r\n    \"package_author\" varchar(100),\r\n    \"package_status\" varchar(20),\r\n    \"created_on\" timestamp without time zone,\r\n    \"updated_on\" timestamp without time zone\r\n);\r\n$D#",
+      "CREATE INDEX idx_axipackagesddl_status ON \"{{schemaName}}\".axipackagesddl USING btree (package_status);\r\n$D#"
+    ]
+  }
+}

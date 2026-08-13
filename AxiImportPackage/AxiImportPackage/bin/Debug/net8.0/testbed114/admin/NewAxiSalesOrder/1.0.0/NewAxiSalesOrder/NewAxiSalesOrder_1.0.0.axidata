@@ -1,0 +1,46 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-57e8ac07-c4ad-4112-bafe-a4b427fef056",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Axi Sales Order-(axslo)",
+                "stransid": "axslo",
+                "txttransid": "axslo",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator,Reporting manager",
+                "notifytocnd": "1,3",
+                "isemailreq": "F"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "Order Details",
+                "notify_msg_new": "Your Order Has been Placed"
+              }
+            },
+            "dc4": {},
+            "dc5": {},
+            "dc6": {}
+          }
+        }
+      ]
+    }
+  }
+}

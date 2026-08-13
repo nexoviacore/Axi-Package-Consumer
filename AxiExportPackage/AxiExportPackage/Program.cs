@@ -21,6 +21,18 @@ try
 {
     Log.Information("Application starting...");
 
+    string appSettingsPath = Path.Combine(AppContext.BaseDirectory, "appsettings.json");
+
+    if (!File.Exists(appSettingsPath))
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"Error: '{appSettingsPath}' was not found.");
+        Console.WriteLine("Application cannot continue without appsettings.json. Press enter to close.");
+        Console.ResetColor();
+        Console.ReadLine();
+        return;
+    }
+
     var builder = Host.CreateApplicationBuilder(args);
 
     builder.Services.AddHostedService<RabbitMqConsumer>();
@@ -42,6 +54,8 @@ try
 catch (Exception ex)
 {
     Log.Fatal(ex, "Application terminated unexpectedly.");
+    Log.Information("Press enter to close the console.");
+    Console.ReadLine();
 }
 finally
 {

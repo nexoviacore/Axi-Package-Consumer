@@ -1,0 +1,1394 @@
+2026-08-12 10:45:15.128 +05:30 [INF] Application starting...
+2026-08-12 10:45:19.466 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-12 10:45:19.502 +05:30 [INF] Hosting environment: Development
+2026-08-12 10:45:19.515 +05:30 [INF] Content root path: D:\Optimized\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-08-12 10:45:19.551 +05:30 [INF] RabbitMQ consumer started.
+2026-08-12 10:46:25.530 +05:30 [INF] Message received from queue.
+2026-08-12 10:46:25.543 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:46:26.761 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:46:26.770 +05:30 [INF] InstallPackage started.
+2026-08-12 10:46:26.838 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test\" ",
+  "trace": true
+}
+2026-08-12 10:46:26.973 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:46:27.025 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:46:27.043 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:46:29.826 +05:30 [INF] Received HTTP response headers after 2775.4101ms - 500
+2026-08-12 10:46:29.844 +05:30 [INF] End processing HTTP request after 2851.6646ms - 500
+2026-08-12 10:46:29.857 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test\" ","trace":true}
+2026-08-12 10:46:29.859 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:46:29.866 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:46:29.874 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:46:29.878 +05:30 [INF] InProgressKey Set
+2026-08-12 10:46:29.886 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test",
+  "InMemoryValue": "CMD_Test",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:46:29.890 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:29.893 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:29.896 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:30.160 +05:30 [INF] Message received from queue.
+2026-08-12 10:46:30.177 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051630-265\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test1\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:46:30.201 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:46:30.212 +05:30 [INF] InstallPackage started.
+2026-08-12 10:46:30.225 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test1\" ",
+  "trace": true
+}
+2026-08-12 10:46:30.245 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:46:30.258 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:46:30.268 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:46:32.973 +05:30 [INF] Received HTTP response headers after 3071.4784ms - 200
+2026-08-12 10:46:32.977 +05:30 [INF] End processing HTTP request after 3084.3741ms - 200
+2026-08-12 10:46:33.049 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:33.054 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:46:33.057 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:46:33.354 +05:30 [INF] SignalR Calling
+2026-08-12 10:46:33.357 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:46:33 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:46:33.369 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:33.372 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:33.376 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:33.523 +05:30 [INF] Received HTTP response headers after 135.7073ms - 200
+2026-08-12 10:46:33.527 +05:30 [INF] End processing HTTP request after 155.811ms - 200
+2026-08-12 10:46:33.539 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:36.509 +05:30 [INF] Received HTTP response headers after 6232.2338ms - 200
+2026-08-12 10:46:36.526 +05:30 [INF] End processing HTTP request after 6267.4206ms - 200
+2026-08-12 10:46:36.533 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test1\" ","trace":true}
+2026-08-12 10:46:36.538 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:46:36.545 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:46:36.559 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:46:36.570 +05:30 [INF] InProgressKey Set
+2026-08-12 10:46:36.575 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test1",
+  "InMemoryValue": "CMD_Test1",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:46:36.583 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:36.591 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:36.594 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:36.774 +05:30 [INF] Received HTTP response headers after 169.5214ms - 200
+2026-08-12 10:46:36.793 +05:30 [INF] End processing HTTP request after 201.9957ms - 200
+2026-08-12 10:46:36.851 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:46:36.857 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:46:36.871 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:46:36.907 +05:30 [INF] SignalR Calling
+2026-08-12 10:46:36.910 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:46:36 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:46:36.925 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:36.928 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:36.942 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:46:37.111 +05:30 [INF] Received HTTP response headers after 156.0289ms - 200
+2026-08-12 10:46:37.174 +05:30 [INF] End processing HTTP request after 245.8987ms - 200
+2026-08-12 10:46:37.194 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:47:29.990 +05:30 [INF] Application starting...
+2026-08-12 10:47:31.204 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-12 10:47:31.228 +05:30 [INF] Hosting environment: Development
+2026-08-12 10:47:31.234 +05:30 [INF] Content root path: D:\Optimized\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-08-12 10:47:31.417 +05:30 [INF] RabbitMQ consumer started.
+2026-08-12 10:48:02.160 +05:30 [INF] Message received from queue.
+2026-08-12 10:48:02.197 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051801-237\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:48:02.584 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:48:02.598 +05:30 [INF] InstallPackage started.
+2026-08-12 10:48:02.701 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test\" ",
+  "trace": true
+}
+2026-08-12 10:48:02.882 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:48:02.937 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:48:02.966 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:48:03.934 +05:30 [INF] Received HTTP response headers after 960.4071ms - 500
+2026-08-12 10:48:03.956 +05:30 [INF] End processing HTTP request after 1051.6901ms - 500
+2026-08-12 10:48:03.968 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test\" ","trace":true}
+2026-08-12 10:48:03.973 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:48:03.979 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:48:03.986 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:48:03.998 +05:30 [INF] InProgressKey Set
+2026-08-12 10:48:04.003 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test",
+  "InMemoryValue": "CMD_Test",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:48:04.013 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:48:04.017 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:48:04.028 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:48:04.583 +05:30 [INF] Received HTTP response headers after 551.4843ms - 200
+2026-08-12 10:48:04.587 +05:30 [INF] End processing HTTP request after 570.5151ms - 200
+2026-08-12 10:48:04.598 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:48:04.601 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:48:04.612 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:48:04.879 +05:30 [INF] SignalR Calling
+2026-08-12 10:48:04.882 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:48:04 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:48:04.894 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:48:04.897 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:48:04.902 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:48:05.043 +05:30 [INF] Received HTTP response headers after 130.7153ms - 200
+2026-08-12 10:48:05.046 +05:30 [INF] End processing HTTP request after 149.977ms - 200
+2026-08-12 10:48:05.050 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:49.772 +05:30 [INF] Message received from queue.
+2026-08-12 10:49:49.775 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051949-669\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test1\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:49:49.787 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:49:49.790 +05:30 [INF] InstallPackage started.
+2026-08-12 10:49:49.798 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test1\" ",
+  "trace": true
+}
+2026-08-12 10:49:49.805 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:49:49.820 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:49:49.826 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:49:50.319 +05:30 [INF] Received HTTP response headers after 484.3779ms - 500
+2026-08-12 10:49:50.336 +05:30 [INF] End processing HTTP request after 515.719ms - 500
+2026-08-12 10:49:50.347 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test1\" ","trace":true}
+2026-08-12 10:49:50.367 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test1" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:49:50.372 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test1" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:49:50.391 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:49:50.400 +05:30 [INF] InProgressKey Set
+2026-08-12 10:49:50.418 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test1",
+  "InMemoryValue": "CMD_Test1",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:49:50.437 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:50.441 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:50.453 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:50.956 +05:30 [INF] Received HTTP response headers after 486.4283ms - 200
+2026-08-12 10:49:50.959 +05:30 [INF] End processing HTTP request after 518.6196ms - 200
+2026-08-12 10:49:50.969 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:50.985 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:49:51.002 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:49:51.043 +05:30 [INF] SignalR Calling
+2026-08-12 10:49:51.054 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:49:51 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:49:51.067 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:51.091 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:51.103 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:51.134 +05:30 [INF] Message received from queue.
+2026-08-12 10:49:51.137 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051951-7\",\"appName\":\"pgbase114\",\"packageName\":\"sales26_package\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:49:51.158 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:49:51.167 +05:30 [INF] InstallPackage started.
+2026-08-12 10:49:51.171 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"sales26_package\" ",
+  "trace": true
+}
+2026-08-12 10:49:51.179 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:49:51.191 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:49:51.201 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:49:51.202 +05:30 [INF] Received HTTP response headers after 95.7338ms - 200
+2026-08-12 10:49:51.220 +05:30 [INF] End processing HTTP request after 128.5211ms - 200
+2026-08-12 10:49:51.232 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:56.188 +05:30 [INF] Received HTTP response headers after 4979.3055ms - 200
+2026-08-12 10:49:56.198 +05:30 [INF] End processing HTTP request after 5007.2591ms - 200
+2026-08-12 10:49:56.202 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"sales26_package\" ","trace":true}
+2026-08-12 10:49:56.214 +05:30 [INF] Result : Fail, Command : Install Package "sales26_package" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:49:56.224 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "sales26_package" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:49:56.236 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:49:56.249 +05:30 [INF] InProgressKey Set
+2026-08-12 10:49:56.252 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_sales26_package",
+  "InMemoryValue": "sales26_package",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:49:56.258 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:56.275 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:56.283 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:56.455 +05:30 [INF] Received HTTP response headers after 163.8898ms - 200
+2026-08-12 10:49:56.463 +05:30 [INF] End processing HTTP request after 188.8504ms - 200
+2026-08-12 10:49:56.473 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:49:56.489 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:49:56.507 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:49:56.553 +05:30 [INF] SignalR Calling
+2026-08-12 10:49:56.572 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:49:56 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:49:56.605 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:56.618 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:56.630 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:49:56.771 +05:30 [INF] Received HTTP response headers after 134.4958ms - 200
+2026-08-12 10:49:56.785 +05:30 [INF] End processing HTTP request after 167.2366ms - 200
+2026-08-12 10:49:56.801 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:29.621 +05:30 [INF] Application starting...
+2026-08-12 10:55:36.465 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-12 10:55:36.525 +05:30 [INF] Hosting environment: Development
+2026-08-12 10:55:36.536 +05:30 [INF] Content root path: D:\Optimized\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-08-12 10:55:36.554 +05:30 [INF] RabbitMQ consumer started.
+2026-08-12 10:55:43.814 +05:30 [INF] Message received from queue.
+2026-08-12 10:55:43.818 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812052543-560\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:55:44.855 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:55:44.863 +05:30 [INF] InstallPackage started.
+2026-08-12 10:55:44.941 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test\" ",
+  "trace": true
+}
+2026-08-12 10:55:45.063 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:55:45.104 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:55:45.118 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:55:46.554 +05:30 [INF] Received HTTP response headers after 1425.0962ms - 500
+2026-08-12 10:55:46.582 +05:30 [INF] End processing HTTP request after 1500.7384ms - 500
+2026-08-12 10:55:46.603 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test\" ","trace":true}
+2026-08-12 10:55:46.606 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:55:46.618 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:55:46.640 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:55:46.655 +05:30 [INF] InProgressKey Set
+2026-08-12 10:55:46.668 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test",
+  "InMemoryValue": "CMD_Test",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:55:46.675 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:46.691 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:46.704 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:47.153 +05:30 [INF] Received HTTP response headers after 443.8517ms - 200
+2026-08-12 10:55:47.156 +05:30 [INF] End processing HTTP request after 467.4631ms - 200
+2026-08-12 10:55:47.243 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:47.251 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 10:55:47.255 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:55:47.575 +05:30 [INF] SignalR Calling
+2026-08-12 10:55:47.584 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:55:47 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:55:47.592 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:47.604 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:47.619 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:47.683 +05:30 [INF] Message received from queue.
+2026-08-12 10:55:47.687 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812052544-976\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test1\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 10:55:47.704 +05:30 [INF] InstallPackage process started.###
+2026-08-12 10:55:47.709 +05:30 [INF] InstallPackage started.
+2026-08-12 10:55:47.722 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test1\" ",
+  "trace": true
+}
+2026-08-12 10:55:47.739 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:55:47.752 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:55:47.758 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 10:55:47.820 +05:30 [INF] Received HTTP response headers after 197.1226ms - 200
+2026-08-12 10:55:47.837 +05:30 [INF] End processing HTTP request after 233.5149ms - 200
+2026-08-12 10:55:47.851 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:52.790 +05:30 [INF] Received HTTP response headers after 5016.4456ms - 200
+2026-08-12 10:55:52.797 +05:30 [INF] End processing HTTP request after 5044.8558ms - 200
+2026-08-12 10:55:52.801 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test1\" ","trace":true}
+2026-08-12 10:55:52.804 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:55:52.818 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:55:52.833 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:55:52.837 +05:30 [INF] InProgressKey Set
+2026-08-12 10:55:52.845 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test1",
+  "InMemoryValue": "CMD_Test1",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 10:55:52.855 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:52.868 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:52.875 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:52.934 +05:30 [INF] Received HTTP response headers after 45.3292ms - 200
+2026-08-12 10:55:52.937 +05:30 [INF] End processing HTTP request after 68.9951ms - 200
+2026-08-12 10:55:53.007 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 10:55:53.016 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 10:55:53.019 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 10:55:53.036 +05:30 [INF] SignalR Calling
+2026-08-12 10:55:53.039 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 10:55:53 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 10:55:53.055 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:53.068 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:53.073 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 10:55:53.304 +05:30 [INF] Received HTTP response headers after 214.7344ms - 200
+2026-08-12 10:55:53.308 +05:30 [INF] End processing HTTP request after 239.8883ms - 200
+2026-08-12 10:55:53.316 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:01:06.163 +05:30 [INF] Application starting...
+2026-08-12 16:01:10.281 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-12 16:01:10.307 +05:30 [INF] Hosting environment: Development
+2026-08-12 16:01:10.314 +05:30 [INF] Content root path: D:\Optimized\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-08-12 16:01:10.454 +05:30 [INF] RabbitMQ consumer started.
+2026-08-12 16:02:11.684 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:11.689 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103208-914\",\"appName\":\"pgbase114\",\"packageName\":\"sales26_package\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:12.495 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:12.508 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:12.602 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"sales26_package\" ",
+  "trace": true
+}
+2026-08-12 16:02:12.713 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:12.759 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:12.777 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:15.574 +05:30 [INF] Received HTTP response headers after 2774.1733ms - 500
+2026-08-12 16:02:15.593 +05:30 [INF] End processing HTTP request after 2866.866ms - 500
+2026-08-12 16:02:15.608 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"sales26_package\" ","trace":true}
+2026-08-12 16:02:15.610 +05:30 [INF] Result : Fail, Command : Install Package "sales26_package" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:15.623 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "sales26_package" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:15.634 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:15.638 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:15.645 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_sales26_package",
+  "InMemoryValue": "sales26_package",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:15.656 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:15.670 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:15.676 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:16.311 +05:30 [INF] Received HTTP response headers after 623.9221ms - 200
+2026-08-12 16:02:16.327 +05:30 [INF] End processing HTTP request after 658.2185ms - 200
+2026-08-12 16:02:16.345 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:16.357 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:16.368 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:16.656 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:16.661 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:16 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:16.671 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:16.681 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:16.692 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:16.757 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:16.762 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103209-643\",\"appName\":\"pgbase114\",\"packageName\":\"ERP 0099\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:16.788 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:16.792 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:16.811 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"ERP 0099\" ",
+  "trace": true
+}
+2026-08-12 16:02:16.827 +05:30 [INF] Received HTTP response headers after 129.1351ms - 200
+2026-08-12 16:02:16.838 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:16.850 +05:30 [INF] End processing HTTP request after 171.2378ms - 200
+2026-08-12 16:02:16.873 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:16.890 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:16.914 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:17.220 +05:30 [INF] Received HTTP response headers after 267.4368ms - 500
+2026-08-12 16:02:17.228 +05:30 [INF] End processing HTTP request after 354.1815ms - 500
+2026-08-12 16:02:17.234 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"ERP 0099\" ","trace":true}
+2026-08-12 16:02:17.239 +05:30 [INF] Result : Fail, Command : Install Package "ERP 0099" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:17.244 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "ERP 0099" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:17.255 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:17.259 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:17.266 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP_0099",
+  "InMemoryValue": "ERP 0099",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:17.274 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:17.278 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:17.282 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:17.330 +05:30 [INF] Received HTTP response headers after 37.5873ms - 200
+2026-08-12 16:02:17.334 +05:30 [INF] End processing HTTP request after 56.9786ms - 200
+2026-08-12 16:02:17.404 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:17.407 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:02:17.411 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP 0099 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:17.441 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:17.444 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP 0099 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:17 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:17.455 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:17.459 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:17.472 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:17.524 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:17.528 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103211-242\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test1\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:17.550 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:17.555 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:17.561 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test1\" ",
+  "trace": true
+}
+2026-08-12 16:02:17.585 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:17.594 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:17.600 +05:30 [INF] Received HTTP response headers after 123.5424ms - 200
+2026-08-12 16:02:17.627 +05:30 [INF] End processing HTTP request after 167.8568ms - 200
+2026-08-12 16:02:17.620 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:17.636 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:23.770 +05:30 [INF] Received HTTP response headers after 6111.9797ms - 200
+2026-08-12 16:02:23.786 +05:30 [INF] End processing HTTP request after 6191.8003ms - 200
+2026-08-12 16:02:23.811 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test1\" ","trace":true}
+2026-08-12 16:02:23.841 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:23.855 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:23.869 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:23.876 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:23.886 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test1",
+  "InMemoryValue": "CMD_Test1",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:23.891 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:23.901 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:23.905 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:23.945 +05:30 [INF] Received HTTP response headers after 34.5933ms - 200
+2026-08-12 16:02:23.955 +05:30 [INF] End processing HTTP request after 54.7885ms - 200
+2026-08-12 16:02:24.017 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:24.027 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:24.047 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:24.087 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:24.094 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:24 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:24.153 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:24.178 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:24.190 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:24.244 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:24.253 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103212-815\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:24.259 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:24.272 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:24.276 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test\" ",
+  "trace": true
+}
+2026-08-12 16:02:24.292 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:24.299 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:24.315 +05:30 [INF] Received HTTP response headers after 113.1574ms - 200
+2026-08-12 16:02:24.335 +05:30 [INF] End processing HTTP request after 156.4916ms - 200
+2026-08-12 16:02:24.342 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:24.328 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:26.250 +05:30 [INF] Received HTTP response headers after 1876.0701ms - 200
+2026-08-12 16:02:26.256 +05:30 [INF] End processing HTTP request after 1956.5893ms - 200
+2026-08-12 16:02:26.264 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test\" ","trace":true}
+2026-08-12 16:02:26.273 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:26.285 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:26.298 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:26.307 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:26.311 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test",
+  "InMemoryValue": "CMD_Test",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:26.322 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:26.332 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:26.344 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:26.401 +05:30 [INF] Received HTTP response headers after 41.3062ms - 200
+2026-08-12 16:02:26.410 +05:30 [INF] End processing HTTP request after 78.3143ms - 200
+2026-08-12 16:02:26.484 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:26.491 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:26.494 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:26.519 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:26.531 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:26 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:26.547 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:26.552 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:26.563 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:26.616 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:26.619 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103214-919\",\"appName\":\"pgbase114\",\"packageName\":\"PackageAxiNEWTesting\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:26.638 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:26.641 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:26.644 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"PackageAxiNEWTesting\" ",
+  "trace": true
+}
+2026-08-12 16:02:26.657 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:26.668 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:26.673 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:26.678 +05:30 [INF] Received HTTP response headers after 105.9645ms - 200
+2026-08-12 16:02:26.695 +05:30 [INF] End processing HTTP request after 142.6856ms - 200
+2026-08-12 16:02:26.721 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:28.655 +05:30 [INF] Received HTTP response headers after 1968.1028ms - 200
+2026-08-12 16:02:28.664 +05:30 [INF] End processing HTTP request after 1996.3562ms - 200
+2026-08-12 16:02:28.675 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"PackageAxiNEWTesting\" ","trace":true}
+2026-08-12 16:02:28.692 +05:30 [INF] Result : Fail, Command : Install Package "PackageAxiNEWTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:28.710 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "PackageAxiNEWTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:28.733 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:28.739 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:28.745 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_PackageAxiNEWTesting",
+  "InMemoryValue": "PackageAxiNEWTesting",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:28.754 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:28.768 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:28.774 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:28.825 +05:30 [INF] Received HTTP response headers after 38.3353ms - 200
+2026-08-12 16:02:28.839 +05:30 [INF] End processing HTTP request after 71.0437ms - 200
+2026-08-12 16:02:29.006 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:29.189 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:29.193 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI PackageAxiNEWTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:29.221 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:29.226 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI PackageAxiNEWTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:29 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:29.240 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:29.244 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:29.255 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:29.302 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:29.304 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103215-827\",\"appName\":\"pgbase114\",\"packageName\":\"PackageAxiTesting\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:29.310 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:29.313 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:29.320 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"PackageAxiTesting\" ",
+  "trace": true
+}
+2026-08-12 16:02:29.327 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:29.341 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:29.360 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:29.370 +05:30 [INF] Received HTTP response headers after 111.5219ms - 200
+2026-08-12 16:02:29.409 +05:30 [INF] End processing HTTP request after 164.616ms - 200
+2026-08-12 16:02:29.425 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:31.254 +05:30 [INF] Received HTTP response headers after 1877.0236ms - 200
+2026-08-12 16:02:31.262 +05:30 [INF] End processing HTTP request after 1921.1251ms - 200
+2026-08-12 16:02:31.271 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"PackageAxiTesting\" ","trace":true}
+2026-08-12 16:02:31.286 +05:30 [INF] Result : Fail, Command : Install Package "PackageAxiTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:31.301 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "PackageAxiTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:31.326 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:31.336 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:31.344 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_PackageAxiTesting",
+  "InMemoryValue": "PackageAxiTesting",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:31.361 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:31.377 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:31.390 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:31.431 +05:30 [INF] Received HTTP response headers after 33.66ms - 200
+2026-08-12 16:02:31.438 +05:30 [INF] End processing HTTP request after 61.4756ms - 200
+2026-08-12 16:02:31.501 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:31.506 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:31.514 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:31.540 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:31.547 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:31 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:31.570 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:31.580 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:31.604 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:31.662 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:31.666 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103221-411\",\"appName\":\"pgbase114\",\"packageName\":\"NewPack2\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:31.671 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:31.674 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:31.677 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"NewPack2\" ",
+  "trace": true
+}
+2026-08-12 16:02:31.690 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:31.701 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:31.711 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:31.731 +05:30 [INF] Received HTTP response headers after 112.0572ms - 200
+2026-08-12 16:02:31.742 +05:30 [INF] End processing HTTP request after 164.05ms - 200
+2026-08-12 16:02:31.753 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:34.127 +05:30 [INF] Received HTTP response headers after 2406.6484ms - 200
+2026-08-12 16:02:34.135 +05:30 [INF] End processing HTTP request after 2433.9965ms - 200
+2026-08-12 16:02:34.144 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"NewPack2\" ","trace":true}
+2026-08-12 16:02:34.158 +05:30 [INF] Result : Fail, Command : Install Package "NewPack2" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:34.184 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "NewPack2" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:34.202 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:34.215 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:34.222 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_NewPack2",
+  "InMemoryValue": "NewPack2",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:34.236 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:34.247 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:34.260 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:34.316 +05:30 [INF] Received HTTP response headers after 37.5863ms - 200
+2026-08-12 16:02:34.323 +05:30 [INF] End processing HTTP request after 76.2102ms - 200
+2026-08-12 16:02:34.384 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:34.389 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:34.398 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI NewPack2 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:34.440 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:34.448 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI NewPack2 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:34 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:34.472 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:34.483 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:34.492 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:34.561 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:34.568 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103222-36\",\"appName\":\"pgbase114\",\"packageName\":\"NewPack3\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:34.579 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:34.590 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:34.597 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"NewPack3\" ",
+  "trace": true
+}
+2026-08-12 16:02:34.616 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:34.625 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:34.637 +05:30 [INF] Received HTTP response headers after 124.593ms - 200
+2026-08-12 16:02:34.637 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:34.652 +05:30 [INF] End processing HTTP request after 169.5064ms - 200
+2026-08-12 16:02:34.686 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:36.708 +05:30 [INF] Received HTTP response headers after 2039.4931ms - 200
+2026-08-12 16:02:36.718 +05:30 [INF] End processing HTTP request after 2092.7036ms - 200
+2026-08-12 16:02:36.736 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"NewPack3\" ","trace":true}
+2026-08-12 16:02:36.751 +05:30 [INF] Result : Fail, Command : Install Package "NewPack3" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:36.773 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "NewPack3" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:36.797 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:36.809 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:36.816 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_NewPack3",
+  "InMemoryValue": "NewPack3",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:36.831 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:36.843 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:36.856 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:36.941 +05:30 [INF] Received HTTP response headers after 76.7813ms - 200
+2026-08-12 16:02:37.034 +05:30 [INF] End processing HTTP request after 191.1953ms - 200
+2026-08-12 16:02:37.038 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:37.042 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:37.059 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI NewPack3 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:37.075 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:37.085 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI NewPack3 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:37 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:37.093 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:37.102 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:37.108 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:37.157 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:37.164 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103223-464\",\"appName\":\"pgbase114\",\"packageName\":\"NewPack4\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:37.171 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:37.187 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:37.193 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"NewPack4\" ",
+  "trace": true
+}
+2026-08-12 16:02:37.207 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:37.217 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:37.221 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:37.231 +05:30 [INF] Received HTTP response headers after 114.7864ms - 200
+2026-08-12 16:02:37.238 +05:30 [INF] End processing HTTP request after 135.5454ms - 200
+2026-08-12 16:02:37.244 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:39.264 +05:30 [INF] Received HTTP response headers after 2032.9621ms - 200
+2026-08-12 16:02:39.276 +05:30 [INF] End processing HTTP request after 2058.639ms - 200
+2026-08-12 16:02:39.287 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"NewPack4\" ","trace":true}
+2026-08-12 16:02:39.298 +05:30 [INF] Result : Fail, Command : Install Package "NewPack4" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:39.309 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "NewPack4" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:39.321 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:39.323 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:39.325 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_NewPack4",
+  "InMemoryValue": "NewPack4",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:39.333 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:39.335 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:39.339 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:39.434 +05:30 [INF] Received HTTP response headers after 91.7282ms - 200
+2026-08-12 16:02:39.444 +05:30 [INF] End processing HTTP request after 108.9634ms - 200
+2026-08-12 16:02:39.459 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:39.471 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:39.481 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI NewPack4 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:39.496 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:39.503 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI NewPack4 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:39 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:39.513 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:39.521 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:39.531 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:39.658 +05:30 [INF] Received HTTP response headers after 120.4817ms - 200
+2026-08-12 16:02:39.668 +05:30 [INF] End processing HTTP request after 146.6254ms - 200
+2026-08-12 16:02:39.674 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:50.268 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:50.271 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103250-389\",\"appName\":\"pgbase114\",\"packageName\":\"Sales New QA\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:50.274 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:50.276 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:50.278 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"Sales New QA\" ",
+  "trace": true
+}
+2026-08-12 16:02:50.281 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:50.284 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:50.288 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:52.439 +05:30 [INF] Received HTTP response headers after 2146.9064ms - 200
+2026-08-12 16:02:52.446 +05:30 [INF] End processing HTTP request after 2162.0239ms - 200
+2026-08-12 16:02:52.451 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"Sales New QA\" ","trace":true}
+2026-08-12 16:02:52.459 +05:30 [INF] Result : Fail, Command : Install Package "Sales New QA" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:52.469 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "Sales New QA" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:52.485 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:52.490 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:52.495 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Sales_New_QA",
+  "InMemoryValue": "Sales New QA",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:52.500 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:52.503 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:52.508 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:52.551 +05:30 [INF] Received HTTP response headers after 38.3599ms - 200
+2026-08-12 16:02:52.559 +05:30 [INF] End processing HTTP request after 55.1651ms - 200
+2026-08-12 16:02:52.609 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:52.612 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:52.616 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Sales New QA package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:52.625 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:52.633 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Sales New QA package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:52 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:52.638 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:52.642 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:52.646 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:52.682 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:52.684 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103251-771\",\"appName\":\"pgbase114\",\"packageName\":\"Sales New QA V2\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:52.688 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:52.690 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:52.693 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"Sales New QA V2\" ",
+  "trace": true
+}
+2026-08-12 16:02:52.697 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:52.701 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:52.705 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:52.723 +05:30 [INF] Received HTTP response headers after 72.2992ms - 200
+2026-08-12 16:02:52.731 +05:30 [INF] End processing HTTP request after 89.1216ms - 200
+2026-08-12 16:02:52.740 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:54.847 +05:30 [INF] Received HTTP response headers after 2136.8636ms - 200
+2026-08-12 16:02:54.850 +05:30 [INF] End processing HTTP request after 2148.478ms - 200
+2026-08-12 16:02:54.854 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"Sales New QA V2\" ","trace":true}
+2026-08-12 16:02:54.857 +05:30 [INF] Result : Fail, Command : Install Package "Sales New QA V2" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:54.863 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "Sales New QA V2" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:54.870 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:54.874 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:54.879 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Sales_New_QA_V2",
+  "InMemoryValue": "Sales New QA V2",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:54.883 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:54.888 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:54.891 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:54.987 +05:30 [INF] Received HTTP response headers after 90.218ms - 200
+2026-08-12 16:02:54.991 +05:30 [INF] End processing HTTP request after 102.7336ms - 200
+2026-08-12 16:02:54.999 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:55.001 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:55.004 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Sales New QA V2 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:55.013 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:55.015 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Sales New QA V2 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:55 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:55.020 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:55.023 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:55.029 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:55.073 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:55.075 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103252-407\",\"appName\":\"pgbase114\",\"packageName\":\"Sales Order - AXI V1\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:55.082 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:55.085 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:55.088 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"Sales Order - AXI V1\" ",
+  "trace": true
+}
+2026-08-12 16:02:55.091 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:55.096 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:55.101 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:55.140 +05:30 [INF] Received HTTP response headers after 107.3381ms - 200
+2026-08-12 16:02:55.144 +05:30 [INF] End processing HTTP request after 121.0649ms - 200
+2026-08-12 16:02:55.149 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:57.037 +05:30 [INF] Received HTTP response headers after 1932.3456ms - 200
+2026-08-12 16:02:57.040 +05:30 [INF] End processing HTTP request after 1943.6304ms - 200
+2026-08-12 16:02:57.044 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"Sales Order - AXI V1\" ","trace":true}
+2026-08-12 16:02:57.047 +05:30 [INF] Result : Fail, Command : Install Package "Sales Order - AXI V1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:57.052 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "Sales Order - AXI V1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:57.059 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:57.062 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:57.066 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Sales_Order_-_AXI_V1",
+  "InMemoryValue": "Sales Order - AXI V1",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:57.071 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:57.074 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:57.078 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:57.113 +05:30 [INF] Received HTTP response headers after 30.6058ms - 200
+2026-08-12 16:02:57.122 +05:30 [INF] End processing HTTP request after 47.4052ms - 200
+2026-08-12 16:02:57.172 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:57.188 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:57.199 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Sales Order - AXI V1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:57.210 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:57.213 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Sales Order - AXI V1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:57 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:57.219 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:57.221 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:57.224 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:57.300 +05:30 [INF] Received HTTP response headers after 73.5104ms - 200
+2026-08-12 16:02:57.300 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:57.318 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103254-417\",\"appName\":\"pgbase114\",\"packageName\":\"Sales Order - AXI\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:57.312 +05:30 [INF] End processing HTTP request after 90.7598ms - 200
+2026-08-12 16:02:57.337 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:57.329 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:57.357 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:57.364 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"Sales Order - AXI\" ",
+  "trace": true
+}
+2026-08-12 16:02:57.374 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:57.384 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:57.394 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:59.250 +05:30 [INF] Received HTTP response headers after 1847.5252ms - 200
+2026-08-12 16:02:59.257 +05:30 [INF] End processing HTTP request after 1873.5442ms - 200
+2026-08-12 16:02:59.262 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"Sales Order - AXI\" ","trace":true}
+2026-08-12 16:02:59.267 +05:30 [INF] Result : Fail, Command : Install Package "Sales Order - AXI" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:59.271 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "Sales Order - AXI" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:59.281 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:59.284 +05:30 [INF] InProgressKey Set
+2026-08-12 16:02:59.287 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Sales_Order_-_AXI",
+  "InMemoryValue": "Sales Order - AXI",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:02:59.290 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:59.297 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:59.299 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:59.403 +05:30 [INF] Received HTTP response headers after 100.6123ms - 200
+2026-08-12 16:02:59.416 +05:30 [INF] End processing HTTP request after 119.4907ms - 200
+2026-08-12 16:02:59.431 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:02:59.437 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:02:59.449 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Sales Order - AXI package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:02:59.472 +05:30 [INF] SignalR Calling
+2026-08-12 16:02:59.486 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Sales Order - AXI package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:02:59 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:02:59.506 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:59.522 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:59.530 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:02:59.572 +05:30 [INF] Message received from queue.
+2026-08-12 16:02:59.574 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103255-899\",\"appName\":\"pgbase114\",\"packageName\":\"ERP Check01\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:02:59.587 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:02:59.600 +05:30 [INF] InstallPackage started.
+2026-08-12 16:02:59.618 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"ERP Check01\" ",
+  "trace": true
+}
+2026-08-12 16:02:59.622 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:59.631 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:59.637 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:02:59.640 +05:30 [INF] Received HTTP response headers after 103.0209ms - 200
+2026-08-12 16:02:59.647 +05:30 [INF] End processing HTTP request after 125.0746ms - 200
+2026-08-12 16:02:59.651 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:01.595 +05:30 [INF] Received HTTP response headers after 1953.1323ms - 200
+2026-08-12 16:03:01.615 +05:30 [INF] End processing HTTP request after 1984.0853ms - 200
+2026-08-12 16:03:01.623 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"ERP Check01\" ","trace":true}
+2026-08-12 16:03:01.649 +05:30 [INF] Result : Fail, Command : Install Package "ERP Check01" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:01.670 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "ERP Check01" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:01.701 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:01.720 +05:30 [INF] InProgressKey Set
+2026-08-12 16:03:01.728 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP_Check01",
+  "InMemoryValue": "ERP Check01",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:03:01.744 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:01.760 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:01.772 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:01.817 +05:30 [INF] Received HTTP response headers after 30.8842ms - 200
+2026-08-12 16:03:01.824 +05:30 [INF] End processing HTTP request after 64.5755ms - 200
+2026-08-12 16:03:01.933 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:01.939 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:01.953 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP Check01 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:03:01.984 +05:30 [INF] SignalR Calling
+2026-08-12 16:03:01.989 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP Check01 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:03:01 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:03:02.017 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:02.024 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:02.038 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:02.091 +05:30 [INF] Message received from queue.
+2026-08-12 16:03:02.097 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812103257-804\",\"appName\":\"pgbase114\",\"packageName\":\"sales88_package\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:03:02.113 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:03:02.118 +05:30 [INF] InstallPackage started.
+2026-08-12 16:03:02.127 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"sales88_package\" ",
+  "trace": true
+}
+2026-08-12 16:03:02.149 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:03:02.157 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:03:02.158 +05:30 [INF] Received HTTP response headers after 105.0736ms - 200
+2026-08-12 16:03:02.168 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:03:02.188 +05:30 [INF] End processing HTTP request after 164.6303ms - 200
+2026-08-12 16:03:02.216 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:04.253 +05:30 [INF] Received HTTP response headers after 2051.4221ms - 200
+2026-08-12 16:03:04.270 +05:30 [INF] End processing HTTP request after 2112.7714ms - 200
+2026-08-12 16:03:04.284 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"sales88_package\" ","trace":true}
+2026-08-12 16:03:04.300 +05:30 [INF] Result : Fail, Command : Install Package "sales88_package" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:04.321 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "sales88_package" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:04.350 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:04.354 +05:30 [INF] InProgressKey Set
+2026-08-12 16:03:04.363 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_sales88_package",
+  "InMemoryValue": "sales88_package",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:03:04.369 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:04.372 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:04.384 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:04.467 +05:30 [INF] Received HTTP response headers after 78.2013ms - 200
+2026-08-12 16:03:04.472 +05:30 [INF] End processing HTTP request after 99.9858ms - 200
+2026-08-12 16:03:04.480 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:03:04.483 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:03:04.490 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI sales88_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:03:04.513 +05:30 [INF] SignalR Calling
+2026-08-12 16:03:04.522 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI sales88_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:03:04 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:03:04.531 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:04.539 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:04.553 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:03:04.682 +05:30 [INF] Received HTTP response headers after 123.8571ms - 200
+2026-08-12 16:03:04.689 +05:30 [INF] End processing HTTP request after 149.8672ms - 200
+2026-08-12 16:03:04.702 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:18:13.925 +05:30 [INF] Application is shutting down...
+2026-08-12 16:38:04.863 +05:30 [INF] Application starting...
+2026-08-12 16:38:06.861 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-12 16:38:06.905 +05:30 [INF] Hosting environment: Development
+2026-08-12 16:38:06.910 +05:30 [INF] Content root path: D:\Optimized\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-08-12 16:38:07.003 +05:30 [INF] RabbitMQ consumer started.
+2026-08-12 16:38:44.664 +05:30 [INF] Message received from queue.
+2026-08-12 16:38:44.670 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110841-510\",\"appName\":\"pgbase114\",\"packageName\":\"PackageAxiTesting\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:38:45.158 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:38:45.180 +05:30 [INF] InstallPackage started.
+2026-08-12 16:38:45.274 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"PackageAxiTesting\" ",
+  "trace": true
+}
+2026-08-12 16:38:45.459 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:45.503 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:45.560 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:47.813 +05:30 [INF] Received HTTP response headers after 2242.4898ms - 500
+2026-08-12 16:38:47.847 +05:30 [INF] End processing HTTP request after 2372.504ms - 500
+2026-08-12 16:38:47.893 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"PackageAxiTesting\" ","trace":true}
+2026-08-12 16:38:48.127 +05:30 [INF] Result : Fail, Command : Install Package "PackageAxiTesting" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:38:48.142 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "PackageAxiTesting" , Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:38:48.160 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:38:48.164 +05:30 [INF] InProgressKey Set
+2026-08-12 16:38:48.175 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_PackageAxiTesting",
+  "InMemoryValue": "PackageAxiTesting",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:38:48.179 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:48.190 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:48.193 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:51.409 +05:30 [INF] Received HTTP response headers after 3201.7088ms - 200
+2026-08-12 16:38:51.547 +05:30 [INF] End processing HTTP request after 3358.5518ms - 200
+2026-08-12 16:38:51.571 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:51.579 +05:30 [ERR] InstallPackage failed. Message : Server error: EInOutError - I/O error 103
+2026-08-12 16:38:51.583 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:38:52.112 +05:30 [INF] SignalR Calling
+2026-08-12 16:38:52.119 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:38:51 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:38:52.128 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:52.129 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:52.138 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:52.189 +05:30 [INF] Message received from queue.
+2026-08-12 16:38:52.192 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110844-317\",\"appName\":\"pgbase114\",\"packageName\":\"PackageAxiTesting\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:38:52.246 +05:30 [INF] Received HTTP response headers after 102.3966ms - 200
+2026-08-12 16:38:52.276 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:38:52.280 +05:30 [INF] End processing HTTP request after 150.8545ms - 200
+2026-08-12 16:38:52.286 +05:30 [INF] InstallPackage started.
+2026-08-12 16:38:52.289 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:52.291 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"PackageAxiTesting\" ",
+  "trace": true
+}
+2026-08-12 16:38:52.309 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:52.312 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:52.327 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:58.505 +05:30 [INF] Received HTTP response headers after 6162.0203ms - 200
+2026-08-12 16:38:58.634 +05:30 [INF] End processing HTTP request after 6321.5016ms - 200
+2026-08-12 16:38:58.654 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"PackageAxiTesting\" ","trace":true}
+2026-08-12 16:38:58.678 +05:30 [INF] Result : Fail, Command : Install Package "PackageAxiTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:38:58.730 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "PackageAxiTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:38:58.778 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:38:58.806 +05:30 [INF] InProgressKey Set
+2026-08-12 16:38:58.814 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_PackageAxiTesting",
+  "InMemoryValue": "PackageAxiTesting",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:38:58.846 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:58.911 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:58.972 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:59.150 +05:30 [INF] Received HTTP response headers after 158.8331ms - 200
+2026-08-12 16:38:59.192 +05:30 [INF] End processing HTTP request after 280.9288ms - 200
+2026-08-12 16:38:59.223 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:38:59.242 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:38:59.273 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:38:59.329 +05:30 [INF] SignalR Calling
+2026-08-12 16:38:59.388 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI PackageAxiTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:38:59 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:38:59.438 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:59.473 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:59.494 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:59.612 +05:30 [INF] Received HTTP response headers after 43.323ms - 200
+2026-08-12 16:38:59.626 +05:30 [INF] Message received from queue.
+2026-08-12 16:38:59.632 +05:30 [INF] End processing HTTP request after 159.1356ms - 200
+2026-08-12 16:38:59.646 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110845-140\",\"appName\":\"pgbase114\",\"packageName\":\"PackageAxiNEWTesting\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:38:59.674 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:38:59.708 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:38:59.755 +05:30 [INF] InstallPackage started.
+2026-08-12 16:38:59.771 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"PackageAxiNEWTesting\" ",
+  "trace": true
+}
+2026-08-12 16:38:59.806 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:38:59.906 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:00.153 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:03.107 +05:30 [INF] Received HTTP response headers after 1947.0761ms - 200
+2026-08-12 16:39:03.126 +05:30 [INF] End processing HTTP request after 3219.9822ms - 200
+2026-08-12 16:39:03.133 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"PackageAxiNEWTesting\" ","trace":true}
+2026-08-12 16:39:03.144 +05:30 [INF] Result : Fail, Command : Install Package "PackageAxiNEWTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:03.162 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "PackageAxiNEWTesting" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:03.190 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:03.208 +05:30 [INF] InProgressKey Set
+2026-08-12 16:39:03.211 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_PackageAxiNEWTesting",
+  "InMemoryValue": "PackageAxiNEWTesting",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:39:03.227 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:03.243 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:03.246 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:03.480 +05:30 [INF] Received HTTP response headers after 207.2512ms - 200
+2026-08-12 16:39:03.611 +05:30 [INF] End processing HTTP request after 368.2559ms - 200
+2026-08-12 16:39:03.617 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:03.619 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:03.621 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI PackageAxiNEWTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:39:03.626 +05:30 [INF] SignalR Calling
+2026-08-12 16:39:03.627 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI PackageAxiNEWTesting package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:39:03 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:39:03.644 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:03.658 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:03.661 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:03.718 +05:30 [INF] Message received from queue.
+2026-08-12 16:39:03.720 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110847-346\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:39:03.726 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:39:03.728 +05:30 [INF] InstallPackage started.
+2026-08-12 16:39:03.759 +05:30 [INF] Received HTTP response headers after 90.9863ms - 200
+2026-08-12 16:39:03.768 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test\" ",
+  "trace": true
+}
+2026-08-12 16:39:03.775 +05:30 [INF] End processing HTTP request after 117.1855ms - 200
+2026-08-12 16:39:03.793 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:03.814 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:03.825 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:03.851 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:05.603 +05:30 [INF] Received HTTP response headers after 1734.7676ms - 200
+2026-08-12 16:39:05.608 +05:30 [INF] End processing HTTP request after 1783.0006ms - 200
+2026-08-12 16:39:05.611 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test\" ","trace":true}
+2026-08-12 16:39:05.622 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:05.625 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:05.644 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:05.659 +05:30 [INF] InProgressKey Set
+2026-08-12 16:39:05.661 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test",
+  "InMemoryValue": "CMD_Test",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:39:05.688 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:05.690 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:05.693 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:05.745 +05:30 [INF] Received HTTP response headers after 36.2819ms - 200
+2026-08-12 16:39:05.750 +05:30 [INF] End processing HTTP request after 59.2746ms - 200
+2026-08-12 16:39:05.859 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:05.862 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:05.867 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:39:05.909 +05:30 [INF] SignalR Calling
+2026-08-12 16:39:05.934 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:39:05 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:39:05.983 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:06.194 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:06.214 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:06.271 +05:30 [INF] Message received from queue.
+2026-08-12 16:39:06.275 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110848-883\",\"appName\":\"pgbase114\",\"packageName\":\"CMD_Test1\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:39:06.290 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:39:06.291 +05:30 [INF] Received HTTP response headers after 64.9818ms - 200
+2026-08-12 16:39:06.295 +05:30 [INF] InstallPackage started.
+2026-08-12 16:39:06.306 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"CMD_Test1\" ",
+  "trace": true
+}
+2026-08-12 16:39:06.303 +05:30 [INF] End processing HTTP request after 109.5235ms - 200
+2026-08-12 16:39:06.337 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:06.341 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:06.342 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:06.365 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:08.252 +05:30 [INF] Received HTTP response headers after 1878.1439ms - 200
+2026-08-12 16:39:08.254 +05:30 [INF] End processing HTTP request after 1912.0686ms - 200
+2026-08-12 16:39:08.257 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"CMD_Test1\" ","trace":true}
+2026-08-12 16:39:08.260 +05:30 [INF] Result : Fail, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:08.271 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "CMD_Test1" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:08.275 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:08.285 +05:30 [INF] InProgressKey Set
+2026-08-12 16:39:08.302 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_CMD_Test1",
+  "InMemoryValue": "CMD_Test1",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:39:08.313 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:08.323 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:08.349 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:08.452 +05:30 [INF] Received HTTP response headers after 85.405ms - 200
+2026-08-12 16:39:08.501 +05:30 [INF] End processing HTTP request after 178.5479ms - 200
+2026-08-12 16:39:08.560 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:08.561 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:08.568 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:39:08.603 +05:30 [INF] SignalR Calling
+2026-08-12 16:39:08.648 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI CMD_Test1 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:39:08 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:39:08.651 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:08.674 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:08.750 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:08.793 +05:30 [INF] Message received from queue.
+2026-08-12 16:39:08.800 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110851-652\",\"appName\":\"pgbase114\",\"packageName\":\"ERP 0099\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:39:08.804 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:39:08.811 +05:30 [INF] InstallPackage started.
+2026-08-12 16:39:08.821 +05:30 [INF] Received HTTP response headers after 66.4208ms - 200
+2026-08-12 16:39:08.827 +05:30 [INF] End processing HTTP request after 153.0623ms - 200
+2026-08-12 16:39:08.823 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"ERP 0099\" ",
+  "trace": true
+}
+2026-08-12 16:39:08.834 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:08.871 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:08.909 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:08.914 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:10.695 +05:30 [INF] Received HTTP response headers after 1771.8809ms - 200
+2026-08-12 16:39:10.703 +05:30 [INF] End processing HTTP request after 1792.9841ms - 200
+2026-08-12 16:39:10.707 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"ERP 0099\" ","trace":true}
+2026-08-12 16:39:10.711 +05:30 [INF] Result : Fail, Command : Install Package "ERP 0099" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:10.717 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "ERP 0099" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:10.726 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:10.741 +05:30 [INF] InProgressKey Set
+2026-08-12 16:39:10.743 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP_0099",
+  "InMemoryValue": "ERP 0099",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:39:10.789 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:10.801 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:10.803 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:10.840 +05:30 [INF] Received HTTP response headers after 33.8528ms - 200
+2026-08-12 16:39:10.843 +05:30 [INF] End processing HTTP request after 41.9533ms - 200
+2026-08-12 16:39:10.955 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:10.959 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:10.961 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP 0099 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:39:10.969 +05:30 [INF] SignalR Calling
+2026-08-12 16:39:10.984 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP 0099 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:39:10 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:39:11.003 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:11.012 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:11.028 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:11.081 +05:30 [INF] Message received from queue.
+2026-08-12 16:39:11.085 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812110852-485\",\"appName\":\"pgbase114\",\"packageName\":\"sales26_package\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-08-12 16:39:11.092 +05:30 [INF] InstallPackage process started.###
+2026-08-12 16:39:11.102 +05:30 [INF] InstallPackage started.
+2026-08-12 16:39:11.188 +05:30 [INF] Received HTTP response headers after 146.7799ms - 200
+2026-08-12 16:39:11.289 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"sales26_package\" ",
+  "trace": true
+}
+2026-08-12 16:39:11.327 +05:30 [INF] End processing HTTP request after 314.8467ms - 200
+2026-08-12 16:39:11.332 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:11.338 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:11.360 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:11.369 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-08-12 16:39:13.389 +05:30 [INF] Received HTTP response headers after 2004.643ms - 200
+2026-08-12 16:39:13.457 +05:30 [INF] End processing HTTP request after 2097.1122ms - 200
+2026-08-12 16:39:13.459 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"sales26_package\" ","trace":true}
+2026-08-12 16:39:13.473 +05:30 [INF] Result : Fail, Command : Install Package "sales26_package" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:13.492 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "sales26_package" , Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:13.512 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:13.541 +05:30 [INF] InProgressKey Set
+2026-08-12 16:39:13.545 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_sales26_package",
+  "InMemoryValue": "sales26_package",
+  "IsBinary": "false",
+  "KeyExpiryInMins": "1"
+}
+2026-08-12 16:39:13.577 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:13.589 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:13.610 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:13.659 +05:30 [INF] Received HTTP response headers after 34.0964ms - 200
+2026-08-12 16:39:13.672 +05:30 [INF] End processing HTTP request after 83.1884ms - 200
+2026-08-12 16:39:13.853 +05:30 [INF] API Business success. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisWrite
+2026-08-12 16:39:13.857 +05:30 [ERR] InstallPackage failed. Message : EIdHTTPProtocolException : HTTP/1.1 404 Not Found
+2026-08-12 16:39:13.859 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Optimized\AxiImportRedis\AxiImportPackage\Services\PackageImportService.cs:line 94
+2026-08-12 16:39:13.939 +05:30 [INF] SignalR Calling
+2026-08-12 16:39:13.959 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI sales26_package package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"08/12/26 4:39:13 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-08-12 16:39:13.990 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:13.994 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:14.008 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 16:39:14.171 +05:30 [INF] Received HTTP response headers after 159.8753ms - 200
+2026-08-12 16:39:14.467 +05:30 [INF] End processing HTTP request after 472.9888ms - 200
+2026-08-12 16:39:14.494 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-08-12 17:37:56.093 +05:30 [INF] Application starting...
+2026-08-12 17:38:00.208 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-12 17:38:00.224 +05:30 [INF] Hosting environment: Development
+2026-08-12 17:38:00.228 +05:30 [INF] Content root path: D:\Optimized\AxiImportRedis\AxiImportPackage\bin\Debug\net8.0
+2026-08-12 17:38:00.363 +05:30 [INF] RabbitMQ consumer started.

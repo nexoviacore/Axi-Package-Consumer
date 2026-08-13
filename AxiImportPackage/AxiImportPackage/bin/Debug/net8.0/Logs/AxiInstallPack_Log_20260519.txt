@@ -1,0 +1,43 @@
+2026-05-19 12:33:44.671 +05:30 [INF] Application starting...
+2026-05-19 12:33:53.939 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-19 12:33:53.965 +05:30 [INF] RabbitMQ consumer started.
+2026-05-19 12:33:53.988 +05:30 [INF] Hosting environment: Development
+2026-05-19 12:33:54.003 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-19 12:34:27.570 +05:30 [INF] Message received from queue.
+2026-05-19 12:34:45.167 +05:30 [INF] Package export process started.
+2026-05-19 12:34:59.865 +05:30 [INF] ImportStructures started.
+2026-05-19 12:35:10.318 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs
+2026-05-19 12:35:11.178 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs
+2026-05-19 12:35:11.194 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs
+2026-05-19 12:35:15.081 +05:30 [INF] Received HTTP response headers after 3879.1821ms - 200
+2026-05-19 12:35:15.098 +05:30 [INF] End processing HTTP request after 3949.446ms - 200
+2026-05-19 14:19:25.664 +05:30 [INF] Application starting...
+2026-05-19 14:19:31.245 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-19 14:19:31.255 +05:30 [INF] RabbitMQ consumer started.
+2026-05-19 14:19:31.265 +05:30 [INF] Hosting environment: Development
+2026-05-19 14:19:52.238 +05:30 [INF] Message received from queue.
+2026-05-19 14:19:52.324 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-19 14:19:55.464 +05:30 [INF] Package export process started.
+2026-05-19 14:19:58.063 +05:30 [INF] ImportStructures started.
+2026-05-19 14:21:01.323 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs
+2026-05-19 14:21:01.922 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs
+2026-05-19 14:21:01.934 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs
+2026-05-19 14:21:05.736 +05:30 [INF] Received HTTP response headers after 3797.5741ms - 200
+2026-05-19 14:21:05.748 +05:30 [INF] End processing HTTP request after 3836.9804ms - 200
+2026-05-19 14:21:34.777 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ExportStructs, Response : {"result":[{"status":"failed","msg":"axpapp not specified in call to ExportStructs Webservice"}]}
+2026-05-19 14:21:34.807 +05:30 [ERR] ImportStructures failed. Message : API returned failed status.
+2026-05-19 14:21:34.812 +05:30 [ERR] ImportStructures failed.
+2026-05-19 14:58:24.398 +05:30 [INF] Application starting...
+2026-05-19 14:58:29.674 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-19 14:58:29.686 +05:30 [INF] RabbitMQ consumer started.
+2026-05-19 14:58:29.697 +05:30 [INF] Hosting environment: Development
+2026-05-19 14:58:29.702 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-19 14:58:54.992 +05:30 [INF] Message received from queue.
+2026-05-19 14:58:56.374 +05:30 [INF] Package export process started.
+2026-05-19 14:58:58.127 +05:30 [INF] ImportStructures started.
+2026-05-19 14:59:18.133 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-19 14:59:18.622 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-19 14:59:18.630 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-19 15:00:28.497 +05:30 [INF] Received HTTP response headers after 69859.7381ms - 200
+2026-05-19 15:00:28.508 +05:30 [INF] End processing HTTP request after 69899.5849ms - 200
+2026-05-19 15:00:54.112 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs

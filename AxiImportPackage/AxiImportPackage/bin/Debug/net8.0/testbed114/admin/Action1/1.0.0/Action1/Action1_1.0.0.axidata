@@ -1,0 +1,106 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-90017d3b-21a8-4a21-8ac3-b834efa06f5a",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select string_agg(cnd,' and ') from ( select 'exists(select 1 from unnest(string_to_array({primarytable.}axg_newdimension,'','')) val where val in('''||replace( concat(:axug_newdimension,',All'),',',''',''')||'''))' cnd from(select 'axug_newdimension' gname,unnest(string_to_array(:axug_newdimension,',')) gval from dual)a group by gname having sum(case when gval='All' then 1 else 0 end) = 0)b"
+              }
+            }
+          }
+        },
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil1",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil1",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select string_agg(cnd,' and ') from ( select 'exists(select 1 from unnest(string_to_array({primarytable.}axg_newdimension,'','')) val where val in('''||replace( concat(:axug_newdimension,',All'),',',''',''')||'''))' cnd from(select 'axug_newdimension' gname,unnest(string_to_array(:axug_newdimension,',')) gval from dual)a group by gname having sum(case when gval='All' then 1 else 0 end) = 0)b"
+              }
+            }
+          }
+        },
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "abinash",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "Yes",
+                "viewcnd": "All",
+                "viewctrl": "0",
+                "editcnd": "All",
+                "editctrl": "0",
+                "dupchk": "Alldsrcpabinash",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select string_agg(cnd,' and ') from ( select 'exists(select 1 from unnest(string_to_array({primarytable.}axg_newdimension,'','')) val where val in('''||replace( concat(:axug_newdimension,',All'),',',''',''')||'''))' cnd from(select 'axug_newdimension' gname,unnest(string_to_array(:axug_newdimension,',')) gval from dual)a group by gname having sum(case when gval='All' then 1 else 0 end) = 0)b"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

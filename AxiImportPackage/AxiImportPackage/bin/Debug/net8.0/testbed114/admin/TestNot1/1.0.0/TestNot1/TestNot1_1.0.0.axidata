@@ -1,0 +1,195 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-cf8c474d-d0fc-4511-a695-caaf3fe482a3",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Test Notification Form New-(tngtm)",
+                "stransid": "tngtm",
+                "txttransid": "tngtm",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "T"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "New record added",
+                "notify_msg_new": "New record has been added",
+                "notify_sub_edit": "test",
+                "notify_msg_edit": "test"
+              }
+            },
+            "dc4": {
+              "row1": {
+                "emailto": "Creator,User names",
+                "emailto_usernames": "syamalab,lakshmi"
+              }
+            },
+            "dc5": {
+              "row1": {
+                "email_sub_new": "New Data is added",
+                "email_msg_new": "New record is added",
+                "email_sub_edit": "Existing Record is Modified in Notification Form",
+                "email_msg_edit": "Existing Record is Modified in Notification Form"
+              }
+            },
+            "dc6": {}
+          }
+        },
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Test Notification Form New-(tngtm)",
+                "stransid": "tngtm",
+                "txttransid": "tngtm",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "T"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "New record added",
+                "notify_msg_new": "New record has been added",
+                "notify_sub_edit": "test",
+                "notify_msg_edit": "test"
+              }
+            },
+            "dc4": {
+              "row1": {
+                "emailto": "Creator,User names",
+                "emailto_usernames": "syamalab,lakshmi"
+              }
+            },
+            "dc5": {
+              "row1": {
+                "email_sub_new": "New Data is added",
+                "email_msg_new": "New record is added",
+                "email_sub_edit": "Existing Record is Modified in Notification Form",
+                "email_msg_edit": "Existing Record is Modified in Notification Form"
+              }
+            },
+            "dc6": {}
+          }
+        },
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Test Notification Form New-(tngtm)",
+                "stransid": "tngtm",
+                "txttransid": "tngtm",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "T"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "New record added",
+                "notify_msg_new": "New record has been added",
+                "notify_sub_edit": "test",
+                "notify_msg_edit": "test"
+              }
+            },
+            "dc4": {
+              "row1": {
+                "emailto": "Creator,User names",
+                "emailto_usernames": "syamalab,lakshmi"
+              }
+            },
+            "dc5": {
+              "row1": {
+                "email_sub_new": "New Data is added",
+                "email_msg_new": "New record is added",
+                "email_sub_edit": "Existing Record is Modified in Notification Form",
+                "email_msg_edit": "Existing Record is Modified in Notification Form"
+              }
+            },
+            "dc6": {}
+          }
+        },
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Test Notification Form New-(tngtm)",
+                "stransid": "tngtm",
+                "txttransid": "tngtm",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "T"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "New record added",
+                "notify_msg_new": "New record has been added",
+                "notify_sub_edit": "test",
+                "notify_msg_edit": "test"
+              }
+            },
+            "dc4": {
+              "row1": {
+                "emailto": "Creator,User names",
+                "emailto_usernames": "syamalab,lakshmi"
+              }
+            },
+            "dc5": {
+              "row1": {
+                "email_sub_new": "New Data is added",
+                "email_msg_new": "New record is added",
+                "email_sub_edit": "Existing Record is Modified in Notification Form",
+                "email_msg_edit": "Existing Record is Modified in Notification Form"
+              }
+            },
+            "dc6": {}
+          }
+        }
+      ]
+    },
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"tngtm1\" (\r\n    \"tngtm1id\" numeric(16,0) NOT NULL,\r\n    \"cancel\" varchar(1),\r\n    \"sourceid\" numeric(16,0),\r\n    \"mapname\" varchar(20),\r\n    \"username\" varchar(50),\r\n    \"modifiedon\" timestamp without time zone,\r\n    \"createdby\" varchar(50),\r\n    \"createdon\" timestamp without time zone,\r\n    \"wkid\" varchar(15),\r\n    \"app_level\" numeric(3,0),\r\n    \"app_desc\" numeric(1,0),\r\n    \"app_slevel\" numeric(3,0),\r\n    \"cancelremarks\" varchar(150),\r\n    \"wfroles\" varchar(250),\r\n    \"ename\" varchar(50)\r\n);\r\n$D#"
+    ]
+  }
+}

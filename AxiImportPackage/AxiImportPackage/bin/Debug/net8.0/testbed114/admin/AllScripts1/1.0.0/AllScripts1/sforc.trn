@@ -1,0 +1,763 @@
+<root pform="yes" wflow="F" name="sforc" caption="All Scripts" runtimemod="F" runtimetstruct="F" cachedsave="F" vno="11.4" createdon="05/09/2025 4:13:41 PM" createdby="syamalab" updatedon="02/04/2026 11:58:08" updatedby="syamalab" defpage="y" peg="false" amendment="false" axoutboundqueues="false" autoprints="false" formnotify="false" pid="2141" dbtype="postgre">
+	<sforc cat="tstruct">
+		<a1>sforc</a1>
+		<a2>All Scripts</a2>
+		<a4 fcaption=""></a4>
+		<a5 fcaption=""></a5>
+		<a6>False</a6>
+		<a9></a9>
+		<a10></a10>
+		<a11></a11>
+		<a12></a12>
+		<a13></a13>
+		<a14></a14>
+		<a15></a15>
+		<a16>t</a16>
+		<a17></a17>
+		<a18>False</a18>
+		<a19>
+			<l></l>
+		</a19>
+		<a20>True</a20>
+		<a24></a24>
+		<a25>False</a25>
+		<a26>False</a26>
+		<a27>False</a27>
+		<a28>None</a28>
+		<a29>Default</a29>
+		<a30>False</a30>
+		<a31 savemode="">
+			<apiqueuename></apiqueuename>
+			<savequeuename></savequeuename>
+		</a31>
+		<a59></a59>
+	</sforc>
+	<dc1 cat="dc" ordno="">
+		<a1>dc1</a1>
+		<a2>All Scripts</a2>
+		<a3>1</a3>
+		<a4></a4>
+		<a5>sforc1</a5>
+		<a6>False</a6>
+		<a7>True</a7>
+		<a9>False</a9>
+		<a14></a14>
+		<a15></a15>
+		<a16></a16>
+		<a17>True</a17>
+		<a26>True</a26>
+		<a27>False</a27>
+		<a59></a59>
+	</dc1>
+	<appid cat="field" dcno="1" dccap="All Scripts" fieldtype="Auto Generate" customdatatype="NA" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>appid</a1>
+		<a2>Appid</a2>
+		<a3>Character</a3>
+		<a4>20</a4>
+		<a5>0</a5>
+		<a6>autogenerate</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>False</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30></a30>
+			<a40></a40>
+			<a41>
+				<l r="f">
+					<a42>appid-</a42>
+					<a53></a53>
+					<a43></a43>
+					<a44>1</a44>
+					<a45>True</a45>
+					<a54>3</a54>
+				</l>
+			</a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>True</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</appid>
+	<ename cat="field" dcno="1" dccap="All Scripts" fieldtype="Simple Text" customdatatype="NA" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>ename</a1>
+		<a2>Employee Name</a2>
+		<a3>Character</a3>
+		<a4>50</a4>
+		<a5>0</a5>
+		<a6>Accept</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>True</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30>False</a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65>Open_nwtfm&lt;h&gt;type=t,name=nwtfm&lt;/h&gt;</a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59>Enter empname</a59>
+	</ename>
+	<drop1 cat="field" dcno="1" dccap="All Scripts" fieldtype="DropDown" customdatatype="NA" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>drop1</a1>
+		<a2>DropDown</a2>
+		<a3>Character</a3>
+		<a4>20</a4>
+		<a5>0</a5>
+		<a6>Select</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>False</a23>
+			<a24>False</a24>
+			<a25>
+				<l>QA</l>
+				<l>DEV</l>
+				<l>SUP</l>
+				<l>IT</l>
+				<l>HR</l>
+				<l>SOLN</l>
+			</a25>
+			<a26 table="" cap="" fcaption="" stype="list" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30></a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>True</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>True</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</drop1>
+	<yoe cat="field" dcno="1" dccap="All Scripts" fieldtype="Whole Number" customdatatype="NA" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" dbdecimal="0" customdecimal="F">
+		<a1>yoe</a1>
+		<a2>YOE</a2>
+		<a3>Numeric</a3>
+		<a4>10</a4>
+		<a5>0</a5>
+		<a6>Accept</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>True</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30>False</a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</yoe>
+	<dummyfromaxi cat="field" dcno="1" dccap="All Scripts" fieldtype="Simple Text" customdatatype="NA" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>dummyfromaxi</a1>
+		<a2>dummyfromaxi</a2>
+		<a3>Character</a3>
+		<a4>50</a4>
+		<a5>0</a5>
+		<a6>Accept</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>True</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30>False</a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</dummyfromaxi>
+	<dc2 cat="dc" ordno="" booleandc="FALSE">
+		<a1>dc2</a1>
+		<a2>dc2</a2>
+		<a3>2</a3>
+		<a4></a4>
+		<a5>sforc2</a5>
+		<a6>True</a6>
+		<a7>True</a7>
+		<a9>False</a9>
+		<a14></a14>
+		<a15></a15>
+		<a16></a16>
+		<a17>True</a17>
+		<a26>True</a26>
+		<a27>False</a27>
+		<a59></a59>
+	</dc2>
+	<bankdetails cat="field" dcno="2" dccap="dc2" fieldtype="Simple Text" customdatatype="NA" runtimecriteria="F" runtimefld="F" applyrule="F" encrypted="F" displaytotal="F" customdecimal="F">
+		<a1>bankdetails</a1>
+		<a2>Bank Name</a2>
+		<a3>Character</a3>
+		<a4>50</a4>
+		<a5>0</a5>
+		<a6>Accept</a6>
+		<a7>
+			<a22 firesql="false" txt="" param="n" pcount="0">
+				<l></l>
+			</a22>
+			<a18 cfcap=""></a18>
+			<a20>0</a20>
+			<a21>0</a21>
+			<a23>True</a23>
+			<a24>False</a24>
+			<a25></a25>
+			<a26 table="" cap="" fcaption="" stype="" scol="0"></a26>
+			<a27 fcaption=""></a27>
+			<a28></a28>
+			<a29></a29>
+			<a30>False</a30>
+			<a40></a40>
+			<a41></a41>
+			<a63/>
+		</a7>
+		<a8>False</a8>
+		<a9>True</a9>
+		<a10>False</a10>
+		<a11>False</a11>
+		<a12>True</a12>
+		<a13></a13>
+		<a14></a14>
+		<a15>True</a15>
+		<a16>False</a16>
+		<a17>False</a17>
+		<a19>False</a19>
+		<a31></a31>
+		<a32></a32>
+		<a33></a33>
+		<a34></a34>
+		<a35></a35>
+		<a36></a36>
+		<a37></a37>
+		<a46></a46>
+		<a47></a47>
+		<a48 masking="No Mask" lastcharmask="0" firstcharmask="0" maskchar="X" maskroles=""></a48>
+		<a49></a49>
+		<a50></a50>
+		<a51></a51>
+		<a52>False</a52>
+		<a55>True</a55>
+		<a56></a56>
+		<a57></a57>
+		<a58></a58>
+		<a60></a60>
+		<a64></a64>
+		<a65></a65>
+		<a66></a66>
+		<a67>True</a67>
+		<a69></a69>
+		<a70></a70>
+		<a59></a59>
+	</bankdetails>
+	<scripts cat="actions">
+		<script1 cap="savesc" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="t" confmsg="Do u want to save the Transaction?" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>Save()</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script1>
+		<script12 cap="script12" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>C,reancelTransaction({sforc},recordid,{T})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script12>
+		<script11 cap="script11" type="tstruct" apply="On Data Load" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="true" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>SetFieldFontProperty({bankdetails},{allrows},{Arial},{24px},{bold},{red},{yellow}</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script11>
+		<script5 cap="clonerecord" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="t" confmsg="Do you want to clone the record?" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>copytrans(recordid)</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script5>
+		<script2 cap="Loadformanddata" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="t" confmsg="Do u want to load form?" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>LoadFormAndData({empmt},{empname=:ename},{p},{t},{f})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script2>
+		<script9 cap="script9" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>save()</l0>
+						<l1>LoadForm({empmt},{empname=:ename},{p},{t})</l1>
+					</exprset>
+				</param1>
+			</r1>
+		</script9>
+		<script6 cap="CancelRecord" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>CancelTransaction({sforc},{},{Y})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script6>
+		<script3 cap="LoadForm" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>LoadForm({empmt},{},{p},{t})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script3>
+		<script4 cap="LoadIview" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>LoadIView({form2rpt},{},{p},{t})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script4>
+		<script7 cap="deletetrans" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>DeleteTransaction({},{},{true})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script7>
+		<script8 cap="script8" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>LoadForm({tstcn},{},{p},{t})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script8>
+		<script10 cap="script10" type="tstruct" apply="" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="false" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>Notify({syamala},{Notify Me!},{Welcome to agilelabs......},{})</l0>
+					</exprset>
+				</param1>
+			</r1>
+		</script10>
+		<script13 cap="script13" type="tstruct" apply="On Data Load" applyon="" sname="sforc" scripts="yes" desc="" failmessage="" validate="no" formcontrol="true" pushtoqueue="f" queuename="" confreq="f" confmsg="" breakonerror="no" localnum="2" active="True">
+			<r1 localnum="2" id="a1" op="5" task="scripts" type="" sname="" apply="" applyon="">
+				<param1 task="scripts" op="7">
+					<exprset>
+						<l0>if ename={agile}</l0>
+						<l1>AxReadOnly()</l1>
+					</exprset>
+				</param1>
+			</r1>
+		</script13>
+	</scripts>
+	<comps cat="comps" dwbtb="true" btn="26">
+		<btn1 cat="btn" parent="x__heading" key="btn1" caption="First" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="First Button" action="" task="gofirst" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>first_page</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn1>
+		<btn2 cat="btn" parent="x__heading" key="btn2" caption="Previous" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Previous Button" action="" task="goprior" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>skip_previous</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn2>
+		<btn3 cat="btn" parent="x__heading" key="btn3" caption="Next" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Next Button" action="" task="gonext" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>skip_next</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn3>
+		<btn4 cat="btn" parent="x__heading" key="btn4" caption="Last" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Last Button" action="" task="golast" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>last_page</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn4>
+		<btn5 cat="btn" parent="x__heading" key="btn5" caption="New" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="New@" action="" task="new" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>add</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn5>
+		<btn6 cat="btn" parent="x__heading" key="btn6" caption="Save" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Save Button" action="" task="save" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>save</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn6>
+		<btn7 cat="btn" parent="x__heading" key="btn7" caption="Search" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Search Button" action="" task="search" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>search</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn7>
+		<btn8 cat="btn" parent="x__heading" key="btn8" caption="Remove" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Remove Button" action="" task="remove" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>remove</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn8>
+		<btn9 cat="btn" parent="x__heading" key="btn9" caption="Print" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Print Button" action="" task="print" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>print</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn9>
+		<btn10 cat="btn" parent="x__heading" key="btn10" caption="Preview" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Preview Button" action="" task="preview" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>remove_red_eye</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn10>
+		<btn11 cat="btn" parent="x__heading" key="btn11" caption="Attach" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Attach Button" action="" task="attach" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>attach_file</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn11>
+		<btn12 cat="btn" parent="x__heading" key="btn12" caption="PDF" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="PDF Button" action="" task="pdf" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>picture_as_pdf</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn12>
+		<btn13 cat="btn" parent="x__heading" key="btn13" caption="List View" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="List View Button" action="" task="listview" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>list</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn13>
+		<btn14 cat="btn" parent="x__heading" key="btn14" caption="Draft" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="header" container="" hint="Draft Button" action="" task="draft" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>list</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn14>
+		<btn18 cat="btn" parent="x__heading" key="btn18" caption="LoadFormandData" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Footer" container="" hint="LoadFormandData@" action="script2" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="true" visible="true" api="">
+			<icon>
+				<text>backup_table</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn18>
+		<btn19 cat="btn" parent="x__heading" key="btn19" caption="LoadForm" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Footer" container="" hint="LoadForm Button!" action="script3" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="true" visible="true" api="">
+			<icon>
+				<text>alarm_on</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn19>
+		<btn23 cat="btn" parent="x__heading" key="btn23" caption="Delete Record" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Default" container="" hint="Delete Record Button!" action="script7" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>aspect_ratio</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn23>
+		<btn24 cat="btn" parent="x__heading" key="btn24" caption="Open Test Form NG" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Default" container="" hint="Open Test Form NG Button!" action="script8" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>alarm_add</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn24>
+		<btn17 cat="btn" parent="x__heading" key="btn17" caption="Save Record" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Default" container="" hint="Save Record Button!" action="script1" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>task_alt</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn17>
+		<btn27 cat="btn" parent="x__heading" key="btn27" caption="Sample Btn Test " sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Default" container="" hint="" action="script1" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>check_circle_outline</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn27>
+		<btn20 cat="btn" parent="x__heading" key="btn20" caption="LoadIview" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Default" container="" hint="LoadIview Button!" action="script4" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>task_alt</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn20>
+		<btn25 cat="btn" parent="x__heading" key="btn25" caption="saveandload" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Footer" container="" hint="saveandload Button!" action="script9" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="true" visible="true" api="">
+			<icon>
+				<text>task_alt</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn25>
+		<btn26 cat="btn" parent="x__heading" key="btn26" caption="Notify To" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Footer" container="" hint="" action="script1" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="true" visible="true" api="">
+			<icon>
+				<text>task_alt</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn26>
+		<btn28 cat="btn" parent="x__heading" key="btn28" caption="cancel" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="Footer" container="" hint="" action="script12" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="true" visible="true" api="">
+			<icon>
+				<text>task_alt</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn28>
+		<btn21 cat="btn" parent="x__heading" key="btn21" caption="Clone Record" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="dc2~rowlevel" container="" hint="Clone Record Button!" action="script5" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>task_alt</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn21>
+		<btn22 cat="btn" parent="x__heading" key="btn22" caption="Cancel with Remarks" sname="tsforc" tlhw="4,9310210,26,28" flat="True" img="" position="dc2~headerlevel" container="" hint="Cancel with Remarks Button!" action="script6" task="" script="True" scut="Ctrl+" def="" font="Tahoma,8,clBlack,ffff" footer="false" visible="true" api="">
+			<icon>
+				<text>credit_card_off</text>
+				<addClass>material-icons</addClass>
+			</icon>
+		</btn22>
+	</comps>
+	<iframes cat="iframes" layout="default"><Frame1 align="top" pop="no" tlhw="89,0,254,1103" hp="33"><pages><dc>dc1</dc></pages></Frame1><Frame2 align="top" pop="no" tlhw="348,0,254,1103" hp="33"><pages><dc>dc2</dc></pages></Frame2></iframes>
+	<temp>
+		<menupos>default</menupos>
+		<menulist></menulist>
+		<listview>true</listview>
+		<layout>Default</layout>
+		<fcaption>All Scripts</fcaption>
+		<defpage>true</defpage>
+		<includepage>F</includepage>
+		<changeddc></changeddc>
+	</temp>
+	<axpconfigs_sforc cat="config">
+		<CONFIGNAME>searchcols</CONFIGNAME>
+		<CVALUE>appid,ename,drop1,yoe,dummyfromaxi,bankdetails</CVALUE>
+	</axpconfigs_sforc>
+	<hyperlinks cat="hyperlinks"><dhl__ename sname="tnwtfm" source="ename" pop="True" refresh="False" load=""/></hyperlinks></root>

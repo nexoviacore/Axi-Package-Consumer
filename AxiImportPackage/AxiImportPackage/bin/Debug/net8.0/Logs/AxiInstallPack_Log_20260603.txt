@@ -1,0 +1,921 @@
+2026-06-03 10:17:42.656 +05:30 [INF] Application starting...
+2026-06-03 10:17:46.998 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-03 10:17:47.030 +05:30 [INF] Hosting environment: Development
+2026-06-03 10:17:47.043 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-06-03 10:17:47.049 +05:30 [INF] RabbitMQ consumer started.
+2026-06-03 10:33:43.434 +05:30 [INF] Message received from queue.
+2026-06-03 10:33:43.446 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603050340-330\",\"appName\":\"testbed114\",\"packageName\":\"ExportForm\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 10:33:44.723 +05:30 [INF] Package export process started.
+2026-06-03 10:33:44.728 +05:30 [INF] GitPull started.
+2026-06-03 10:33:44.780 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportForm\\1.0.0",
+  "packageName": "ExportForm",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 10:33:44.841 +05:30 [INF] Calling API : https://1faf-2405-201-e02b-5124-91ab-db68-f381-95ec.ngrok-free.app/api/git/pull
+2026-06-03 10:33:44.882 +05:30 [INF] Start processing HTTP request POST https://1faf-2405-201-e02b-5124-91ab-db68-f381-95ec.ngrok-free.app/api/git/pull
+2026-06-03 10:33:44.896 +05:30 [INF] Sending HTTP request POST https://1faf-2405-201-e02b-5124-91ab-db68-f381-95ec.ngrok-free.app/api/git/pull
+2026-06-03 10:33:45.611 +05:30 [INF] Received HTTP response headers after 683.1371ms - 404
+2026-06-03 10:33:45.653 +05:30 [INF] End processing HTTP request after 794.8044ms - 404
+2026-06-03 10:33:45.700 +05:30 [ERR] API failed. Url : https://1faf-2405-201-e02b-5124-91ab-db68-f381-95ec.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 1faf-2405-201-e02b-5124-91ab-db68-f381-95ec.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-06-03 10:33:45.707 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-06-03 10:33:45.712 +05:30 [INF] ImportStructures started.
+2026-06-03 10:33:45.717 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603050340-330",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportForm\\1.0.0"
+  }
+}
+2026-06-03 10:33:45.722 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:33:45.727 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:33:45.731 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:33:50.310 +05:30 [INF] Received HTTP response headers after 4575.2831ms - 200
+2026-06-03 10:33:50.316 +05:30 [INF] End processing HTTP request after 4589.7149ms - 200
+2026-06-03 10:33:50.325 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:33:50.336 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 10:33:50.344 +05:30 [INF] ImportData started.
+2026-06-03 10:33:50.354 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603050340-330",
+  "appName": "testbed114",
+  "packageName": "ExportForm",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportForm\\1.0.0\\ExportForm"
+}
+2026-06-03 10:33:50.372 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 10:33:50.380 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 10:33:50.396 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 10:33:50.544 +05:30 [INF] Received HTTP response headers after 135.0777ms - 200
+2026-06-03 10:33:50.548 +05:30 [INF] End processing HTTP request after 168.5873ms - 200
+2026-06-03 10:33:50.555 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Import directory does not exist"}
+2026-06-03 10:33:50.561 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 10:33:50.568 +05:30 [ERR] ImportData failed.
+2026-06-03 10:39:32.728 +05:30 [INF] Application starting...
+2026-06-03 10:39:35.943 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-03 10:39:35.974 +05:30 [INF] Hosting environment: Development
+2026-06-03 10:39:35.984 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-06-03 10:39:36.295 +05:30 [INF] RabbitMQ consumer started.
+2026-06-03 10:39:46.175 +05:30 [INF] Message received from queue.
+2026-06-03 10:39:46.180 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603050945-641\",\"appName\":\"testbed114\",\"packageName\":\"ExportForm\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 10:39:46.357 +05:30 [INF] Package export process started.
+2026-06-03 10:39:46.361 +05:30 [INF] GitPull started.
+2026-06-03 10:39:46.400 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportForm\\1.0.0",
+  "packageName": "ExportForm",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 10:39:46.442 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 10:39:46.463 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 10:39:46.473 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 10:39:48.031 +05:30 [INF] Received HTTP response headers after 1548.2366ms - 200
+2026-06-03 10:39:48.285 +05:30 [INF] End processing HTTP request after 1834.8925ms - 200
+2026-06-03 10:39:48.340 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 10:39:48.370 +05:30 [INF] GitPull completed successfully.
+2026-06-03 10:39:48.377 +05:30 [INF] ImportStructures started.
+2026-06-03 10:39:48.398 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603050945-641",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportForm\\1.0.0"
+  }
+}
+2026-06-03 10:39:48.416 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:39:48.439 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:39:48.457 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:39:53.692 +05:30 [INF] Received HTTP response headers after 5230.3009ms - 200
+2026-06-03 10:39:53.697 +05:30 [INF] End processing HTTP request after 5259.7813ms - 200
+2026-06-03 10:39:53.706 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 10:39:53.712 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 10:39:53.726 +05:30 [INF] ImportData started.
+2026-06-03 10:39:53.744 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603050945-641",
+  "appName": "testbed114",
+  "packageName": "ExportForm",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportForm\\1.0.0\\ExportForm"
+}
+2026-06-03 10:39:53.781 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 10:39:53.785 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 10:39:53.789 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 10:39:53.882 +05:30 [INF] Received HTTP response headers after 89.0583ms - 200
+2026-06-03 10:39:53.884 +05:30 [INF] End processing HTTP request after 99.83ms - 200
+2026-06-03 10:39:53.888 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-06-03 10:39:53.892 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 10:39:53.895 +05:30 [ERR] ImportData failed.
+2026-06-03 11:11:33.825 +05:30 [INF] Application starting...
+2026-06-03 11:11:36.491 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-03 11:11:36.763 +05:30 [INF] RabbitMQ consumer started.
+2026-06-03 11:11:37.914 +05:30 [INF] Hosting environment: Development
+2026-06-03 11:11:38.179 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-06-03 11:20:29.581 +05:30 [INF] Message received from queue.
+2026-06-03 11:20:29.623 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603055026-495\",\"appName\":\"testbed114\",\"packageName\":\"ExpExport\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 11:20:29.824 +05:30 [INF] Package export process started.
+2026-06-03 11:20:29.831 +05:30 [INF] GitPull started.
+2026-06-03 11:20:29.840 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExpExport\\1.0.0",
+  "packageName": "ExpExport",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 11:20:29.851 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:20:29.857 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:20:29.872 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:20:31.795 +05:30 [INF] Received HTTP response headers after 1912.1721ms - 200
+2026-06-03 11:20:31.798 +05:30 [INF] End processing HTTP request after 1943.1018ms - 200
+2026-06-03 11:20:31.804 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:20:31.807 +05:30 [INF] GitPull completed successfully.
+2026-06-03 11:20:31.810 +05:30 [INF] ImportStructures started.
+2026-06-03 11:20:31.820 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603055026-495",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExpExport\\1.0.0"
+  }
+}
+2026-06-03 11:20:31.842 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:20:31.857 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:20:31.865 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:20:35.704 +05:30 [INF] Received HTTP response headers after 3823.1115ms - 200
+2026-06-03 11:20:35.708 +05:30 [INF] End processing HTTP request after 3850.8308ms - 200
+2026-06-03 11:20:35.714 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:20:35.726 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 11:20:35.729 +05:30 [INF] ImportData started.
+2026-06-03 11:20:35.747 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603055026-495",
+  "appName": "testbed114",
+  "packageName": "ExpExport",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExpExport\\1.0.0\\ExpExport"
+}
+2026-06-03 11:20:35.777 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:20:35.786 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:20:35.791 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:20:36.352 +05:30 [INF] Received HTTP response headers after 556.7448ms - 200
+2026-06-03 11:20:36.360 +05:30 [INF] End processing HTTP request after 573.3885ms - 200
+2026-06-03 11:20:36.372 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:20:36.387 +05:30 [INF] ImportData completed successfully.
+2026-06-03 11:20:36.396 +05:30 [INF] Package import completed successfully.
+2026-06-03 11:49:21.403 +05:30 [INF] Message received from queue.
+2026-06-03 11:49:21.431 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603061918-333\",\"appName\":\"testbed114\",\"packageName\":\"ExportTesting\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 11:49:21.531 +05:30 [INF] Package export process started.
+2026-06-03 11:49:21.551 +05:30 [INF] GitPull started.
+2026-06-03 11:49:21.562 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportTesting\\1.0.0",
+  "packageName": "ExportTesting",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 11:49:21.590 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:49:21.605 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:49:21.628 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:49:23.177 +05:30 [INF] Received HTTP response headers after 1531.0866ms - 200
+2026-06-03 11:49:23.181 +05:30 [INF] End processing HTTP request after 1575.5743ms - 200
+2026-06-03 11:49:23.188 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 11:49:23.191 +05:30 [INF] GitPull completed successfully.
+2026-06-03 11:49:23.207 +05:30 [INF] ImportStructures started.
+2026-06-03 11:49:23.225 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603061918-333",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportTesting\\1.0.0"
+  }
+}
+2026-06-03 11:49:23.264 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:49:23.295 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:49:23.304 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:49:27.633 +05:30 [INF] Received HTTP response headers after 4270.771ms - 200
+2026-06-03 11:49:27.638 +05:30 [INF] End processing HTTP request after 4342.8511ms - 200
+2026-06-03 11:49:27.642 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 11:49:27.652 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 11:49:27.659 +05:30 [INF] ImportData started.
+2026-06-03 11:49:27.667 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603061918-333",
+  "appName": "testbed114",
+  "packageName": "ExportTesting",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportTesting\\1.0.0\\ExportTesting"
+}
+2026-06-03 11:49:27.687 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:49:27.693 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:49:27.705 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:49:28.249 +05:30 [INF] Received HTTP response headers after 539.0357ms - 200
+2026-06-03 11:49:28.255 +05:30 [INF] End processing HTTP request after 561.6998ms - 200
+2026-06-03 11:49:28.266 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 11:49:28.276 +05:30 [INF] ImportData completed successfully.
+2026-06-03 11:49:28.291 +05:30 [INF] Package import completed successfully.
+2026-06-03 12:05:46.577 +05:30 [INF] Message received from queue.
+2026-06-03 12:05:46.595 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603063546-443\",\"appName\":\"testbed114\",\"packageName\":\"ExpExport\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 12:05:46.645 +05:30 [INF] Package export process started.
+2026-06-03 12:05:46.730 +05:30 [INF] GitPull started.
+2026-06-03 12:05:46.746 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExpExport\\1.0.0",
+  "packageName": "ExpExport",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 12:05:46.756 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:05:46.763 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:05:46.770 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:05:48.647 +05:30 [INF] Received HTTP response headers after 1871.0084ms - 200
+2026-06-03 12:05:48.658 +05:30 [INF] End processing HTTP request after 1894.8523ms - 200
+2026-06-03 12:05:48.709 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:05:48.717 +05:30 [INF] GitPull completed successfully.
+2026-06-03 12:05:48.722 +05:30 [INF] ImportStructures started.
+2026-06-03 12:05:48.740 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603063546-443",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExpExport\\1.0.0"
+  }
+}
+2026-06-03 12:05:48.791 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:05:48.812 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:05:48.841 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:05:53.637 +05:30 [INF] Received HTTP response headers after 4776.0888ms - 200
+2026-06-03 12:05:53.654 +05:30 [INF] End processing HTTP request after 4841.7681ms - 200
+2026-06-03 12:05:53.660 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:05:53.674 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 12:05:53.680 +05:30 [INF] ImportData started.
+2026-06-03 12:05:53.707 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603063546-443",
+  "appName": "testbed114",
+  "packageName": "ExpExport",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExpExport\\1.0.0\\ExpExport"
+}
+2026-06-03 12:05:53.738 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:05:53.753 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:05:53.764 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:05:55.239 +05:30 [INF] Received HTTP response headers after 1458.8843ms - 200
+2026-06-03 12:05:55.246 +05:30 [INF] End processing HTTP request after 1493.3176ms - 200
+2026-06-03 12:05:55.263 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:05:55.277 +05:30 [INF] ImportData completed successfully.
+2026-06-03 12:05:55.294 +05:30 [INF] Package import completed successfully.
+2026-06-03 12:22:42.503 +05:30 [INF] Message received from queue.
+2026-06-03 12:22:42.532 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603065242-936\",\"appName\":\"testbed114\",\"packageName\":\"NewExport\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 12:22:42.541 +05:30 [INF] Package export process started.
+2026-06-03 12:22:42.544 +05:30 [INF] GitPull started.
+2026-06-03 12:22:42.549 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0",
+  "packageName": "NewExport",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 12:22:42.561 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:42.570 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:42.580 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:42.595 +05:30 [INF] Message received from queue.
+2026-06-03 12:22:42.600 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603065242-329\",\"appName\":\"testbed114\",\"packageName\":\"NewExport\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 12:22:42.609 +05:30 [INF] Package export process started.
+2026-06-03 12:22:42.612 +05:30 [INF] GitPull started.
+2026-06-03 12:22:42.619 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0",
+  "packageName": "NewExport",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 12:22:42.628 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:42.634 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:42.640 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:44.074 +05:30 [INF] Received HTTP response headers after 1483.461ms - 400
+2026-06-03 12:22:44.717 +05:30 [INF] Received HTTP response headers after 2071.1873ms - 200
+2026-06-03 12:22:44.809 +05:30 [INF] End processing HTTP request after 2238.9681ms - 400
+2026-06-03 12:22:44.813 +05:30 [INF] End processing HTTP request after 2179.0755ms - 200
+2026-06-03 12:22:44.827 +05:30 [ERR] API failed. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull, StatusCode : "BadRequest", Response : {"success":false,"message":"the index is locked; this might be due to a concurrent or crashed process"}
+2026-06-03 12:22:44.834 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:22:44.897 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-06-03 12:22:44.904 +05:30 [INF] ImportStructures started.
+2026-06-03 12:22:44.900 +05:30 [INF] GitPull completed successfully.
+2026-06-03 12:22:44.911 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603065242-936",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0"
+  }
+}
+2026-06-03 12:22:44.979 +05:30 [INF] ImportStructures started.
+2026-06-03 12:22:45.011 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:45.017 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603065242-329",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0"
+  }
+}
+2026-06-03 12:22:45.029 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:45.080 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:45.112 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:45.122 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:45.100 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:49.979 +05:30 [INF] Received HTTP response headers after 4846.5537ms - 200
+2026-06-03 12:22:49.989 +05:30 [INF] End processing HTTP request after 4876.6778ms - 200
+2026-06-03 12:22:49.994 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:50.023 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 12:22:50.066 +05:30 [INF] ImportData started.
+2026-06-03 12:22:50.080 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603065242-329",
+  "appName": "testbed114",
+  "packageName": "NewExport",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0\\NewExport"
+}
+2026-06-03 12:22:50.098 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:50.113 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:50.133 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:50.396 +05:30 [INF] Received HTTP response headers after 5239.4233ms - 200
+2026-06-03 12:22:50.402 +05:30 [INF] End processing HTTP request after 5370.1955ms - 200
+2026-06-03 12:22:50.412 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:22:50.424 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 12:22:50.428 +05:30 [INF] ImportData started.
+2026-06-03 12:22:50.440 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603065242-936",
+  "appName": "testbed114",
+  "packageName": "NewExport",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0\\NewExport"
+}
+2026-06-03 12:22:50.470 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:50.483 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:50.512 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:51.347 +05:30 [INF] Received HTTP response headers after 1169.4928ms - 200
+2026-06-03 12:22:51.394 +05:30 [INF] End processing HTTP request after 1281.1495ms - 200
+2026-06-03 12:22:51.432 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:22:51.457 +05:30 [INF] ImportData completed successfully.
+2026-06-03 12:22:51.505 +05:30 [INF] Package import completed successfully.
+2026-06-03 12:22:52.191 +05:30 [INF] Received HTTP response headers after 1664.0157ms - 200
+2026-06-03 12:22:52.198 +05:30 [INF] End processing HTTP request after 1715.3926ms - 200
+2026-06-03 12:22:52.215 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Failed : 42710: trigger \"trg_axipackagesddl_updatedon\" for relation \"axipackagesddl\" already exists"}
+2026-06-03 12:22:52.245 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 12:22:52.262 +05:30 [ERR] ImportData failed.
+2026-06-03 12:24:02.860 +05:30 [INF] Message received from queue.
+2026-06-03 12:24:02.871 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603065402-924\",\"appName\":\"testbed114\",\"packageName\":\"NewExport\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 12:24:02.899 +05:30 [INF] Package export process started.
+2026-06-03 12:24:02.906 +05:30 [INF] GitPull started.
+2026-06-03 12:24:02.921 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0",
+  "packageName": "NewExport",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 12:24:02.946 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:24:02.968 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:24:02.988 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:24:04.172 +05:30 [INF] Received HTTP response headers after 1171.096ms - 200
+2026-06-03 12:24:04.177 +05:30 [INF] End processing HTTP request after 1209.7425ms - 200
+2026-06-03 12:24:04.182 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:24:04.185 +05:30 [INF] GitPull completed successfully.
+2026-06-03 12:24:04.188 +05:30 [INF] ImportStructures started.
+2026-06-03 12:24:04.199 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603065402-924",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0"
+  }
+}
+2026-06-03 12:24:04.218 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:24:04.223 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:24:04.232 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:24:09.665 +05:30 [INF] Received HTTP response headers after 5418.9635ms - 200
+2026-06-03 12:24:09.669 +05:30 [INF] End processing HTTP request after 5445.6998ms - 200
+2026-06-03 12:24:09.678 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:24:09.698 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 12:24:09.720 +05:30 [INF] ImportData started.
+2026-06-03 12:24:09.734 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603065402-924",
+  "appName": "testbed114",
+  "packageName": "NewExport",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\NewExport\\1.0.0\\NewExport"
+}
+2026-06-03 12:24:09.755 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:24:09.771 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:24:09.783 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:24:10.641 +05:30 [INF] Received HTTP response headers after 854.2157ms - 200
+2026-06-03 12:24:10.649 +05:30 [INF] End processing HTTP request after 878.5679ms - 200
+2026-06-03 12:24:10.662 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:24:10.680 +05:30 [INF] ImportData completed successfully.
+2026-06-03 12:24:10.687 +05:30 [INF] Package import completed successfully.
+2026-06-03 12:50:31.431 +05:30 [INF] Message received from queue.
+2026-06-03 12:50:31.437 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603072028-582\",\"appName\":\"testbed114\",\"packageName\":\"formsExport\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 12:50:31.457 +05:30 [INF] Package export process started.
+2026-06-03 12:50:31.470 +05:30 [INF] GitPull started.
+2026-06-03 12:50:31.487 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\formsExport\\1.0.0",
+  "packageName": "formsExport",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 12:50:31.525 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:50:31.535 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:50:31.563 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:50:33.553 +05:30 [INF] Received HTTP response headers after 1976.5275ms - 200
+2026-06-03 12:50:33.556 +05:30 [INF] End processing HTTP request after 2020.9544ms - 200
+2026-06-03 12:50:33.560 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 12:50:33.566 +05:30 [INF] GitPull completed successfully.
+2026-06-03 12:50:33.570 +05:30 [INF] ImportStructures started.
+2026-06-03 12:50:33.575 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603072028-582",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\formsExport\\1.0.0"
+  }
+}
+2026-06-03 12:50:33.590 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:50:33.604 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:50:33.612 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:50:38.166 +05:30 [INF] Received HTTP response headers after 4541.481ms - 200
+2026-06-03 12:50:38.170 +05:30 [INF] End processing HTTP request after 4565.9666ms - 200
+2026-06-03 12:50:38.175 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 12:50:38.179 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 12:50:38.182 +05:30 [INF] ImportData started.
+2026-06-03 12:50:38.185 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603072028-582",
+  "appName": "testbed114",
+  "packageName": "formsExport",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\formsExport\\1.0.0\\formsExport"
+}
+2026-06-03 12:50:38.193 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:50:38.200 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:50:38.215 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:50:38.859 +05:30 [INF] Received HTTP response headers after 636.6287ms - 200
+2026-06-03 12:50:38.873 +05:30 [INF] End processing HTTP request after 673.6398ms - 200
+2026-06-03 12:50:38.889 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 12:50:38.922 +05:30 [INF] ImportData completed successfully.
+2026-06-03 12:50:38.941 +05:30 [INF] Package import completed successfully.
+2026-06-03 14:24:37.425 +05:30 [INF] Message received from queue.
+2026-06-03 14:24:37.451 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603085434-463\",\"appName\":\"testbed114\",\"packageName\":\"ExportFormTest2\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 14:24:37.470 +05:30 [INF] Package export process started.
+2026-06-03 14:24:37.478 +05:30 [INF] GitPull started.
+2026-06-03 14:24:37.497 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportFormTest2\\1.0.0",
+  "packageName": "ExportFormTest2",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 14:24:37.563 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 14:24:37.573 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 14:24:37.576 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 14:24:38.485 +05:30 [INF] Received HTTP response headers after 906.8578ms - 200
+2026-06-03 14:24:38.489 +05:30 [INF] End processing HTTP request after 916.8209ms - 200
+2026-06-03 14:24:38.493 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 14:24:38.494 +05:30 [INF] GitPull completed successfully.
+2026-06-03 14:24:38.502 +05:30 [INF] ImportStructures started.
+2026-06-03 14:24:38.505 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603085434-463",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportFormTest2\\1.0.0"
+  }
+}
+2026-06-03 14:24:38.518 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 14:24:38.525 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 14:24:38.533 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 14:24:41.036 +05:30 [INF] Received HTTP response headers after 2498.3797ms - 200
+2026-06-03 14:24:41.039 +05:30 [INF] End processing HTTP request after 2514.5654ms - 200
+2026-06-03 14:24:41.042 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 14:24:41.045 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 14:24:41.047 +05:30 [INF] ImportData started.
+2026-06-03 14:24:41.049 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603085434-463",
+  "appName": "testbed114",
+  "packageName": "ExportFormTest2",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportFormTest2\\1.0.0\\ExportFormTest2"
+}
+2026-06-03 14:24:41.055 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 14:24:41.057 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 14:24:41.065 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 14:24:44.112 +05:30 [INF] Received HTTP response headers after 3042.8063ms - 200
+2026-06-03 14:24:44.116 +05:30 [INF] End processing HTTP request after 3059.0123ms - 200
+2026-06-03 14:24:44.122 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Validation Fail: Field 'axusername' (Row No: 1) with value 'tamil'; \"tamil\" is not a valid Username*;Validation Fail: Field 'formcap' (Row No: 1) with value 'Action Desktop-(dsrcp)'; Unexpected error in RapidValidateData: There is no row at position 0.;Validation Fail: Field 'viewctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult;Validation Fail: Field 'editctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult"}
+2026-06-03 14:24:44.126 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 14:24:44.152 +05:30 [ERR] ImportData failed.
+2026-06-03 15:40:02.554 +05:30 [INF] Message received from queue.
+2026-06-03 15:40:02.645 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603100959-185\",\"appName\":\"testbed114\",\"packageName\":\"New2\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 15:40:02.890 +05:30 [INF] Package export process started.
+2026-06-03 15:40:03.028 +05:30 [INF] GitPull started.
+2026-06-03 15:40:03.179 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\New2\\1.0.0",
+  "packageName": "New2",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 15:40:03.230 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 15:40:03.262 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 15:40:03.297 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 15:40:04.368 +05:30 [INF] Received HTTP response headers after 1040.0376ms - 200
+2026-06-03 15:40:04.372 +05:30 [INF] End processing HTTP request after 1110.4657ms - 200
+2026-06-03 15:40:04.378 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 15:40:04.382 +05:30 [INF] GitPull completed successfully.
+2026-06-03 15:40:04.389 +05:30 [INF] ImportStructures started.
+2026-06-03 15:40:04.403 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603100959-185",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\New2\\1.0.0"
+  }
+}
+2026-06-03 15:40:04.430 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 15:40:04.461 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 15:40:04.492 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 15:40:09.846 +05:30 [INF] Received HTTP response headers after 5335.626ms - 200
+2026-06-03 15:40:10.373 +05:30 [INF] End processing HTTP request after 5912.336ms - 200
+2026-06-03 15:40:10.380 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 15:40:10.385 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 15:40:10.388 +05:30 [INF] ImportData started.
+2026-06-03 15:40:10.390 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603100959-185",
+  "appName": "testbed114",
+  "packageName": "New2",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\New2\\1.0.0\\New2"
+}
+2026-06-03 15:40:10.396 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 15:40:10.420 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 15:40:10.425 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 15:40:13.143 +05:30 [INF] Received HTTP response headers after 2708.8654ms - 200
+2026-06-03 15:40:13.177 +05:30 [INF] End processing HTTP request after 2758.2416ms - 200
+2026-06-03 15:40:13.183 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Validation Fail: Field 'axusername' (Row No: 1) with value 'tamil'; \"tamil\" is not a valid Username*;Validation Fail: Field 'formcap' (Row No: 1) with value 'Action Desktop-(dsrcp)'; Unexpected error in RapidValidateData: There is no row at position 0.;Validation Fail: Field 'viewctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult;Validation Fail: Field 'editctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult"}
+2026-06-03 15:40:13.208 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 15:40:13.212 +05:30 [ERR] ImportData failed.
+2026-06-03 17:02:43.661 +05:30 [INF] Message received from queue.
+2026-06-03 17:02:43.671 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603113242-464\",\"appName\":\"testbed114\",\"packageName\":\"ExportFormTest3\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 17:02:43.690 +05:30 [INF] Package export process started.
+2026-06-03 17:02:43.695 +05:30 [INF] GitPull started.
+2026-06-03 17:02:43.709 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportFormTest3\\1.0.0",
+  "packageName": "ExportFormTest3",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 17:02:43.723 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 17:02:43.739 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 17:02:43.743 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 17:02:44.847 +05:30 [INF] Received HTTP response headers after 1100.7073ms - 200
+2026-06-03 17:02:44.869 +05:30 [INF] End processing HTTP request after 1135.0431ms - 200
+2026-06-03 17:02:44.877 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 17:02:44.881 +05:30 [INF] GitPull completed successfully.
+2026-06-03 17:02:44.883 +05:30 [INF] ImportStructures started.
+2026-06-03 17:02:44.884 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603113242-464",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportFormTest3\\1.0.0"
+  }
+}
+2026-06-03 17:02:44.910 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 17:02:44.911 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 17:02:44.914 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 17:02:47.470 +05:30 [INF] Received HTTP response headers after 2550.8114ms - 200
+2026-06-03 17:02:47.472 +05:30 [INF] End processing HTTP request after 2560.6328ms - 200
+2026-06-03 17:02:47.476 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 17:02:47.478 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 17:02:47.480 +05:30 [INF] ImportData started.
+2026-06-03 17:02:47.482 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603113242-464",
+  "appName": "testbed114",
+  "packageName": "ExportFormTest3",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\ExportFormTest3\\1.0.0\\ExportFormTest3"
+}
+2026-06-03 17:02:47.487 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 17:02:47.497 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 17:02:47.503 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 17:02:48.755 +05:30 [INF] Received HTTP response headers after 1244.5312ms - 200
+2026-06-03 17:02:48.757 +05:30 [INF] End processing HTTP request after 1260.5507ms - 200
+2026-06-03 17:02:48.759 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Failed : 42P07: relation \"idx_axipackagesddl_status\" already exists"}
+2026-06-03 17:02:48.763 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 17:02:48.765 +05:30 [ERR] ImportData failed.
+2026-06-03 18:19:31.474 +05:30 [INF] Message received from queue.
+2026-06-03 18:19:31.488 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603124928-689\",\"appName\":\"testbed114\",\"packageName\":\"Test1\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 18:19:31.521 +05:30 [INF] Package export process started.
+2026-06-03 18:19:31.531 +05:30 [INF] GitPull started.
+2026-06-03 18:19:31.558 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test1\\1.0.0",
+  "packageName": "Test1",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 18:19:31.590 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:19:31.709 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:19:31.721 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:19:32.838 +05:30 [INF] Received HTTP response headers after 1105.6184ms - 200
+2026-06-03 18:19:32.852 +05:30 [INF] End processing HTTP request after 1145.8105ms - 200
+2026-06-03 18:19:32.858 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:19:32.869 +05:30 [INF] GitPull completed successfully.
+2026-06-03 18:19:32.872 +05:30 [INF] ImportStructures started.
+2026-06-03 18:19:32.877 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603124928-689",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test1\\1.0.0"
+  }
+}
+2026-06-03 18:19:32.905 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:19:32.912 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:19:32.921 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:19:36.470 +05:30 [INF] Received HTTP response headers after 3533.6788ms - 200
+2026-06-03 18:19:36.474 +05:30 [INF] End processing HTTP request after 3562.0909ms - 200
+2026-06-03 18:19:36.480 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:19:36.487 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 18:19:36.491 +05:30 [INF] ImportData started.
+2026-06-03 18:19:36.499 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603124928-689",
+  "appName": "testbed114",
+  "packageName": "Test1",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test1\\1.0.0\\Test1"
+}
+2026-06-03 18:19:36.523 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:19:36.529 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:19:36.545 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:19:37.250 +05:30 [INF] Received HTTP response headers after 697.6977ms - 200
+2026-06-03 18:19:37.258 +05:30 [INF] End processing HTTP request after 728.7338ms - 200
+2026-06-03 18:19:37.275 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:19:37.289 +05:30 [INF] ImportData completed successfully.
+2026-06-03 18:19:37.303 +05:30 [INF] Package import completed successfully.
+2026-06-03 18:44:07.069 +05:30 [INF] Message received from queue.
+2026-06-03 18:44:07.139 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603131404-160\",\"appName\":\"testbed114\",\"packageName\":\"Test2\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 18:44:07.156 +05:30 [INF] Package export process started.
+2026-06-03 18:44:07.164 +05:30 [INF] GitPull started.
+2026-06-03 18:44:07.172 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test2\\1.0.0",
+  "packageName": "Test2",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 18:44:07.191 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:44:07.196 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:44:07.209 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:44:08.302 +05:30 [INF] Received HTTP response headers after 1085.4509ms - 200
+2026-06-03 18:44:08.310 +05:30 [INF] End processing HTTP request after 1114.3728ms - 200
+2026-06-03 18:44:08.318 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 18:44:08.329 +05:30 [INF] GitPull completed successfully.
+2026-06-03 18:44:08.343 +05:30 [INF] ImportStructures started.
+2026-06-03 18:44:08.350 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603131404-160",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test2\\1.0.0"
+  }
+}
+2026-06-03 18:44:08.381 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:44:08.397 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:44:08.405 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:44:11.686 +05:30 [INF] Received HTTP response headers after 3267.4067ms - 200
+2026-06-03 18:44:11.690 +05:30 [INF] End processing HTTP request after 3293.0367ms - 200
+2026-06-03 18:44:11.692 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 18:44:11.695 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 18:44:11.696 +05:30 [INF] ImportData started.
+2026-06-03 18:44:11.698 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603131404-160",
+  "appName": "testbed114",
+  "packageName": "Test2",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test2\\1.0.0\\Test2"
+}
+2026-06-03 18:44:11.701 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:44:11.703 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:44:11.714 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:44:12.787 +05:30 [INF] Received HTTP response headers after 1060.3988ms - 200
+2026-06-03 18:44:12.795 +05:30 [INF] End processing HTTP request after 1091.6376ms - 200
+2026-06-03 18:44:12.803 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 18:44:12.814 +05:30 [INF] ImportData completed successfully.
+2026-06-03 18:44:12.820 +05:30 [INF] Package import completed successfully.
+2026-06-03 19:33:40.326 +05:30 [INF] Application starting...
+2026-06-03 19:33:44.756 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-03 19:33:44.787 +05:30 [INF] Hosting environment: Development
+2026-06-03 19:33:44.796 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-06-03 19:33:44.873 +05:30 [INF] RabbitMQ consumer started.
+2026-06-03 19:37:58.019 +05:30 [INF] Message received from queue.
+2026-06-03 19:37:58.025 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603140755-926\",\"appName\":\"testbed114\",\"packageName\":\"Test2\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 19:37:59.572 +05:30 [INF] Package export process started.
+2026-06-03 19:37:59.585 +05:30 [INF] GitPull started.
+2026-06-03 19:37:59.703 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test2\\1.0.0",
+  "packageName": "Test2",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 19:37:59.850 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:37:59.925 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:37:59.944 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:38:01.920 +05:30 [INF] Received HTTP response headers after 1959.1326ms - 200
+2026-06-03 19:38:01.953 +05:30 [INF] End processing HTTP request after 2081.9057ms - 200
+2026-06-03 19:38:01.976 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:38:01.984 +05:30 [INF] GitPull completed successfully.
+2026-06-03 19:38:01.993 +05:30 [INF] ImportStructures started.
+2026-06-03 19:38:02.006 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603140755-926",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test2\\1.0.0\\Test2"
+  }
+}
+2026-06-03 19:38:02.034 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:38:02.045 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:38:02.058 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:38:29.283 +05:30 [INF] Received HTTP response headers after 27211.8107ms - 200
+2026-06-03 19:38:39.844 +05:30 [INF] End processing HTTP request after 37801.8421ms - 200
+2026-06-03 19:38:39.850 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:38:39.856 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 19:38:39.866 +05:30 [INF] ImportData started.
+2026-06-03 19:38:39.879 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603140755-926",
+  "appName": "testbed114",
+  "packageName": "Test2",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test2\\1.0.0\\Test2",
+  "trace": "true"
+}
+2026-06-03 19:38:39.900 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:38:39.920 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:38:39.935 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:38:41.117 +05:30 [INF] Received HTTP response headers after 1165.9252ms - 200
+2026-06-03 19:38:41.131 +05:30 [INF] End processing HTTP request after 1210.8352ms - 200
+2026-06-03 19:38:41.148 +05:30 [INF] API success. Url : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:38:41.154 +05:30 [INF] ImportData completed successfully.
+2026-06-03 19:38:41.166 +05:30 [INF] Package import completed successfully.
+2026-06-03 19:57:30.885 +05:30 [INF] Message received from queue.
+2026-06-03 19:57:30.892 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260603142730-172\",\"appName\":\"testbed114\",\"packageName\":\"Test3\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-06-03 19:57:30.924 +05:30 [INF] Package export process started.
+2026-06-03 19:57:30.936 +05:30 [INF] GitPull started.
+2026-06-03 19:57:30.959 +05:30 [INF] GitPull payload 
+{
+  "physicalPath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test3\\1.0.0",
+  "packageName": "Test3",
+  "gitbranch": "main",
+  "targetRepo": "AxpertPackages"
+}
+2026-06-03 19:57:30.983 +05:30 [INF] Calling API : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:57:30.997 +05:30 [INF] Start processing HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:57:31.011 +05:30 [INF] Sending HTTP request POST https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:57:32.402 +05:30 [INF] Received HTTP response headers after 1377.72ms - 200
+2026-06-03 19:57:32.406 +05:30 [INF] End processing HTTP request after 1409.742ms - 200
+2026-06-03 19:57:32.418 +05:30 [INF] API success. Url : https://b99f-2405-201-e02b-5124-f4ff-c96b-500d-caa3.ngrok-free.app/api/git/pull
+2026-06-03 19:57:32.422 +05:30 [INF] GitPull completed successfully.
+2026-06-03 19:57:32.440 +05:30 [INF] ImportStructures started.
+2026-06-03 19:57:32.448 +05:30 [INF] ImportStructures payload 
+{
+  "import": {
+    "axpapp": "testbed114",
+    "username": "PKG-20260603142730-172",
+    "trace": true,
+    "impallfromfolder": true,
+    "imppath": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test3\\1.0.0\\Test3"
+  }
+}
+2026-06-03 19:57:32.480 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:57:32.486 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:57:32.507 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:57:50.422 +05:30 [INF] Received HTTP response headers after 17904.856ms - 200
+2026-06-03 19:57:50.427 +05:30 [INF] End processing HTTP request after 17940.1209ms - 200
+2026-06-03 19:57:50.432 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-06-03 19:57:50.440 +05:30 [INF] ImportStructures completed successfully.
+2026-06-03 19:57:50.449 +05:30 [INF] ImportData started.
+2026-06-03 19:57:50.452 +05:30 [INF] ImportData payload 
+{
+  "requestId": "PKG-20260603142730-172",
+  "appName": "testbed114",
+  "packageName": "Test3",
+  "packageVersion": "1.0.0",
+  "requestedBy": "admin",
+  "repository": "AxpertPackages",
+  "password": "22723bbd4217a0abf6d3e68073c7603d",
+  "importDir": "D:\\AxiExportProject\\AxiExportPackage\\AxiExportPackage\\bin\\Debug\\net8.0\\testbed114\\admin\\Test3\\1.0.0\\Test3",
+  "trace": "true"
+}
+2026-06-03 19:57:50.467 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:57:50.476 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:57:50.482 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-06-03 19:57:53.003 +05:30 [INF] Received HTTP response headers after 2513.4936ms - 200
+2026-06-03 19:57:53.031 +05:30 [INF] End processing HTTP request after 2555.3055ms - 200
+2026-06-03 19:57:53.053 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Validation Fail: Field 'emailto_usernames' (Row No: 1) with value 'syamalab,lakshmi'; \"syamalab\" is not a valid Emailto usernames"}
+2026-06-03 19:57:53.067 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-06-03 19:57:53.086 +05:30 [ERR] ImportData failed.

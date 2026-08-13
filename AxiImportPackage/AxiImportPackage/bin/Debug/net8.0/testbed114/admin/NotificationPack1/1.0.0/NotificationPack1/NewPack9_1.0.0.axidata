@@ -1,0 +1,76 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-6aaa7356-f745-4201-97e6-0b034c4f48b0",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select null from dual"
+              }
+            }
+          }
+        },
+        {
+          "transid": "a__up",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "fromsource": "U",
+                "axuserrole": "All",
+                "axusername": "tamil1",
+                "comptype": "Form",
+                "formcap": "Action Desktop-(dsrcp)",
+                "formtransid": "dsrcp",
+                "createcol": "F",
+                "dc1table": "dsrcp1",
+                "allowcreate": "No",
+                "viewcnd": "No view access",
+                "viewctrl": "4",
+                "editcnd": "No edit access",
+                "editctrl": "4",
+                "dupchk": "Alldsrcptamil1",
+                "axp_savedirective": "reloadaftersave"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "sqltext": "select null from dual"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

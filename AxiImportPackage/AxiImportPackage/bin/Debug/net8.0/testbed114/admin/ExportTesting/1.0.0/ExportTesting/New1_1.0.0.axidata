@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "ddlscritps": [
+      "CREATE OR REPLACE FUNCTION \"{{schemaName}}\".fn_axipackagesddl_set_updatedon()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\r\nBEGIN\r\n    NEW.updated_on = now();\r\n    RETURN NEW;\r\nEND;\r\n$function$\n;\r\n$D#\r\nCREATE TRIGGER trg_axipackagesddl_updatedon BEFORE UPDATE ON axipackagesddl FOR EACH ROW EXECUTE FUNCTION fn_axipackagesddl_set_updatedon();\r\n$D#\r\n"
+    ]
+  }
+}

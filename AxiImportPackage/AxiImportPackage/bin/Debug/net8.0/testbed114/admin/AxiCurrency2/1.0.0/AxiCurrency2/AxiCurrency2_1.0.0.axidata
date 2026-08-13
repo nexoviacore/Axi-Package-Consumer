@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-2bfa2e4d-698b-4f84-abe7-452719d1eb69",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Axi Currency Master-(axcur)",
+                "stransid": "axcur",
+                "txttransid": "axcur",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "F"
+              }
+            },
+            "dc3": {},
+            "dc4": {},
+            "dc5": {},
+            "dc6": {}
+          }
+        }
+      ]
+    }
+  }
+}

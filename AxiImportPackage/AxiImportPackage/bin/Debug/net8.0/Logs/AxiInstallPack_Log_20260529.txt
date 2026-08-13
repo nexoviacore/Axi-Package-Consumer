@@ -1,0 +1,504 @@
+2026-05-29 14:53:51.441 +05:30 [INF] Application starting...
+2026-05-29 14:54:32.031 +05:30 [INF] Application starting...
+2026-05-29 15:04:26.160 +05:30 [INF] Application starting...
+2026-05-29 15:04:52.508 +05:30 [FTL] Application terminated unexpectedly.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.InitializeRabbitMq() in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 42
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer..ctor(IConfiguration configuration, ILogger`1 logger, IServiceScopeFactory scopeFactory) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 30
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Program.cs:line 40
+2026-05-29 15:05:54.013 +05:30 [INF] Application starting...
+2026-05-29 15:06:10.105 +05:30 [FTL] Application terminated unexpectedly.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.InitializeRabbitMq() in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 42
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer..ctor(IConfiguration configuration, ILogger`1 logger, IServiceScopeFactory scopeFactory) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 30
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Program.cs:line 40
+2026-05-29 15:08:41.689 +05:30 [INF] Application starting...
+2026-05-29 15:14:01.140 +05:30 [INF] Application starting...
+2026-05-29 15:14:09.010 +05:30 [FTL] Application terminated unexpectedly.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.InitializeRabbitMq() in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 43
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer..ctor(IConfiguration configuration, ILogger`1 logger, IServiceScopeFactory scopeFactory) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 30
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Program.cs:line 40
+2026-05-29 15:15:07.172 +05:30 [INF] Application starting...
+2026-05-29 15:15:35.088 +05:30 [INF] Application starting...
+2026-05-29 15:15:40.874 +05:30 [FTL] Application terminated unexpectedly.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.AggregateException: One or more errors occurred. (Connection failed)
+ ---> RabbitMQ.Client.Exceptions.ConnectFailureException: Connection failed
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.NameResolutionPal.ProcessResult(SocketError errorCode, GetAddrInfoExContext* context)
+   at System.Net.NameResolutionPal.GetAddressInfoExCallback(Int32 error, Int32 bytes, NativeOverlapped* overlapped)
+--- End of stack trace from previous location ---
+   at System.Net.Dns.<GetAddrInfoWithTelemetryAsync>g__CompleteAsync|34_0[T](Task task, String hostName, Int64 startingTimestamp)
+   at RabbitMQ.Client.TcpClientAdapter.ConnectAsync(String host, Int32 port)
+   at RabbitMQ.Client.Impl.TaskExtensions.TimeoutAfter(Task task, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectOrFail(ITcpClient socket, AmqpTcpEndpoint endpoint, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingAddressFamily(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout, AddressFamily family)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ConnectUsingIPv4(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan timeout)
+   at RabbitMQ.Client.Impl.SocketFrameHandler..ctor(AmqpTcpEndpoint endpoint, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.Framing.Impl.IProtocolExtensions.CreateFrameHandler(IProtocol protocol, AmqpTcpEndpoint endpoint, ArrayPool`1 pool, Func`2 socketFactory, TimeSpan connectionTimeout, TimeSpan readTimeout, TimeSpan writeTimeout)
+   at RabbitMQ.Client.ConnectionFactory.CreateFrameHandler(AmqpTcpEndpoint endpoint)
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.EndpointResolverExtensions.SelectOne[T](IEndpointResolver resolver, Func`2 selector)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.InitializeRabbitMq() in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 43
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer..ctor(IConfiguration configuration, ILogger`1 logger, IServiceScopeFactory scopeFactory) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 30
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Program.cs:line 40
+2026-05-29 15:17:59.120 +05:30 [INF] Application starting...
+2026-05-29 15:18:14.856 +05:30 [FTL] Application terminated unexpectedly.
+RabbitMQ.Client.Exceptions.BrokerUnreachableException: None of the specified endpoints were reachable
+ ---> System.IO.IOException: connection.start was never received, likely due to a network timeout
+ ---> System.IO.EndOfStreamException: Reached the end of the stream. Possible authentication failure.
+   at RabbitMQ.Client.Impl.InboundFrame.ReadFrom(Stream reader, Byte[] frameHeaderBuffer, ArrayPool`1 pool, UInt32 maxMessageSize)
+   at RabbitMQ.Client.Impl.SocketFrameHandler.ReadFrame()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoopIteration()
+   at RabbitMQ.Client.Framing.Impl.Connection.MainLoop()
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.Framing.Impl.Connection.StartAndTune()
+   at RabbitMQ.Client.Framing.Impl.Connection.Open(Boolean insist)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.Connection..ctor(IConnectionFactory factory, Boolean insist, IFrameHandler frameHandler, ArrayPool`1 memoryPool, String clientProvidedName)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IFrameHandler fh)
+   at RabbitMQ.Client.Framing.Impl.AutorecoveringConnection.Init(IEndpointResolver endpoints)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   --- End of inner exception stack trace ---
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(IEndpointResolver endpointResolver, String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection(String clientProvidedName)
+   at RabbitMQ.Client.ConnectionFactory.CreateConnection()
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer.InitializeRabbitMq() in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 43
+   at AxiInstallConsumerPackage.Consumers.RabbitMqConsumer..ctor(IConfiguration configuration, ILogger`1 logger, IServiceScopeFactory scopeFactory) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\RabbitMqConsumer.cs:line 30
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Program.cs:line 40
+2026-05-29 15:18:25.092 +05:30 [INF] Application starting...
+2026-05-29 15:18:27.517 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:18:27.541 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:18:27.547 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:18:33.328 +05:30 [INF] Message received from queue.
+2026-05-29 15:18:33.331 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:18:36.836 +05:30 [INF] Package export process started.
+2026-05-29 15:18:36.840 +05:30 [INF] PushToGitHub started.
+2026-05-29 15:18:43.335 +05:30 [INF] Calling API : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-29 15:18:45.822 +05:30 [INF] Start processing HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-29 15:18:45.836 +05:30 [INF] Sending HTTP request POST https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull
+2026-05-29 15:18:46.496 +05:30 [INF] Received HTTP response headers after 649.3221ms - 404
+2026-05-29 15:18:46.538 +05:30 [INF] End processing HTTP request after 733.8319ms - 404
+2026-05-29 15:18:46.551 +05:30 [ERR] API failed. Url : https://70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app/api/git/pull, StatusCode : "NotFound", Response : The endpoint 70fb-2405-201-e02b-5124-380e-bdf7-c45-108a.ngrok-free.app is offline.
+
+ERR_NGROK_3200
+
+2026-05-29 15:18:46.558 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-29 15:18:47.563 +05:30 [INF] ImportStructures started.
+2026-05-29 15:18:48.913 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:18:49.548 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:18:49.550 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:18:58.275 +05:30 [INF] Received HTTP response headers after 8722.1471ms - 200
+2026-05-29 15:18:58.282 +05:30 [INF] End processing HTTP request after 8735.4625ms - 200
+2026-05-29 15:18:58.294 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:18:58.304 +05:30 [INF] ImportStructures completed successfully.
+2026-05-29 15:19:01.432 +05:30 [INF] ImportData started.
+2026-05-29 15:19:03.420 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:19:03.674 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:19:03.677 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:19:07.817 +05:30 [INF] HTTP request failed after 4129.1629ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-05-29 15:19:08.038 +05:30 [INF] HTTP request failed after 4364.3966ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-05-29 15:19:08.297 +05:30 [ERR] Exception while calling API : http://localhost:7000/AxiDataPackage/ImportData
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:7000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\AxiExportProject\AxiExportPackage\AxiExportPackage\Services\ApiService.cs:line 40
+2026-05-29 15:19:08.396 +05:30 [ERR] ImportData failed. Message : No connection could be made because the target machine actively refused it. (localhost:7000)
+2026-05-29 15:19:08.400 +05:30 [ERR] ImportData failed.
+2026-05-29 15:22:00.988 +05:30 [INF] Application starting...
+2026-05-29 15:22:01.829 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:22:01.860 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:22:01.870 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:22:01.927 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:23:16.485 +05:30 [INF] Message received from queue.
+2026-05-29 15:23:16.767 +05:30 [INF] Package export process started.
+2026-05-29 15:23:16.773 +05:30 [INF] PushToGitHub started.
+2026-05-29 15:23:16.918 +05:30 [INF] Calling API : http://localhost:6000/api/git/pull
+2026-05-29 15:23:16.951 +05:30 [INF] Start processing HTTP request POST http://localhost:6000/api/git/pull
+2026-05-29 15:23:16.963 +05:30 [INF] Sending HTTP request POST http://localhost:6000/api/git/pull
+2026-05-29 15:23:21.379 +05:30 [INF] Received HTTP response headers after 4406.8605ms - 400
+2026-05-29 15:23:21.392 +05:30 [INF] End processing HTTP request after 4464.0626ms - 400
+2026-05-29 15:23:21.402 +05:30 [ERR] API failed. Url : http://localhost:6000/api/git/pull, StatusCode : "BadRequest", Response : {"success":false,"message":"unsupported URL protocol"}
+2026-05-29 15:23:21.407 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-29 15:23:21.411 +05:30 [INF] ImportStructures started.
+2026-05-29 15:23:21.419 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:23:21.422 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:23:21.425 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:23:28.805 +05:30 [INF] Received HTTP response headers after 7377.8894ms - 200
+2026-05-29 15:23:28.809 +05:30 [INF] End processing HTTP request after 7387.603ms - 200
+2026-05-29 15:23:28.818 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:23:28.821 +05:30 [INF] ImportStructures completed successfully.
+2026-05-29 15:23:28.825 +05:30 [INF] ImportData started.
+2026-05-29 15:23:28.832 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:23:28.835 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:23:28.840 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:23:29.861 +05:30 [INF] Received HTTP response headers after 1010.3348ms - 200
+2026-05-29 15:23:29.869 +05:30 [INF] End processing HTTP request after 1034.1274ms - 200
+2026-05-29 15:23:29.877 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-29 15:23:29.886 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-05-29 15:23:29.890 +05:30 [ERR] ImportData failed.
+2026-05-29 15:26:33.676 +05:30 [INF] Application starting...
+2026-05-29 15:26:36.133 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:26:36.153 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:26:36.163 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:26:36.171 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:26:52.397 +05:30 [INF] Message received from queue.
+2026-05-29 15:26:53.413 +05:30 [INF] Package export process started.
+2026-05-29 15:26:53.419 +05:30 [INF] PushToGitHub started.
+2026-05-29 15:26:55.665 +05:30 [INF] Calling API : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:26:56.493 +05:30 [INF] Start processing HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:26:56.510 +05:30 [INF] Sending HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:27:26.468 +05:30 [INF] Application starting...
+2026-05-29 15:27:27.252 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:27:27.279 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:27:27.284 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:27:27.398 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:27:35.013 +05:30 [INF] Message received from queue.
+2026-05-29 15:27:35.157 +05:30 [INF] Package export process started.
+2026-05-29 15:27:35.163 +05:30 [INF] PushToGitHub started.
+2026-05-29 15:27:35.269 +05:30 [INF] Calling API : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:27:35.299 +05:30 [INF] Start processing HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:27:35.311 +05:30 [INF] Sending HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:27:36.798 +05:30 [INF] Received HTTP response headers after 1471.8853ms - 400
+2026-05-29 15:27:36.830 +05:30 [INF] End processing HTTP request after 1548.5841ms - 400
+2026-05-29 15:27:36.857 +05:30 [ERR] API failed. Url : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull, StatusCode : "BadRequest", Response : {"success":false,"message":"unsupported URL protocol"}
+2026-05-29 15:27:36.872 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-29 15:27:36.897 +05:30 [INF] ImportStructures started.
+2026-05-29 15:27:36.962 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:27:36.971 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:27:36.981 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:27:42.881 +05:30 [INF] Received HTTP response headers after 5896.8901ms - 200
+2026-05-29 15:27:42.886 +05:30 [INF] End processing HTTP request after 5916.0852ms - 200
+2026-05-29 15:27:42.892 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:27:42.898 +05:30 [INF] ImportStructures completed successfully.
+2026-05-29 15:27:42.903 +05:30 [INF] ImportData started.
+2026-05-29 15:27:42.908 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:27:42.911 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:27:42.919 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:27:43.076 +05:30 [INF] Received HTTP response headers after 151.7215ms - 200
+2026-05-29 15:27:43.080 +05:30 [INF] End processing HTTP request after 169.5923ms - 200
+2026-05-29 15:27:43.090 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Package file not found"}
+2026-05-29 15:27:43.095 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-05-29 15:27:43.098 +05:30 [ERR] ImportData failed.
+2026-05-29 15:36:11.695 +05:30 [INF] Application starting...
+2026-05-29 15:36:16.289 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:36:16.322 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:36:16.364 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:36:16.389 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:37:31.201 +05:30 [INF] Application starting...
+2026-05-29 15:37:32.769 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:37:32.791 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:37:32.792 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:37:32.799 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:37:40.179 +05:30 [INF] Message received from queue.
+2026-05-29 15:37:40.182 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260529100736-157\",\"appName\":\"pgbase114\",\"packageName\":\"HelpDesk\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"axi-packages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-05-29 15:38:09.263 +05:30 [INF] Package export process started.
+2026-05-29 15:38:09.268 +05:30 [INF] PushToGitHub started.
+2026-05-29 15:38:14.832 +05:30 [INF] Calling API : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:38:17.015 +05:30 [INF] Start processing HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:38:17.030 +05:30 [INF] Sending HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:38:18.262 +05:30 [INF] Received HTTP response headers after 1178.2807ms - 400
+2026-05-29 15:38:18.695 +05:30 [INF] End processing HTTP request after 1697.617ms - 400
+2026-05-29 15:38:18.728 +05:30 [ERR] API failed. Url : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull, StatusCode : "BadRequest", Response : {"success":false,"message":"unsupported URL protocol"}
+2026-05-29 15:38:18.736 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-29 15:38:30.024 +05:30 [INF] ImportStructures started.
+2026-05-29 15:40:24.352 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:40:25.847 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:40:25.851 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:41:14.732 +05:30 [INF] Received HTTP response headers after 48877.2275ms - 200
+2026-05-29 15:41:14.739 +05:30 [INF] End processing HTTP request after 48893.8629ms - 200
+2026-05-29 15:41:29.587 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:41:29.590 +05:30 [INF] ImportStructures completed successfully.
+2026-05-29 15:41:36.392 +05:30 [INF] ImportData started.
+2026-05-29 15:41:52.343 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:41:53.570 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:41:53.578 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:41:56.246 +05:30 [INF] Received HTTP response headers after 2660.0518ms - 200
+2026-05-29 15:41:56.258 +05:30 [INF] End processing HTTP request after 2687.6496ms - 200
+2026-05-29 15:42:12.061 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Validation Fail: Field 'viewctrl' (Row No: 1) with value '1'; AxValidate.Dto.OperationResult;Validation Fail: Field 'editctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult;Validation Fail: Field 'dupchk' (Row No: 1) with value 'Allsvcadmin'; Duplicate values are not allowed in Role and Form"}
+2026-05-29 15:42:12.069 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-05-29 15:42:12.071 +05:30 [ERR] ImportData failed.
+2026-05-29 15:49:46.288 +05:30 [INF] Application starting...
+2026-05-29 15:49:47.834 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-29 15:49:47.893 +05:30 [INF] RabbitMQ consumer started.
+2026-05-29 15:49:47.910 +05:30 [INF] Hosting environment: Development
+2026-05-29 15:49:47.916 +05:30 [INF] Content root path: D:\AxiExportProject\AxiExportPackage\AxiExportPackage\bin\Debug\net8.0
+2026-05-29 15:50:52.922 +05:30 [INF] Message received from queue.
+2026-05-29 15:50:52.934 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260529102050-799\",\"appName\":\"pgbase114\",\"packageName\":\"HelpDesk\",\"packageVersion\":\"1.0.0\",\"requestedBy\":\"admin\",\"repository\":\"axi-packages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-05-29 15:50:53.411 +05:30 [INF] Package export process started.
+2026-05-29 15:50:53.418 +05:30 [INF] PushToGitHub started.
+2026-05-29 15:50:55.175 +05:30 [INF] Calling API : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:50:55.569 +05:30 [INF] Start processing HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:50:55.584 +05:30 [INF] Sending HTTP request POST https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull
+2026-05-29 15:50:56.592 +05:30 [INF] Received HTTP response headers after 938.0542ms - 400
+2026-05-29 15:50:57.004 +05:30 [INF] End processing HTTP request after 1453.798ms - 400
+2026-05-29 15:50:57.047 +05:30 [ERR] API failed. Url : https://b64b-2405-201-e02b-5124-2dd4-3d5e-8098-3831.ngrok-free.app/api/git/pull, StatusCode : "BadRequest", Response : {"success":false,"message":"unsupported URL protocol"}
+2026-05-29 15:50:57.058 +05:30 [ERR] GitPull failed. Message : API call failed.
+2026-05-29 15:50:59.303 +05:30 [INF] ImportStructures started.
+2026-05-29 15:51:01.653 +05:30 [INF] Calling API : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:51:02.737 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:51:02.747 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:51:45.977 +05:30 [INF] Received HTTP response headers after 43225.8935ms - 200
+2026-05-29 15:51:46.072 +05:30 [INF] End processing HTTP request after 43336.5051ms - 200
+2026-05-29 15:51:46.087 +05:30 [INF] API success. Url : http://localhost/Axpert114armscripts/ASBDefSyncRest.dll/datasnap/rest/TASBDefSyncRest/ImportStructs
+2026-05-29 15:51:46.101 +05:30 [INF] ImportStructures completed successfully.
+2026-05-29 15:51:55.082 +05:30 [INF] ImportData started.
+2026-05-29 15:52:17.538 +05:30 [INF] Calling API : http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:52:20.832 +05:30 [INF] Start processing HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:52:20.838 +05:30 [INF] Sending HTTP request POST http://localhost:7000/AxiDataPackage/ImportData
+2026-05-29 15:52:23.081 +05:30 [INF] Received HTTP response headers after 2239.3018ms - 200
+2026-05-29 15:52:23.092 +05:30 [INF] End processing HTTP request after 2260.6088ms - 200
+2026-05-29 15:52:31.727 +05:30 [ERR] API business failure. Url : http://localhost:7000/AxiDataPackage/ImportData, Response : {"success":false,"message":"Import Package Failed","errormessage":"Validation Fail: Field 'viewctrl' (Row No: 1) with value '1'; AxValidate.Dto.OperationResult;Validation Fail: Field 'editctrl' (Row No: 1) with value '4'; AxValidate.Dto.OperationResult;Validation Fail: Field 'dupchk' (Row No: 1) with value 'Allsvcadmin'; Duplicate values are not allowed in Role and Form"}
+2026-05-29 15:52:31.732 +05:30 [ERR] ImportData failed. Message : API returned failed status.
+2026-05-29 15:52:31.736 +05:30 [ERR] ImportData failed.

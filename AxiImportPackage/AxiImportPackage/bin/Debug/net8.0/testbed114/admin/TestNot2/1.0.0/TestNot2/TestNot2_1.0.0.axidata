@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "message": "Data fetched successfully",
+  "hasData": true,
+  "resultpayload": {
+    "axputpayloads": {
+      "ARMSessionId": "ARM-pgbase114-b01992da-416c-41a2-8955-697ddd6fa8ed",
+      "trace": true,
+      "validateonly": false,
+      "axclient_dateformat": "yyyy-MM-dd",
+      "millisecsintimestamp": true,
+      "data": [
+        {
+          "transid": "a__fn",
+          "action": "create",
+          "submitdata": {
+            "dc1": {
+              "row1": {
+                "form": "Test Form Notification BDF -(tfnb)",
+                "stransid": "tfnb",
+                "txttransid": "tfnb",
+                "active": "T"
+              }
+            },
+            "dc2": {
+              "row1": {
+                "notifyto": "Creator",
+                "notifytocnd": "1",
+                "isemailreq": "F"
+              }
+            },
+            "dc3": {
+              "row1": {
+                "notify_sub_new": "Open Form - Form Notification 2",
+                "notify_msg_new": "Open Form - Form Notification 2",
+                "notify_sub_edit": "Open Form - Form Notification 2",
+                "notify_msg_edit": "Open Form - Form Notification 2"
+              }
+            },
+            "dc4": {},
+            "dc5": {},
+            "dc6": {
+              "row1": {
+                "navigateto": "employee form",
+                "pagetype": "tempfo",
+                "loadopen": "Open",
+                "tbl_navigationparam": "Name-(cname)|Login username-(cusername)"
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ddlscritps": [
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"empfo1\" (\r\n    \"empfo1id\" numeric(16,0) NOT NULL,\r\n    \"cancel\" varchar(1),\r\n    \"sourceid\" numeric(16,0),\r\n    \"mapname\" varchar(20),\r\n    \"username\" varchar(50),\r\n    \"modifiedon\" timestamp without time zone,\r\n    \"createdby\" varchar(50),\r\n    \"createdon\" timestamp without time zone,\r\n    \"wkid\" varchar(15),\r\n    \"app_level\" numeric(3,0),\r\n    \"app_desc\" numeric(1,0),\r\n    \"app_slevel\" numeric(3,0),\r\n    \"cancelremarks\" varchar(150),\r\n    \"wfroles\" varchar(250),\r\n    \"name\" varchar(50),\r\n    \"age\" numeric(10,0),\r\n    \"field3\" varchar(50)\r\n);\r\n$D#",
+      "CREATE TABLE IF NOT EXISTS \"{{schemaName}}\".\"tfnb1\" (\r\n    \"tfnb1id\" numeric(16,0) NOT NULL,\r\n    \"cancel\" varchar(1),\r\n    \"sourceid\" numeric(16,0),\r\n    \"mapname\" varchar(20),\r\n    \"username\" varchar(50),\r\n    \"modifiedon\" timestamp without time zone,\r\n    \"createdby\" varchar(50),\r\n    \"createdon\" timestamp without time zone,\r\n    \"wkid\" varchar(15),\r\n    \"app_level\" numeric(3,0),\r\n    \"app_desc\" numeric(1,0),\r\n    \"app_slevel\" numeric(3,0),\r\n    \"cancelremarks\" varchar(150),\r\n    \"wfroles\" varchar(250),\r\n    \"ename\" varchar(50)\r\n);\r\n$D#"
+    ]
+  }
+}
