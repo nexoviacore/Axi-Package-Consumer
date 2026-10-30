@@ -1,0 +1,20 @@
+[2026-09-25 12:55:43] Method: Error in InstallPackage
+Message: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-09-25 13:57:58] Method: Error in InstallPackage
+Message: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-09-25 14:02:53] Method: Error in InstallPackage
+Message: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-09-25 14:04:15] Method: Error in InstallPackage
+Message: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-09-25 14:05:06] Method: Error in InstallPackage
+Message: The AXI ERP package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+--------------------------------------------------

@@ -1,0 +1,20 @@
+[2026-09-29 14:14:55] Method: Error in InstallPackage
+Message: The AXI PageTest36 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-09-29 14:32:12] Method: Error in InstallPackage
+Message: The AXI PageTest36 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-09-29 17:44:37] Method: Error in InstallPackage
+Message: The AXI PageTest37 package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+--------------------------------------------------
+[2026-09-29 17:48:51] Method: Error in InstallPackage
+Message: The AXI PageTest37 package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+--------------------------------------------------
+[2026-09-29 18:02:43] Method: Error in InstallPackage
+Message: The AXI PageTest39 package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+--------------------------------------------------

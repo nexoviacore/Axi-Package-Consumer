@@ -1,0 +1,36 @@
+[2026-10-05 12:48:12] Method: Error in InstallPackage
+Message: The AXI Test29 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-10-05 12:57:15] Method: Error in InstallPackage
+Message: The AXI Test29 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-10-05 13:06:16] Method: Error in InstallPackage
+Message: The AXI Test29 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-10-05 13:20:19] Method: Error in InstallPackage
+Message: The AXI Test29 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-10-05 14:23:40] Method: Error in InstallPackage
+Message: The AXI Test29 package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+--------------------------------------------------
+[2026-10-05 15:12:15] Method: Error in InstallPackage
+Message: The AXI Test35 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-10-05 16:13:41] Method: Error in InstallPackage
+Message: The AXI Test36 package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+--------------------------------------------------
+[2026-10-05 16:20:49] Method: Error in InstallPackage
+Message: The AXI Test36 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------
+[2026-10-05 16:23:15] Method: Error in InstallPackage
+Message: The AXI Test36 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+--------------------------------------------------

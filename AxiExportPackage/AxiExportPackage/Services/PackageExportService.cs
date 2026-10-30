@@ -17,6 +17,7 @@ namespace AxiExportPackage.Services
 
         private string exportDir;
         private string packageName;
+        private string packageVersion;
 
         private string signalrUrl;
         private string project;
@@ -52,6 +53,8 @@ namespace AxiExportPackage.Services
                 dbtype = queueJson["dbtype"]?.ToString()??"Postgre";
 
                 packageName = queueJson["packageName"]?.ToString();
+
+                packageVersion = queueJson["packageVersion"]?.ToString();
 
                 exportDir = PrepExportDir();
 
@@ -181,7 +184,7 @@ namespace AxiExportPackage.Services
             {
                 _logger.LogError(ex, "Error in ExportData.");
 
-                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Package to Git", ex);
+                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Product to Git", ex);
 
                 return false;
             }
@@ -212,7 +215,7 @@ namespace AxiExportPackage.Services
                 {
                     _logger.LogError("PushToGitHub failed. Message : {Message}", response.Message);
 
-                    throw new Exception($"AXI package {packageName} could not be published to Git.Review the export logs for details and try again. If the issue persists, contact your administrator.");
+                    throw new Exception($"AXI product {packageName} could not be published to Git.Review the export logs for details and try again. If the issue persists, contact your administrator.");
 
                     /*SRPayload = prepSRPayload($"Failed to Publish AXI {packageName} Package to Git", $"AXI package {packageName} could not be published to Git. Please check the logs and try again.");
 
@@ -223,9 +226,9 @@ namespace AxiExportPackage.Services
 
                 _logger.LogInformation("PushToGitHub completed successfully.");
 
-                SRPayload = prepSRPayload($"AXI {packageName} Package Published to Git", $"The AXI package {packageName} was successfully published to Git and is ready for deployment or testing.") ;
+                SRPayload = prepSRPayload($"AXI {packageName} product Published to Git", $"The AXI product {packageName} was successfully published to Git and is ready for deployment or testing.") ;
 
-                await _signalR.SendSignalRMessage(signalrUrl, project, clientId, SRPayload);
+                await _signalR.SendSignalRMessage(signalrUrl, project, clientId, SRPayload, AxActivePayload("Export Success"), AxiExportTablePayload("Published", "Product"+ packageName +" published successfully."));
 
                 return true;
             }
@@ -233,7 +236,7 @@ namespace AxiExportPackage.Services
             {
                 _logger.LogError(ex, "Error in PushToGitHub.");
 
-                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Package to Git", ex);
+                await WriteErrorLogAsync($"Failed to publish AXI {packageName} Product to Git", ex);
 
                 return false;
             }
@@ -335,16 +338,21 @@ namespace AxiExportPackage.Services
 
             payload["targetRepo"] = data["publish"]["repository"];
 
-            payload["packageName"] = data["packageName"];
-            ;
+            payload["productName"] = data["packageName"];            ;
 
             payload["gitbranch"] = data["gitbranch"] ?? data["publish"]["branch"] ?? "main";
 
-            payload["packageDescription"] = data["publish"]["packageDescription"];
+            payload["productDescription"] = data["publish"]["packageDescription"];
 
-            payload["packageVersion"] = data["packageVersion"];
+            payload["productVersion"] = data["packageVersion"].ToString();
 
-            payload["packageAuthor"] = data["requestedBy"]; 
+            payload["productAuthor"] = data["requestedBy"];
+
+            payload["managerType"] = "Product";
+
+            payload["ensureRepository"] = true;
+
+            payload["compress"] = true;
 
             return payload;
         }
@@ -515,6 +523,29 @@ namespace AxiExportPackage.Services
             }
         }
 
+        private JObject AxActivePayload(String status)
+        {
+            JObject axactivepayload = new JObject();
+            axactivepayload["username"] = clientId;
+            axactivepayload["productName"] = packageName;
+            axactivepayload["status"] = status;
+            axactivepayload["version"] = packageVersion.ToString();
+
+
+            return axactivepayload;
+        }
+
+        private JObject AxiExportTablePayload(String status, String remarks)
+        {
+            JObject axiexppayload = new JObject();
+            axiexppayload["remarks"] = remarks;
+            axiexppayload["packageName"] = packageName;
+            axiexppayload["status"] = status;
+            axiexppayload["version"] = packageVersion??"1";
+
+            return axiexppayload;
+        }
+
         private async Task WriteErrorLogAsync(string title, Exception ex)
         {
             try
@@ -541,7 +572,7 @@ namespace AxiExportPackage.Services
 
                 File.AppendAllText(logFile, errorMessage);
 
-                await _signalR.SendSignalRMessage(signalrUrl, project, clientId, prepSRPayload(title, ex.Message));
+                await _signalR.SendSignalRMessage(signalrUrl, project, clientId, prepSRPayload(title, ex.Message), AxActivePayload("Export Failed"), AxiExportTablePayload("Export Failed", "Failed to publish product " +packageName+". " + ex.Message));
             }
             catch
             {

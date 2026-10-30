@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a2uHz10Ja9s=",
+  "dgSpecHash": "5pJDRyDjATo=",
   "success": true,
-  "projectFilePath": "D:\\Optimized\\AxiImportRedis\\AxiImportPackage\\AxiInstallConsumerPackage.csproj",
+  "projectFilePath": "D:\\Axi-Package-Consumer-main\\Axi-Package-Consumer-main\\AxiImportPackage\\AxiImportPackage\\AxiInstallConsumerPackage.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.8\\microsoft.extensions.configuration.10.0.8.nupkg.sha512",
     "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.8\\microsoft.extensions.configuration.abstractions.10.0.8.nupkg.sha512",
@@ -52,10 +52,7 @@
     "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\system.text.encodings.web\\10.0.0\\system.text.encodings.web.10.0.0.nupkg.sha512",
     "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\system.text.json\\10.0.0\\system.text.json.10.0.0.nupkg.sha512",
-    "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.25\\microsoft.netcore.app.runtime.win-x64.8.0.25.nupkg.sha512",
-    "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.25\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.25.nupkg.sha512",
-    "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.25\\microsoft.aspnetcore.app.runtime.win-x64.8.0.25.nupkg.sha512"
+    "C:\\Users\\Venkitapathi.s\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

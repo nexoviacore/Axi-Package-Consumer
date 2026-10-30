@@ -1,0 +1,651 @@
+2026-10-06 11:46:26.334 +05:30 [INF] Application starting...
+2026-10-06 11:46:44.461 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 11:46:44.489 +05:30 [INF] Hosting environment: Development
+2026-10-06 11:46:44.514 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 11:46:44.553 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 11:50:58.804 +05:30 [INF] Message received from queue.
+2026-10-06 11:50:58.808 +05:30 [INF] Payload {
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Test38\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 11:50:59.609 +05:30 [ERR] Error processing RMQ message.
+System.Exception: queuedata not found in message.
+   at AxiInstallConsumerPackage.Helpers.QueueDataHelper.ExtractQueueData(String message) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Helpers\QueueDataHelper.cs:line 15
+   at AxiInstallConsumerPackage.RabbitMqConsumer.<ExecuteAsync>b__7_0(Object model, BasicDeliverEventArgs ea) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\RabbitMqConsumer.cs:line 114
+2026-10-06 11:51:54.532 +05:30 [INF] Message received from queue.
+2026-10-06 11:51:54.542 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"testbed114\",\"packageName\":\"Test38\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 11:51:54.744 +05:30 [INF] InstallPackage process started.###
+2026-10-06 11:51:54.749 +05:30 [INF] InstallPackage started.
+2026-10-06 11:51:54.814 +05:30 [INF] Payload:
+{
+  "project": "testbed114",
+  "username": "admin",
+  "command": "Install Product \"Test38\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 11:51:54.930 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 11:51:54.978 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 11:51:54.999 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 11:52:11.538 +05:30 [INF] Received HTTP response headers after 16513.9977ms - 200
+2026-10-06 11:52:11.586 +05:30 [INF] End processing HTTP request after 16637.2608ms - 200
+2026-10-06 11:52:11.612 +05:30 [INF] Response JSON:
+{"project":"testbed114","username":"admin","command":"Install Product \"Test38\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-06 11:52:11.618 +05:30 [INF] Result : Fail, Command : Install Product "Test38" , Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 11:52:11.632 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Test38" , Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 11:52:11.645 +05:30 [ERR] InstallPackage failed. Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 11:52:11.668 +05:30 [INF] InProgressKey Set
+2026-10-06 11:52:11.683 +05:30 [INF] RedisKey {
+  "AccessCode": "testbed114",
+  "InMemoryKey": "testbed114-inprogresspkg_Test38"
+}
+2026-10-06 11:52:11.701 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 11:52:11.708 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 11:52:11.715 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 11:52:12.420 +05:30 [INF] Received HTTP response headers after 692.2111ms - 200
+2026-10-06 11:52:12.425 +05:30 [INF] End processing HTTP request after 718.2568ms - 200
+2026-10-06 11:52:12.437 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027testbed114-inprogresspkg_Test38\u0027 not found."}
+2026-10-06 11:52:12.441 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 11:52:12.456 +05:30 [ERR] InstallPackage failed. Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 11:52:12.469 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Test38 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 11:52:12.630 +05:30 [INF] SignalR Calling
+2026-10-06 11:52:14.994 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-06 11:52:15.015 +05:30 [INF] SignalR Request: { project = testbed114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Test38 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 11:52:12 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 11:52:15.036 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 11:52:15.043 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 11:52:15.059 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 11:52:15.217 +05:30 [INF] Received HTTP response headers after 150.8464ms - 200
+2026-10-06 11:52:15.248 +05:30 [INF] End processing HTTP request after 204.8526ms - 200
+2026-10-06 11:52:15.500 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:31:07.287 +05:30 [INF] Application starting...
+2026-10-06 17:31:08.372 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 17:31:08.432 +05:30 [INF] Hosting environment: Development
+2026-10-06 17:31:08.445 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 17:31:08.513 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 17:32:14.887 +05:30 [INF] Message received from queue.
+2026-10-06 17:32:14.890 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"testbed114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 17:32:15.071 +05:30 [INF] InstallPackage process started.###
+2026-10-06 17:32:15.077 +05:30 [INF] InstallPackage started.
+2026-10-06 17:32:15.126 +05:30 [INF] Payload:
+{
+  "project": "testbed114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 17:32:15.207 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:32:15.240 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:32:15.256 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:32:25.524 +05:30 [INF] Application is shutting down...
+2026-10-06 17:32:35.612 +05:30 [INF] Application starting...
+2026-10-06 17:32:36.654 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 17:32:36.699 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 17:32:36.715 +05:30 [INF] Message received from queue.
+2026-10-06 17:32:36.718 +05:30 [INF] Hosting environment: Development
+2026-10-06 17:32:36.718 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"testbed114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 17:32:36.724 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 17:32:36.847 +05:30 [INF] InstallPackage process started.###
+2026-10-06 17:32:36.851 +05:30 [INF] InstallPackage started.
+2026-10-06 17:32:36.888 +05:30 [INF] Payload:
+{
+  "project": "testbed114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 17:32:36.983 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:32:37.030 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:32:37.051 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:34:27.384 +05:30 [INF] HTTP request failed after 110320.4959ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 17:34:27.565 +05:30 [INF] HTTP request failed after 110571.0064ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 17:34:27.658 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-06 17:34:27.769 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 17:34:27.776 +05:30 [INF] InProgressKey Set
+2026-10-06 17:34:27.787 +05:30 [INF] RedisKey {
+  "AccessCode": "testbed114",
+  "InMemoryKey": "testbed114-inprogresspkg_DummyPack7"
+}
+2026-10-06 17:34:27.799 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:34:27.806 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:34:27.815 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:34:28.403 +05:30 [INF] Received HTTP response headers after 567.9833ms - 200
+2026-10-06 17:34:28.411 +05:30 [INF] End processing HTTP request after 605.5308ms - 200
+2026-10-06 17:34:28.432 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027testbed114-inprogresspkg_DummyPack7\u0027 not found."}
+2026-10-06 17:34:28.443 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 17:34:28.460 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 17:34:28.471 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 17:34:28.643 +05:30 [INF] SignalR Calling
+2026-10-06 17:34:30.481 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-06 17:34:30.494 +05:30 [INF] SignalR Request: { project = testbed114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 5:34:28 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 17:34:30.505 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:34:30.508 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:34:30.516 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:34:30.616 +05:30 [INF] Received HTTP response headers after 93.5806ms - 200
+2026-10-06 17:34:30.623 +05:30 [INF] End processing HTTP request after 115.3976ms - 200
+2026-10-06 17:34:30.698 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:45:01.548 +05:30 [INF] Application starting...
+2026-10-06 17:45:02.631 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 17:45:02.650 +05:30 [INF] Hosting environment: Development
+2026-10-06 17:45:02.655 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 17:45:02.750 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 17:46:27.043 +05:30 [INF] Application starting...
+2026-10-06 17:46:27.968 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 17:46:27.999 +05:30 [INF] Hosting environment: Development
+2026-10-06 17:46:28.012 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 17:46:28.084 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 17:46:37.453 +05:30 [INF] Message received from queue.
+2026-10-06 17:46:37.460 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 17:46:37.725 +05:30 [INF] InstallPackage process started.###
+2026-10-06 17:46:37.733 +05:30 [INF] InstallPackage started.
+2026-10-06 17:46:37.806 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 17:46:37.912 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:46:37.962 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:46:37.985 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:48:30.442 +05:30 [INF] HTTP request failed after 112434.5253ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 17:48:30.590 +05:30 [INF] HTTP request failed after 112654.4147ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 17:48:30.683 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-06 17:48:30.864 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 17:48:30.871 +05:30 [INF] InProgressKey Set
+2026-10-06 17:48:30.890 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_DummyPack7"
+}
+2026-10-06 17:48:30.901 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:48:30.916 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:48:30.924 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:48:31.417 +05:30 [INF] Received HTTP response headers after 477.0583ms - 200
+2026-10-06 17:48:31.428 +05:30 [INF] End processing HTTP request after 514.8366ms - 200
+2026-10-06 17:48:31.469 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_DummyPack7\u0027 not found."}
+2026-10-06 17:48:31.479 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 17:48:31.491 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 17:48:31.501 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 17:48:31.710 +05:30 [INF] SignalR Calling
+2026-10-06 17:48:31.719 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 5:48:31 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 17:48:31.735 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:48:31.744 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:48:31.766 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:48:31.826 +05:30 [INF] Received HTTP response headers after 50.233ms - 200
+2026-10-06 17:48:31.835 +05:30 [INF] End processing HTTP request after 91.3149ms - 200
+2026-10-06 17:48:31.889 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:48:33.951 +05:30 [ERR] Exception in InsertData : Npgsql.PostgresException (0x80004005): 42703: column "taskid" does not exist
+
+POSITION: 336
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at AxiInstallConsumerPackage.Services.SignalRClass.InsertData(JObject axactive) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\SignalRClass.cs:line 101
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "taskid" does not exist
+    Hint: There is a column named "taskid" in table "axactivemessages", but it cannot be referenced from this part of the query.
+    Position: 336
+    File: parse_relation.c
+    Line: 3657
+    Routine: errorMissingColumn
+2026-10-06 17:49:24.241 +05:30 [INF] Application starting...
+2026-10-06 17:49:26.188 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 17:49:26.238 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 17:49:26.391 +05:30 [INF] Hosting environment: Development
+2026-10-06 17:49:26.410 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 17:54:25.585 +05:30 [INF] Message received from queue.
+2026-10-06 17:54:25.591 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 17:54:25.955 +05:30 [INF] InstallPackage process started.###
+2026-10-06 17:54:25.962 +05:30 [INF] InstallPackage started.
+2026-10-06 17:54:26.050 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 17:54:26.268 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:54:26.324 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:54:26.350 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 17:56:32.117 +05:30 [INF] HTTP request failed after 125752.3218ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 17:56:32.303 +05:30 [INF] HTTP request failed after 126016.265ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 17:56:32.395 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-06 17:56:32.519 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 17:56:32.526 +05:30 [INF] InProgressKey Set
+2026-10-06 17:56:32.536 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_DummyPack7"
+}
+2026-10-06 17:56:32.547 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:56:32.557 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:56:32.567 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 17:56:32.986 +05:30 [INF] Received HTTP response headers after 399.0675ms - 200
+2026-10-06 17:56:32.999 +05:30 [INF] End processing HTTP request after 441.9771ms - 200
+2026-10-06 17:56:33.054 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_DummyPack7\u0027 not found."}
+2026-10-06 17:56:33.067 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 17:56:33.083 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 17:56:33.092 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 17:56:33.290 +05:30 [INF] SignalR Calling
+2026-10-06 17:56:33.296 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 5:56:33 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 17:56:33.318 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:56:33.326 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:56:33.339 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:56:33.397 +05:30 [INF] Received HTTP response headers after 48.8231ms - 200
+2026-10-06 17:56:33.405 +05:30 [INF] End processing HTTP request after 78.6102ms - 200
+2026-10-06 17:56:33.465 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 17:56:35.508 +05:30 [ERR] Exception in InsertData : Npgsql.PostgresException (0x80004005): 42703: column "taskid" does not exist
+
+POSITION: 336
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult()
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery()
+   at AxiInstallConsumerPackage.Services.SignalRClass.InsertData(JObject axactive) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\SignalRClass.cs:line 101
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "taskid" does not exist
+    Hint: There is a column named "taskid" in table "axactivemessages", but it cannot be referenced from this part of the query.
+    Position: 336
+    File: parse_relation.c
+    Line: 3657
+    Routine: errorMissingColumn
+2026-10-06 18:03:25.651 +05:30 [INF] Application starting...
+2026-10-06 18:03:26.846 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 18:03:26.900 +05:30 [INF] Hosting environment: Development
+2026-10-06 18:03:26.912 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 18:03:26.967 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 18:03:33.013 +05:30 [INF] Message received from queue.
+2026-10-06 18:03:33.020 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 18:03:33.343 +05:30 [INF] InstallPackage process started.###
+2026-10-06 18:03:33.352 +05:30 [INF] InstallPackage started.
+2026-10-06 18:03:33.433 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 18:03:33.583 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:03:33.633 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:03:33.657 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:06:01.784 +05:30 [INF] Received HTTP response headers after 148108.7066ms - 200
+2026-10-06 18:06:01.814 +05:30 [INF] End processing HTTP request after 148213.3261ms - 200
+2026-10-06 18:06:01.837 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"DummyPack7\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-06 18:06:01.852 +05:30 [INF] Result : Fail, Command : Install Product "DummyPack7" , Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 18:06:01.869 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "DummyPack7" , Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 18:06:01.891 +05:30 [ERR] InstallPackage failed. Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 18:06:01.909 +05:30 [INF] InProgressKey Set
+2026-10-06 18:06:01.924 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_DummyPack7"
+}
+2026-10-06 18:06:01.937 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:06:01.954 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:06:01.968 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:06:02.367 +05:30 [INF] Received HTTP response headers after 385.3448ms - 200
+2026-10-06 18:06:02.375 +05:30 [INF] End processing HTTP request after 422.5696ms - 200
+2026-10-06 18:06:02.435 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_DummyPack7\u0027 not found."}
+2026-10-06 18:06:02.448 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 18:06:02.477 +05:30 [ERR] InstallPackage failed. Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-06 18:06:02.500 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 18:06:02.865 +05:30 [INF] SignalR Calling
+2026-10-06 18:06:02.873 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 6:06:02 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 18:06:02.894 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:06:02.900 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:06:02.915 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:06:02.981 +05:30 [INF] Received HTTP response headers after 50.2055ms - 200
+2026-10-06 18:06:02.992 +05:30 [INF] End processing HTTP request after 92.3514ms - 200
+2026-10-06 18:06:03.048 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:06:05.025 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-06 18:10:15.805 +05:30 [INF] Application starting...
+2026-10-06 18:10:16.644 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 18:10:16.695 +05:30 [INF] Hosting environment: Development
+2026-10-06 18:10:16.711 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 18:10:16.754 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 18:10:21.092 +05:30 [INF] Message received from queue.
+2026-10-06 18:10:21.095 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 18:10:21.538 +05:30 [INF] InstallPackage process started.###
+2026-10-06 18:10:21.547 +05:30 [INF] InstallPackage started.
+2026-10-06 18:10:21.659 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 18:10:21.775 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:10:21.810 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:10:21.822 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:12:07.492 +05:30 [INF] HTTP request failed after 105654.9736ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 18:12:07.673 +05:30 [INF] HTTP request failed after 105883.2368ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 18:12:07.776 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-06 18:12:07.913 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 18:12:07.919 +05:30 [INF] InProgressKey Set
+2026-10-06 18:12:07.927 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_DummyPack7"
+}
+2026-10-06 18:12:07.941 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:12:07.953 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:12:07.963 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:12:08.556 +05:30 [INF] Received HTTP response headers after 575.3962ms - 200
+2026-10-06 18:12:08.572 +05:30 [INF] End processing HTTP request after 610.81ms - 200
+2026-10-06 18:12:08.622 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_DummyPack7\u0027 not found."}
+2026-10-06 18:12:08.766 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 18:12:08.773 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 18:12:08.780 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 18:12:08.925 +05:30 [INF] SignalR Calling
+2026-10-06 18:12:08.932 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 6:12:08 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 18:12:08.952 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:12:08.961 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:12:08.978 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:12:09.037 +05:30 [INF] Received HTTP response headers after 45.9152ms - 200
+2026-10-06 18:12:09.044 +05:30 [INF] End processing HTTP request after 82.6002ms - 200
+2026-10-06 18:12:09.101 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:12:11.079 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-06 18:47:48.514 +05:30 [INF] Application starting...
+2026-10-06 18:47:51.234 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-06 18:47:51.294 +05:30 [INF] Hosting environment: Development
+2026-10-06 18:47:51.302 +05:30 [INF] RabbitMQ consumer started.
+2026-10-06 18:47:51.320 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-06 18:50:19.444 +05:30 [INF] Message received from queue.
+2026-10-06 18:50:19.453 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"DummyPack7\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-06 18:50:19.965 +05:30 [INF] InstallPackage process started.###
+2026-10-06 18:50:19.974 +05:30 [INF] InstallPackage started.
+2026-10-06 18:50:20.058 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"DummyPack7\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-06 18:50:20.236 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:50:20.292 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:50:20.318 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-06 18:52:21.120 +05:30 [INF] HTTP request failed after 120784.2867ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 18:52:21.283 +05:30 [INF] HTTP request failed after 121022.8657ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-06 18:52:21.373 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-06 18:52:21.493 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 18:52:21.502 +05:30 [INF] InProgressKey Set
+2026-10-06 18:52:21.512 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_DummyPack7"
+}
+2026-10-06 18:52:21.520 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:52:21.532 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:52:21.539 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-06 18:52:22.106 +05:30 [INF] Received HTTP response headers after 548.6712ms - 200
+2026-10-06 18:52:22.118 +05:30 [INF] End processing HTTP request after 586.6222ms - 200
+2026-10-06 18:52:22.149 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_DummyPack7\u0027 not found."}
+2026-10-06 18:52:22.162 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-06 18:52:22.175 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-06 18:52:22.190 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-10-06 18:52:22.429 +05:30 [INF] SignalR Calling
+2026-10-06 18:52:22.436 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI DummyPack7 package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/06/26 6:52:22 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-06 18:52:22.453 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:52:22.459 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:52:22.474 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:52:22.531 +05:30 [INF] Received HTTP response headers after 48.9374ms - 200
+2026-10-06 18:52:22.538 +05:30 [INF] End processing HTTP request after 79.5401ms - 200
+2026-10-06 18:52:22.599 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-06 18:52:24.572 +05:30 [INF] Record inserted to AxActiveMessages successfully

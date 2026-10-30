@@ -1,0 +1,16 @@
+[2026-10-14 12:08:22] Method: Error in InstallPackage
+Message: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+--------------------------------------------------
+[2026-10-14 14:34:33] Method: Error in InstallPackage
+Message: The AXI Account Payable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+--------------------------------------------------
+[2026-10-14 14:53:18] Method: Error in InstallPackage
+Message: The AXI Inventory Control package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+--------------------------------------------------
+[2026-10-14 15:14:17] Method: Error in InstallPackage
+Message: The AXI Order to Cash package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+--------------------------------------------------

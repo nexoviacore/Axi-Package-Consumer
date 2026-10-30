@@ -16,7 +16,7 @@ namespace AxiInstallConsumerPackage.Services
             ILogger<ApiService> logger)
         {
             _httpClient = httpClient;
-            _httpClient.Timeout = TimeSpan.FromMinutes(10);
+            _httpClient.Timeout = TimeSpan.FromMinutes(60);
             _logger = logger;
         }
 

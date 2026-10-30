@@ -1,0 +1,382 @@
+2026-10-14 12:03:05.562 +05:30 [INF] Application starting...
+2026-10-14 12:03:09.488 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-14 12:03:09.520 +05:30 [INF] Hosting environment: Development
+2026-10-14 12:03:09.530 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-14 12:03:09.645 +05:30 [INF] RabbitMQ consumer started.
+2026-10-14 12:03:41.895 +05:30 [INF] Message received from queue.
+2026-10-14 12:03:41.900 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Receivable\",\"requestedBy\":\"admin\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-14 12:03:42.811 +05:30 [INF] InstallPackage process started.###
+2026-10-14 12:03:42.816 +05:30 [INF] InstallPackage started.
+2026-10-14 12:03:42.866 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-14 12:03:42.999 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 12:03:43.150 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 12:03:43.160 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 12:08:21.848 +05:30 [INF] Received HTTP response headers after 278678.1855ms - 200
+2026-10-14 12:08:21.872 +05:30 [INF] End processing HTTP request after 278805.4416ms - 200
+2026-10-14 12:08:21.887 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"admin","command":"Install Product \"Account Receivable\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-14 12:08:21.891 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-14 12:08:21.899 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-14 12:08:21.916 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-14 12:08:21.928 +05:30 [INF] InProgressKey Set
+2026-10-14 12:08:21.934 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-14 12:08:21.942 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 12:08:21.948 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 12:08:21.956 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 12:08:22.372 +05:30 [INF] Received HTTP response headers after 405.062ms - 200
+2026-10-14 12:08:22.380 +05:30 [INF] End processing HTTP request after 433.9429ms - 200
+2026-10-14 12:08:22.449 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-14 12:08:22.458 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-14 12:08:22.470 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-14 12:08:22.485 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-14 12:08:22.965 +05:30 [INF] SignalR Calling
+2026-10-14 12:08:22.970 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/14/26 12:08:22 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-14 12:08:22.976 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 12:08:22.979 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 12:08:22.993 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 12:08:23.045 +05:30 [INF] Received HTTP response headers after 48.1969ms - 200
+2026-10-14 12:08:23.052 +05:30 [INF] End processing HTTP request after 73.7413ms - 200
+2026-10-14 12:08:23.115 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 12:08:26.607 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-14 14:28:28.206 +05:30 [INF] Application starting...
+2026-10-14 14:28:29.236 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-14 14:28:29.251 +05:30 [INF] Hosting environment: Development
+2026-10-14 14:28:29.256 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-14 14:28:29.374 +05:30 [INF] RabbitMQ consumer started.
+2026-10-14 14:30:11.561 +05:30 [INF] Message received from queue.
+2026-10-14 14:30:11.564 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Payable\",\"requestedBy\":\"karthik\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-14 14:30:11.717 +05:30 [INF] InstallPackage process started.###
+2026-10-14 14:30:11.721 +05:30 [INF] InstallPackage started.
+2026-10-14 14:30:11.785 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Account Payable\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-14 14:30:11.854 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 14:30:11.873 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 14:30:11.884 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 14:34:28.341 +05:30 [INF] Received HTTP response headers after 256446.7897ms - 200
+2026-10-14 14:34:28.359 +05:30 [INF] End processing HTTP request after 256496.7383ms - 200
+2026-10-14 14:34:28.373 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"Account Payable\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-14 14:34:28.380 +05:30 [INF] Result : success, Command : Install Product "Account Payable" , Message : Command Executed Successfully
+2026-10-14 14:34:28.394 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Payable" 
+2026-10-14 14:34:28.407 +05:30 [INF] InProgressKey Set
+2026-10-14 14:34:28.415 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-14 14:34:28.422 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 14:34:28.437 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 14:34:28.445 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 14:34:28.777 +05:30 [INF] Received HTTP response headers after 328.7542ms - 200
+2026-10-14 14:34:28.791 +05:30 [INF] End processing HTTP request after 354.5556ms - 200
+2026-10-14 14:34:28.853 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-14 14:34:28.861 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-14 14:34:28.868 +05:30 [INF] AxiClient API Calling
+2026-10-14 14:34:28.873 +05:30 [INF] Payload for DB:
+ {
+  "AxiAccId": "pgbase114",
+  "PackageName": "Account Payable"
+}
+2026-10-14 14:34:28.880 +05:30 [INF] Calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 14:34:28.884 +05:30 [INF] Start processing HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 14:34:28.890 +05:30 [INF] Sending HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 14:34:33.012 +05:30 [INF] HTTP request failed after 4103.4822ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-14 14:34:33.147 +05:30 [INF] HTTP request failed after 4262.8771ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-14 14:34:33.232 +05:30 [ERR] Exception while calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-14 14:34:33.322 +05:30 [ERR] DBService failed. Message : No connection could be made because the target machine actively refused it. (localhost:8000)
+2026-10-14 14:34:33.327 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+2026-10-14 14:34:33.492 +05:30 [INF] SignalR Calling
+2026-10-14 14:34:33.496 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.","dt":"10/14/26 2:34:33 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-14 14:34:33.508 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:34:33.514 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:34:33.524 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:34:33.590 +05:30 [INF] Received HTTP response headers after 49.2794ms - 200
+2026-10-14 14:34:33.592 +05:30 [INF] End processing HTTP request after 78.0787ms - 200
+2026-10-14 14:34:33.660 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:34:35.303 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-14 14:46:44.300 +05:30 [INF] Message received from queue.
+2026-10-14 14:46:44.370 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Inventory Control\",\"requestedBy\":\"karthik\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-14 14:46:44.383 +05:30 [INF] InstallPackage process started.###
+2026-10-14 14:46:44.387 +05:30 [INF] InstallPackage started.
+2026-10-14 14:46:44.394 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Inventory Control\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-14 14:46:44.407 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 14:46:44.419 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 14:46:44.424 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 14:53:13.704 +05:30 [INF] Received HTTP response headers after 389272.7154ms - 200
+2026-10-14 14:53:13.711 +05:30 [INF] End processing HTTP request after 389291.6564ms - 200
+2026-10-14 14:53:13.715 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"Inventory Control\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-14 14:53:13.718 +05:30 [INF] Result : success, Command : Install Product "Inventory Control" , Message : Command Executed Successfully
+2026-10-14 14:53:13.728 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Inventory Control" 
+2026-10-14 14:53:13.731 +05:30 [INF] InProgressKey Set
+2026-10-14 14:53:13.733 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Inventory_Control"
+}
+2026-10-14 14:53:13.742 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 14:53:13.746 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 14:53:13.751 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 14:53:14.045 +05:30 [INF] Received HTTP response headers after 289.1004ms - 200
+2026-10-14 14:53:14.050 +05:30 [INF] End processing HTTP request after 303.8277ms - 200
+2026-10-14 14:53:14.112 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Inventory_Control\u0027 not found."}
+2026-10-14 14:53:14.117 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-14 14:53:14.125 +05:30 [INF] AxiClient API Calling
+2026-10-14 14:53:14.131 +05:30 [INF] Payload for DB:
+ {
+  "AxiAccId": "pgbase114",
+  "PackageName": "Inventory Control"
+}
+2026-10-14 14:53:14.144 +05:30 [INF] Calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 14:53:14.149 +05:30 [INF] Start processing HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 14:53:14.156 +05:30 [INF] Sending HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 14:53:18.217 +05:30 [INF] HTTP request failed after 4053.5111ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-14 14:53:18.336 +05:30 [INF] HTTP request failed after 4186.8487ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-14 14:53:18.473 +05:30 [ERR] Exception while calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-14 14:53:18.678 +05:30 [ERR] DBService failed. Message : No connection could be made because the target machine actively refused it. (localhost:8000)
+2026-10-14 14:53:18.695 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Inventory Control package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+2026-10-14 14:53:18.719 +05:30 [INF] SignalR Calling
+2026-10-14 14:53:18.722 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Inventory Control package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.","dt":"10/14/26 2:53:18 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-14 14:53:18.729 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:53:18.732 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:53:18.739 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:53:18.808 +05:30 [INF] Received HTTP response headers after 59.1869ms - 200
+2026-10-14 14:53:18.811 +05:30 [INF] End processing HTTP request after 79.0039ms - 200
+2026-10-14 14:53:18.875 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 14:53:19.162 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-14 15:05:52.762 +05:30 [INF] Message received from queue.
+2026-10-14 15:05:52.800 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Order to Cash\",\"requestedBy\":\"karthik\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-14 15:05:52.839 +05:30 [INF] InstallPackage process started.###
+2026-10-14 15:05:52.844 +05:30 [INF] InstallPackage started.
+2026-10-14 15:05:52.854 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Order to Cash\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-14 15:05:52.876 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 15:05:52.898 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 15:05:52.910 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-14 15:14:12.221 +05:30 [INF] Received HTTP response headers after 499294.9949ms - 200
+2026-10-14 15:14:12.231 +05:30 [INF] End processing HTTP request after 499337.4412ms - 200
+2026-10-14 15:14:12.243 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"Order to Cash\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-14 15:14:12.251 +05:30 [INF] Result : success, Command : Install Product "Order to Cash" , Message : Command Executed Successfully
+2026-10-14 15:14:12.268 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Order to Cash" 
+2026-10-14 15:14:12.289 +05:30 [INF] InProgressKey Set
+2026-10-14 15:14:12.297 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Order_to_Cash"
+}
+2026-10-14 15:14:12.312 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 15:14:12.328 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 15:14:12.342 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-14 15:14:12.630 +05:30 [INF] Received HTTP response headers after 276.7817ms - 200
+2026-10-14 15:14:12.643 +05:30 [INF] End processing HTTP request after 314.6556ms - 200
+2026-10-14 15:14:12.656 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Order_to_Cash\u0027 not found."}
+2026-10-14 15:14:12.672 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-14 15:14:12.686 +05:30 [INF] AxiClient API Calling
+2026-10-14 15:14:12.697 +05:30 [INF] Payload for DB:
+ {
+  "AxiAccId": "pgbase114",
+  "PackageName": "Order to Cash"
+}
+2026-10-14 15:14:12.718 +05:30 [INF] Calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 15:14:12.727 +05:30 [INF] Start processing HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 15:14:12.744 +05:30 [INF] Sending HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-14 15:14:16.846 +05:30 [INF] HTTP request failed after 4088.0698ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-14 15:14:16.960 +05:30 [INF] HTTP request failed after 4233.0818ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-14 15:14:17.095 +05:30 [ERR] Exception while calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-14 15:14:17.232 +05:30 [ERR] DBService failed. Message : No connection could be made because the target machine actively refused it. (localhost:8000)
+2026-10-14 15:14:17.245 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Order to Cash package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+2026-10-14 15:14:17.274 +05:30 [INF] SignalR Calling
+2026-10-14 15:14:17.280 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Order to Cash package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.","dt":"10/14/26 3:14:17 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-14 15:14:17.291 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 15:14:17.298 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 15:14:17.314 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 15:14:17.374 +05:30 [INF] Received HTTP response headers after 48.6161ms - 200
+2026-10-14 15:14:17.379 +05:30 [INF] End processing HTTP request after 81.4178ms - 200
+2026-10-14 15:14:17.440 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-14 15:14:17.847 +05:30 [INF] Record inserted to AxActiveMessages successfully

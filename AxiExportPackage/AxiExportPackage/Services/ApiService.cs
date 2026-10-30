@@ -17,7 +17,7 @@ namespace AxiExportPackage.Services
         {
             _httpClient = httpClient;
             _logger = logger;
-            _httpClient.Timeout = TimeSpan.FromMinutes(15);
+            _httpClient.Timeout = TimeSpan.FromMinutes(60);
         }
 
         public async Task<ApiResponse> PostAsync(

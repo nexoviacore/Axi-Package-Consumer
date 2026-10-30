@@ -1,0 +1,336 @@
+2026-09-25 12:17:49.938 +05:30 [INF] Application starting...
+2026-09-25 12:17:52.068 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 12:17:52.080 +05:30 [INF] Hosting environment: Development
+2026-09-25 12:17:52.089 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-09-25 12:17:52.116 +05:30 [INF] RabbitMQ consumer started.
+2026-09-25 12:52:55.137 +05:30 [INF] Application starting...
+2026-09-25 12:52:55.711 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 12:52:55.729 +05:30 [INF] Hosting environment: Development
+2026-09-25 12:52:55.733 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-09-25 12:52:55.814 +05:30 [INF] RabbitMQ consumer started.
+2026-09-25 12:55:41.884 +05:30 [INF] Message received from queue.
+2026-09-25 12:55:41.886 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"ERP\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-09-25 12:55:42.379 +05:30 [INF] InstallPackage process started.###
+2026-09-25 12:55:42.382 +05:30 [INF] InstallPackage started.
+2026-09-25 12:55:42.423 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"ERP\" ",
+  "trace": true,
+  "productid": null
+}
+2026-09-25 12:55:42.521 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 12:55:42.540 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 12:55:42.550 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 12:55:42.765 +05:30 [INF] Received HTTP response headers after 210.6563ms - 200
+2026-09-25 12:55:42.778 +05:30 [INF] End processing HTTP request after 247.2042ms - 200
+2026-09-25 12:55:42.789 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 47
+2026-09-25 12:55:42.882 +05:30 [ERR] InstallPackage failed. Message : Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+2026-09-25 12:55:42.891 +05:30 [INF] InProgressKey Set
+2026-09-25 12:55:42.898 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP"
+}
+2026-09-25 12:55:42.904 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 12:55:42.909 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 12:55:42.913 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 12:55:43.428 +05:30 [INF] Received HTTP response headers after 511.8845ms - 200
+2026-09-25 12:55:43.439 +05:30 [INF] End processing HTTP request after 531.1082ms - 200
+2026-09-25 12:55:43.461 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_ERP\u0027 not found."}
+2026-09-25 12:55:43.474 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-09-25 12:55:43.479 +05:30 [ERR] InstallPackage failed. Message : Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+2026-09-25 12:55:43.484 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-09-25 12:55:43.571 +05:30 [INF] SignalR Calling
+2026-09-25 12:55:43.577 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"09/25/26 12:55:43 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-09-25 12:55:43.585 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 12:55:43.590 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 12:55:43.594 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 12:55:43.645 +05:30 [INF] Received HTTP response headers after 49.1053ms - 200
+2026-09-25 12:55:43.651 +05:30 [INF] End processing HTTP request after 60.9439ms - 200
+2026-09-25 12:55:43.723 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 13:57:49.882 +05:30 [INF] Application starting...
+2026-09-25 13:57:50.554 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 13:57:50.575 +05:30 [INF] Hosting environment: Development
+2026-09-25 13:57:50.581 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-09-25 13:57:50.600 +05:30 [INF] RabbitMQ consumer started.
+2026-09-25 13:57:57.412 +05:30 [INF] Message received from queue.
+2026-09-25 13:57:57.418 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"ERP\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-09-25 13:57:57.609 +05:30 [INF] InstallPackage process started.###
+2026-09-25 13:57:57.613 +05:30 [INF] InstallPackage started.
+2026-09-25 13:57:57.652 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"ERP\" ",
+  "trace": true,
+  "productid": null
+}
+2026-09-25 13:57:57.753 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 13:57:57.777 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 13:57:57.788 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 13:57:58.010 +05:30 [INF] Received HTTP response headers after 215.9842ms - 200
+2026-09-25 13:57:58.024 +05:30 [INF] End processing HTTP request after 257.3513ms - 200
+2026-09-25 13:57:58.033 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+   at Newtonsoft.Json.JsonTextReader.ParseValue()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 47
+2026-09-25 13:57:58.117 +05:30 [ERR] InstallPackage failed. Message : Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+2026-09-25 13:57:58.121 +05:30 [INF] InProgressKey Set
+2026-09-25 13:57:58.127 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP"
+}
+2026-09-25 13:57:58.130 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 13:57:58.138 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 13:57:58.142 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 13:57:58.512 +05:30 [INF] Received HTTP response headers after 367.2593ms - 200
+2026-09-25 13:57:58.518 +05:30 [INF] End processing HTTP request after 381.1379ms - 200
+2026-09-25 13:57:58.602 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_ERP\u0027 not found."}
+2026-09-25 13:57:58.612 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-09-25 13:57:58.618 +05:30 [ERR] InstallPackage failed. Message : Unexpected character encountered while parsing value: P. Path '', line 0, position 0.
+2026-09-25 13:57:58.628 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-09-25 13:57:58.720 +05:30 [INF] SignalR Calling
+2026-09-25 13:57:58.725 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"09/25/26 1:57:58 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-09-25 13:57:58.732 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 13:57:58.734 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 13:57:58.739 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 13:57:58.798 +05:30 [INF] Received HTTP response headers after 44.5449ms - 200
+2026-09-25 13:57:58.803 +05:30 [INF] End processing HTTP request after 69.0089ms - 200
+2026-09-25 13:57:58.864 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 13:59:11.503 +05:30 [INF] Application starting...
+2026-09-25 13:59:14.437 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 13:59:14.474 +05:30 [INF] Hosting environment: Development
+2026-09-25 13:59:14.505 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-09-25 13:59:14.645 +05:30 [INF] RabbitMQ consumer started.
+2026-09-25 13:59:19.031 +05:30 [INF] Message received from queue.
+2026-09-25 13:59:19.044 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"ERP\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-09-25 13:59:19.427 +05:30 [INF] InstallPackage process started.###
+2026-09-25 14:02:50.684 +05:30 [INF] Application starting...
+2026-09-25 14:02:51.499 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 14:02:51.521 +05:30 [INF] Hosting environment: Development
+2026-09-25 14:02:51.528 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-09-25 14:02:51.568 +05:30 [INF] RabbitMQ consumer started.
+2026-09-25 14:02:51.572 +05:30 [INF] Message received from queue.
+2026-09-25 14:02:51.577 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"ERP\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-09-25 14:02:51.741 +05:30 [INF] InstallPackage process started.###
+2026-09-25 14:02:51.745 +05:30 [INF] InstallPackage started.
+2026-09-25 14:02:51.787 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Package \"ERP\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-09-25 14:02:51.885 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:02:51.906 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:02:51.918 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:02:52.489 +05:30 [INF] Received HTTP response headers after 565.6326ms - 200
+2026-09-25 14:02:52.500 +05:30 [INF] End processing HTTP request after 604.0134ms - 200
+2026-09-25 14:02:52.510 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Package \"ERP\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-09-25 14:02:52.516 +05:30 [INF] Result : Fail, Command : Install Package "ERP" , Message : The given plugin "package "erp"" does not exist.
+2026-09-25 14:02:52.523 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Package "ERP" , Message : The given plugin "package "erp"" does not exist.
+2026-09-25 14:02:52.527 +05:30 [ERR] InstallPackage failed. Message : The given plugin "package "erp"" does not exist.
+2026-09-25 14:02:52.533 +05:30 [INF] InProgressKey Set
+2026-09-25 14:02:52.539 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP"
+}
+2026-09-25 14:02:52.547 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:02:52.555 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:02:52.557 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:02:52.875 +05:30 [INF] Received HTTP response headers after 312.4509ms - 200
+2026-09-25 14:02:52.880 +05:30 [INF] End processing HTTP request after 326.0637ms - 200
+2026-09-25 14:02:52.956 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_ERP\u0027 not found."}
+2026-09-25 14:02:52.964 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-09-25 14:02:52.969 +05:30 [ERR] InstallPackage failed. Message : The given plugin "package "erp"" does not exist.
+2026-09-25 14:02:52.974 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-09-25 14:02:53.166 +05:30 [INF] SignalR Calling
+2026-09-25 14:02:53.172 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"09/25/26 2:02:53 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-09-25 14:02:53.178 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:02:53.183 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:02:53.190 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:02:53.252 +05:30 [INF] Received HTTP response headers after 54.4307ms - 200
+2026-09-25 14:02:53.258 +05:30 [INF] End processing HTTP request after 75.9386ms - 200
+2026-09-25 14:02:53.325 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:03:52.632 +05:30 [INF] Application starting...
+2026-09-25 14:03:53.222 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-25 14:03:53.235 +05:30 [INF] Hosting environment: Development
+2026-09-25 14:03:53.241 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-09-25 14:03:53.368 +05:30 [INF] RabbitMQ consumer started.
+2026-09-25 14:03:57.158 +05:30 [INF] Message received from queue.
+2026-09-25 14:03:57.166 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"ERP\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-09-25 14:03:57.337 +05:30 [INF] InstallPackage process started.###
+2026-09-25 14:03:57.341 +05:30 [INF] InstallPackage started.
+2026-09-25 14:03:57.369 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"ERP\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-09-25 14:03:57.457 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:03:57.479 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:03:57.492 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:04:15.109 +05:30 [INF] Received HTTP response headers after 17608.3159ms - 200
+2026-09-25 14:04:15.125 +05:30 [INF] End processing HTTP request after 17657.4479ms - 200
+2026-09-25 14:04:15.133 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"ERP\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-09-25 14:04:15.135 +05:30 [INF] Result : Fail, Command : Install Product "ERP" , Message : TDBXError : relation "axi_installed_products" does not exist
+2026-09-25 14:04:15.141 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "ERP" , Message : TDBXError : relation "axi_installed_products" does not exist
+2026-09-25 14:04:15.156 +05:30 [ERR] InstallPackage failed. Message : TDBXError : relation "axi_installed_products" does not exist
+2026-09-25 14:04:15.158 +05:30 [INF] InProgressKey Set
+2026-09-25 14:04:15.171 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_ERP"
+}
+2026-09-25 14:04:15.180 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:04:15.187 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:04:15.204 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:04:15.521 +05:30 [INF] Received HTTP response headers after 308.5936ms - 200
+2026-09-25 14:04:15.525 +05:30 [INF] End processing HTTP request after 339.0304ms - 200
+2026-09-25 14:04:15.605 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_ERP\u0027 not found."}
+2026-09-25 14:04:15.618 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-09-25 14:04:15.623 +05:30 [ERR] InstallPackage failed. Message : TDBXError : relation "axi_installed_products" does not exist
+2026-09-25 14:04:15.631 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 99
+2026-09-25 14:04:15.814 +05:30 [INF] SignalR Calling
+2026-09-25 14:04:15.816 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"09/25/26 2:04:15 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-09-25 14:04:15.822 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:04:15.824 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:04:15.828 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:04:15.888 +05:30 [INF] Received HTTP response headers after 55.0014ms - 200
+2026-09-25 14:04:15.894 +05:30 [INF] End processing HTTP request after 70.153ms - 200
+2026-09-25 14:04:15.954 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:04:43.406 +05:30 [INF] Message received from queue.
+2026-09-25 14:04:47.091 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"ERP\",\"packageVersion\":\"11.3\",\"requestedBy\":\"karthik\",\"repository\":\"AxpertPackages\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-09-25 14:04:47.097 +05:30 [INF] InstallPackage process started.###
+2026-09-25 14:04:47.099 +05:30 [INF] InstallPackage started.
+2026-09-25 14:04:47.102 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "karthik",
+  "command": "Install Product \"ERP\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-09-25 14:04:47.104 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:04:47.106 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:04:47.108 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-09-25 14:05:02.378 +05:30 [INF] Received HTTP response headers after 15266.8574ms - 200
+2026-09-25 14:05:02.388 +05:30 [INF] End processing HTTP request after 15282.1553ms - 200
+2026-09-25 14:05:02.396 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"karthik","command":"Install Product \"ERP\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-09-25 14:05:02.399 +05:30 [INF] Result : success, Command : Install Product "ERP" , Message : Command Executed Successfully
+2026-09-25 14:05:02.401 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "ERP" 
+2026-09-25 14:05:02.402 +05:30 [INF] InProgressKey Set
+2026-09-25 14:05:02.403 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_ERP"
+}
+2026-09-25 14:05:02.406 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:05:02.408 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:05:02.410 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-09-25 14:05:02.514 +05:30 [INF] Received HTTP response headers after 101.158ms - 200
+2026-09-25 14:05:02.519 +05:30 [INF] End processing HTTP request after 110.8214ms - 200
+2026-09-25 14:05:02.524 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_ERP\u0027 not found."}
+2026-09-25 14:05:02.531 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-09-25 14:05:02.542 +05:30 [INF] AxiClient API Calling
+2026-09-25 14:05:02.547 +05:30 [INF] Payload for DB:
+ {
+  "AxiAccId": "devpgbase114",
+  "PackageName": "ERP"
+}
+2026-09-25 14:05:02.554 +05:30 [INF] Calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-09-25 14:05:02.561 +05:30 [INF] Start processing HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-09-25 14:05:02.566 +05:30 [INF] Sending HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-09-25 14:05:06.661 +05:30 [INF] HTTP request failed after 4083.9514ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-09-25 14:05:06.718 +05:30 [INF] HTTP request failed after 4156.5853ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-09-25 14:05:06.780 +05:30 [ERR] Exception while calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-09-25 14:05:06.852 +05:30 [ERR] DBService failed. Message : No connection could be made because the target machine actively refused it. (localhost:8000)
+2026-09-25 14:05:06.861 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI ERP package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 106
+2026-09-25 14:05:06.872 +05:30 [INF] SignalR Calling
+2026-09-25 14:05:06.873 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI ERP package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.","dt":"09/25/26 2:05:06 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-09-25 14:05:06.880 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:05:06.882 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:05:06.894 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-09-25 14:05:07.025 +05:30 [INF] Received HTTP response headers after 128.3882ms - 200
+2026-09-25 14:05:07.027 +05:30 [INF] End processing HTTP request after 145.2334ms - 200
+2026-09-25 14:05:07.030 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR

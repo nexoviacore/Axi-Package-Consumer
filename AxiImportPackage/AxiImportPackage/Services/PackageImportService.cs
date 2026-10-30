@@ -19,9 +19,11 @@ namespace AxiInstallConsumerPackage.Services
         private readonly RedisService _redisservice;
 
         private string packageName;
+        private string packageVersion;
         private string signalrUrl;
         private string project;
         private string username;
+        private string requestId;
 
         private string apiResp;
 
@@ -51,9 +53,13 @@ namespace AxiInstallConsumerPackage.Services
 
                 packageName = queueJson["packageName"].ToString();
 
+                packageVersion = queueJson["packageVersion"]?.ToString();
+
                 username = queueJson["requestedBy"].ToString();
 
                 signalrUrl = _configuration["ApiUrls:SignalRURL"];
+
+                requestId = queueJson["requestId"].ToString();
 
                 if (string.IsNullOrEmpty(project))
                 {
@@ -79,13 +85,15 @@ namespace AxiInstallConsumerPackage.Services
                     return;
                 }
 
-                string installpkgkey = $"{project}-installedpkg_{packageName}";
-                string inprogresskey = $"{project}-inprogresspkg_{packageName}";
+
+
+                /*string installpkgkey = $"{project}-installedpkg_{packageName}";
+                string inprogresskey = $"{project}-inprogresspkg_{packageName}";*/
 
                 bool installData = await InstallData(queueData);
 
                 _logger.LogInformation("InProgressKey Set");
-                await _redisservice.DeleteKey(inprogresskey, project);
+                //await _redisservice.DeleteKey(inprogresskey, project);
 
                 if (!installData)
                 {
@@ -94,7 +102,7 @@ namespace AxiInstallConsumerPackage.Services
                     throw new Exception($"The AXI {packageName} package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.");
                 }
 
-                bool dbService = await UpdateAxiControl();
+                /*bool dbService = await UpdateAxiControl();
 
                 if(!dbService)
                 {
@@ -106,13 +114,13 @@ namespace AxiInstallConsumerPackage.Services
                     _logger.LogInformation("InstallKey Set");
 
                     await _redisservice.SetRedisKey(installpkgkey, packageName, "720", project);
-                }
+                }*/
 
                 string SRPayload;
 
-                SRPayload = prepSRPayload($"Package Installed Successfully: {packageName}", $"The AXI {packageName} package has been installed successfully and is now ready to use.");
+                SRPayload = prepSRPayload($"Product Installed Successfully: {packageName}", $"The AXI {packageName} product has been installed successfully and is now ready to use.");
 
-                await _signalR.SendSignalRMessage(signalrUrl, project, username, SRPayload);
+                await _signalR.SendSignalRMessage(signalrUrl, project, username, SRPayload, AxActivePayload("Install Success"));
 
                 _logger.LogInformation("InstallPackage completed successfully.");
             }
@@ -181,11 +189,16 @@ namespace AxiInstallConsumerPackage.Services
 
             packageName = data["packageName"].ToString();
 
-            string command = $"Install Package \"{packageName}\" ";
+            string command = $"Install Product \"{packageName}\" ";
+
+            if (!string.IsNullOrEmpty(packageVersion))
+                command += $" Version{packageVersion}";
 
             payloaddata["command"] = command;
 
             payloaddata["trace"] = true;
+
+            payloaddata["productid"] = requestId;
 
             return payloaddata;
         }
@@ -287,6 +300,27 @@ namespace AxiInstallConsumerPackage.Services
             }
         }
 
+        private JObject AxActivePayload(String status)
+        {
+            JObject axactivepayload = new JObject();
+            axactivepayload["username"] = username;
+            axactivepayload["productName"] = packageName;
+            axactivepayload["status"] = status;
+
+            return axactivepayload;
+        }
+
+        /*private JObject AxiExportTablePayload(String status, String remarks)
+        {
+            JObject axiexppayload = new JObject();
+            axiexppayload["remarks"] = remarks;
+            axiexppayload["packageName"] = packageName;
+            axiexppayload["status"] = status;
+            axiexppayload["version"] = "1.0";
+
+            return axiexppayload;
+        }*/
+
         private void WriteErrorLog(string title, Exception ex)
         {
             try
@@ -315,7 +349,7 @@ namespace AxiInstallConsumerPackage.Services
 
                 string errMsg = ex.Message;
 
-                _signalR.SendSignalRMessage(signalrUrl, project, username, prepSRPayload(title, errMsg));
+                _signalR.SendSignalRMessage(signalrUrl, project, username, prepSRPayload(title, errMsg), AxActivePayload("Install Failed"));
             }
             catch
             {

@@ -1,0 +1,970 @@
+2026-10-13 10:45:05.037 +05:30 [INF] Application starting...
+2026-10-13 10:45:11.125 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 10:45:11.158 +05:30 [INF] Hosting environment: Development
+2026-10-13 10:45:11.169 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 10:45:11.435 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 10:46:11.247 +05:30 [INF] Message received from queue.
+2026-10-13 10:46:11.255 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Payable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 10:46:12.246 +05:30 [INF] InstallPackage process started.###
+2026-10-13 10:46:12.254 +05:30 [INF] InstallPackage started.
+2026-10-13 10:46:12.339 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Payable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 10:46:12.573 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 10:46:12.607 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 10:46:12.619 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 10:48:23.393 +05:30 [INF] HTTP request failed after 130764.9784ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-13 10:48:23.546 +05:30 [INF] HTTP request failed after 130959.9682ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-13 10:48:23.619 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-13 10:48:23.714 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-13 10:48:23.725 +05:30 [INF] InProgressKey Set
+2026-10-13 10:48:23.731 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-13 10:48:23.740 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 10:48:23.749 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 10:48:23.763 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 10:48:24.268 +05:30 [INF] Received HTTP response headers after 488.1164ms - 200
+2026-10-13 10:48:24.274 +05:30 [INF] End processing HTTP request after 525.7707ms - 200
+2026-10-13 10:48:24.332 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-13 10:48:24.338 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 10:48:24.341 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-13 10:48:24.345 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 10:48:24.510 +05:30 [INF] SignalR Calling
+2026-10-13 10:48:24.514 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 10:48:24 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 10:48:24.526 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:48:24.530 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:48:24.541 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:48:24.590 +05:30 [INF] Received HTTP response headers after 43.1688ms - 200
+2026-10-13 10:48:24.593 +05:30 [INF] End processing HTTP request after 63.7051ms - 200
+2026-10-13 10:48:24.659 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:48:27.220 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 10:49:12.269 +05:30 [INF] Message received from queue.
+2026-10-13 10:49:12.302 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Payable\",\"packageVersion\":\"1\",\"requestedBy\":\"karthik\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 10:49:12.326 +05:30 [INF] InstallPackage process started.###
+2026-10-13 10:49:12.335 +05:30 [INF] InstallPackage started.
+2026-10-13 10:49:12.346 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Account Payable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 10:49:12.367 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 10:49:12.382 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 10:49:12.392 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 10:51:24.000 +05:30 [INF] HTTP request failed after 131596.7884ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-13 10:51:24.137 +05:30 [INF] HTTP request failed after 131756.0063ms
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-13 10:51:24.201 +05:30 [ERR] Exception while calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host..
+ ---> System.Net.Sockets.SocketException (10054): An existing connection was forcibly closed by the remote host.
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource<System.Int32>.GetResult(Int16 token)
+   at System.Net.Http.HttpConnection.InitialFillAsync(Boolean async)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-13 10:51:24.287 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-13 10:51:24.294 +05:30 [INF] InProgressKey Set
+2026-10-13 10:51:24.300 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-13 10:51:24.315 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 10:51:24.319 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 10:51:24.326 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 10:51:24.555 +05:30 [INF] Received HTTP response headers after 223.1818ms - 200
+2026-10-13 10:51:24.559 +05:30 [INF] End processing HTTP request after 240.1529ms - 200
+2026-10-13 10:51:24.622 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-13 10:51:24.627 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 10:51:24.631 +05:30 [ERR] InstallPackage failed. Message : An error occurred while sending the request.
+2026-10-13 10:51:24.646 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 10:51:24.684 +05:30 [INF] SignalR Calling
+2026-10-13 10:51:24.690 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 10:51:24 AM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 10:51:24.711 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:51:24.718 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:51:24.726 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:51:24.792 +05:30 [INF] Received HTTP response headers after 59.0785ms - 200
+2026-10-13 10:51:24.799 +05:30 [INF] End processing HTTP request after 80.885ms - 200
+2026-10-13 10:51:24.870 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 10:51:25.365 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 14:39:19.859 +05:30 [INF] Message received from queue.
+2026-10-13 14:39:19.881 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Payable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 14:39:19.915 +05:30 [INF] InstallPackage process started.###
+2026-10-13 14:39:19.920 +05:30 [INF] InstallPackage started.
+2026-10-13 14:39:19.932 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Payable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 14:39:19.961 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:39:19.974 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:39:19.977 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:39:24.536 +05:30 [INF] Received HTTP response headers after 4555.228ms - 200
+2026-10-13 14:39:24.553 +05:30 [INF] End processing HTTP request after 4580.3891ms - 200
+2026-10-13 14:39:24.572 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"Account Payable\" Version1 ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 14:39:24.580 +05:30 [INF] Result : Fail, Command : Install Product "Account Payable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:39:24.588 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Payable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:39:24.599 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:39:24.605 +05:30 [INF] InProgressKey Set
+2026-10-13 14:39:24.612 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-13 14:39:24.616 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:39:24.621 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:39:24.625 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:39:24.925 +05:30 [INF] Received HTTP response headers after 297.5688ms - 200
+2026-10-13 14:39:24.933 +05:30 [INF] End processing HTTP request after 311.8252ms - 200
+2026-10-13 14:39:24.941 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-13 14:39:24.946 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 14:39:24.947 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:39:24.950 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 14:39:24.974 +05:30 [INF] SignalR Calling
+2026-10-13 14:39:24.977 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 2:39:24 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 14:39:24.989 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:39:24.991 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:39:24.994 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:39:25.042 +05:30 [INF] Received HTTP response headers after 44.2367ms - 200
+2026-10-13 14:39:25.049 +05:30 [INF] End processing HTTP request after 58.8959ms - 200
+2026-10-13 14:39:25.106 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:39:25.515 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 14:39:45.289 +05:30 [INF] Message received from queue.
+2026-10-13 14:39:45.296 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 14:39:45.306 +05:30 [INF] InstallPackage process started.###
+2026-10-13 14:39:45.313 +05:30 [INF] InstallPackage started.
+2026-10-13 14:39:45.325 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 14:39:45.330 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:39:45.340 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:39:45.355 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:52:25.398 +05:30 [INF] Message received from queue.
+2026-10-13 14:52:40.310 +05:30 [INF] Received HTTP response headers after 774950.4767ms - 200
+2026-10-13 14:54:06.820 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 14:54:06.826 +05:30 [INF] End processing HTTP request after 861486.0732ms - 200
+2026-10-13 14:54:06.830 +05:30 [INF] InstallPackage process started.###
+2026-10-13 14:54:06.832 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"Account Receivable\" Version1 ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 14:54:06.833 +05:30 [INF] InstallPackage started.
+2026-10-13 14:54:06.835 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable" Version1 , Message : Exception : Cannot connect to server on host '192.168.2.40':
+A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+Socket Error Code: 10060($274C)
+2026-10-13 14:54:06.836 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 14:54:06.839 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable" Version1 , Message : Exception : Cannot connect to server on host '192.168.2.40':
+A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+Socket Error Code: 10060($274C)
+2026-10-13 14:54:06.843 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:54:06.867 +05:30 [ERR] InstallPackage failed. Message : Exception : Cannot connect to server on host '192.168.2.40':
+A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+Socket Error Code: 10060($274C)
+2026-10-13 14:54:06.874 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:54:06.884 +05:30 [INF] InProgressKey Set
+2026-10-13 14:54:06.894 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:54:06.910 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 14:54:06.938 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:54:06.941 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:54:06.947 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:54:07.242 +05:30 [INF] Received HTTP response headers after 286.8316ms - 200
+2026-10-13 14:54:07.245 +05:30 [INF] End processing HTTP request after 304.2419ms - 200
+2026-10-13 14:54:07.250 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 14:54:07.255 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 14:54:07.259 +05:30 [ERR] InstallPackage failed. Message : Exception : Cannot connect to server on host '192.168.2.40':
+A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+Socket Error Code: 10060($274C)
+2026-10-13 14:54:07.264 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 14:54:07.273 +05:30 [INF] SignalR Calling
+2026-10-13 14:54:07.274 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 2:54:07 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 14:54:07.290 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:54:07.292 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:54:07.296 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:54:07.344 +05:30 [INF] Received HTTP response headers after 44.934ms - 200
+2026-10-13 14:54:07.350 +05:30 [INF] End processing HTTP request after 58.1737ms - 200
+2026-10-13 14:54:07.408 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:54:07.779 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 14:54:46.716 +05:30 [INF] Application starting...
+2026-10-13 14:54:47.415 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 14:54:47.429 +05:30 [INF] Hosting environment: Development
+2026-10-13 14:54:47.436 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 14:54:47.485 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 14:54:47.489 +05:30 [INF] Message received from queue.
+2026-10-13 14:54:47.493 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 14:54:47.642 +05:30 [INF] InstallPackage process started.###
+2026-10-13 14:54:47.647 +05:30 [INF] InstallPackage started.
+2026-10-13 14:54:47.685 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 14:54:47.776 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:54:47.796 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:54:47.809 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:58:31.037 +05:30 [INF] Received HTTP response headers after 223218.8104ms - 200
+2026-10-13 14:58:31.050 +05:30 [INF] End processing HTTP request after 223264.9918ms - 200
+2026-10-13 14:58:31.063 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"Account Receivable\" Version1 ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 14:58:31.068 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:31.076 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:31.083 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:31.086 +05:30 [INF] InProgressKey Set
+2026-10-13 14:58:31.088 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 14:58:31.090 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:58:31.092 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:58:31.094 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:58:31.425 +05:30 [INF] Received HTTP response headers after 329.554ms - 200
+2026-10-13 14:58:31.433 +05:30 [INF] End processing HTTP request after 341.1028ms - 200
+2026-10-13 14:58:31.497 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 14:58:31.508 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 14:58:31.516 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:31.529 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 14:58:31.692 +05:30 [INF] SignalR Calling
+2026-10-13 14:58:31.698 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 2:58:31 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 14:58:31.706 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:31.711 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:31.724 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:31.766 +05:30 [INF] Message received from queue.
+2026-10-13 14:58:31.771 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 14:58:31.780 +05:30 [INF] InstallPackage process started.###
+2026-10-13 14:58:31.782 +05:30 [INF] InstallPackage started.
+2026-10-13 14:58:31.785 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 14:58:31.790 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:58:31.796 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:58:31.807 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 14:58:31.830 +05:30 [INF] Received HTTP response headers after 98.2807ms - 200
+2026-10-13 14:58:31.835 +05:30 [INF] End processing HTTP request after 124.0923ms - 200
+2026-10-13 14:58:31.843 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:33.672 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 14:58:36.443 +05:30 [INF] Received HTTP response headers after 4626.0317ms - 200
+2026-10-13 14:58:36.453 +05:30 [INF] End processing HTTP request after 4656.7756ms - 200
+2026-10-13 14:58:36.458 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"Account Receivable\" Version1 ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 14:58:36.462 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:36.466 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:36.478 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:36.482 +05:30 [INF] InProgressKey Set
+2026-10-13 14:58:36.485 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 14:58:36.490 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:58:36.494 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:58:36.502 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 14:58:36.778 +05:30 [INF] Received HTTP response headers after 268.397ms - 200
+2026-10-13 14:58:36.781 +05:30 [INF] End processing HTTP request after 287.6196ms - 200
+2026-10-13 14:58:36.850 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 14:58:36.862 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 14:58:36.877 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 14:58:36.892 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 14:58:36.914 +05:30 [INF] SignalR Calling
+2026-10-13 14:58:36.921 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 2:58:36 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 14:58:36.926 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:36.928 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:36.931 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:36.999 +05:30 [INF] Received HTTP response headers after 61.3234ms - 200
+2026-10-13 14:58:37.008 +05:30 [INF] End processing HTTP request after 80.3847ms - 200
+2026-10-13 14:58:37.030 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 14:58:37.357 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 15:02:21.118 +05:30 [INF] Message received from queue.
+2026-10-13 15:02:27.793 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:02:27.798 +05:30 [ERR] Error processing RMQ message.
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: \. Path 'queuedata', line 1, position 147.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at AxiInstallConsumerPackage.Helpers.QueueDataHelper.ExtractQueueData(String message) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Helpers\QueueDataHelper.cs:line 9
+   at AxiInstallConsumerPackage.RabbitMqConsumer.<ExecuteAsync>b__7_0(Object model, BasicDeliverEventArgs ea) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\RabbitMqConsumer.cs:line 114
+2026-10-13 15:20:17.687 +05:30 [INF] Application starting...
+2026-10-13 15:20:31.539 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:20:31.552 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:20:31.559 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 15:20:31.607 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 15:20:37.641 +05:30 [INF] Message received from queue.
+2026-10-13 15:20:37.647 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:20:37.933 +05:30 [ERR] Error processing RMQ message.
+Newtonsoft.Json.JsonReaderException: Invalid property identifier character: \. Path 'queuedata', line 1, position 147.
+   at Newtonsoft.Json.JsonTextReader.ParseProperty()
+   at Newtonsoft.Json.JsonTextReader.ParseObject()
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at AxiInstallConsumerPackage.Helpers.QueueDataHelper.ExtractQueueData(String message) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Helpers\QueueDataHelper.cs:line 9
+   at AxiInstallConsumerPackage.RabbitMqConsumer.<ExecuteAsync>b__7_0(Object model, BasicDeliverEventArgs ea) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\RabbitMqConsumer.cs:line 114
+2026-10-13 15:20:57.703 +05:30 [INF] Message received from queue.
+2026-10-13 15:20:57.710 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":"",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:20:57.756 +05:30 [ERR] Error processing RMQ message.
+Newtonsoft.Json.JsonReaderException: After parsing a value an unexpected character was encountered: ". Path 'queuedata', line 1, position 144.
+   at Newtonsoft.Json.JsonTextReader.ParsePostValue(Boolean ignoreComments)
+   at Newtonsoft.Json.JsonTextReader.Read()
+   at Newtonsoft.Json.Linq.JContainer.ReadContentFrom(JsonReader r, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JContainer.ReadTokenFrom(JsonReader reader, JsonLoadSettings options)
+   at Newtonsoft.Json.Linq.JObject.Load(JsonReader reader, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json, JsonLoadSettings settings)
+   at Newtonsoft.Json.Linq.JObject.Parse(String json)
+   at AxiInstallConsumerPackage.Helpers.QueueDataHelper.ExtractQueueData(String message) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Helpers\QueueDataHelper.cs:line 9
+   at AxiInstallConsumerPackage.RabbitMqConsumer.<ExecuteAsync>b__7_0(Object model, BasicDeliverEventArgs ea) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\RabbitMqConsumer.cs:line 114
+2026-10-13 15:23:28.084 +05:30 [INF] Message received from queue.
+2026-10-13 15:23:28.143 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:23:28.274 +05:30 [INF] InstallPackage process started.###
+2026-10-13 15:23:28.282 +05:30 [ERR] Error during InstallPackage processing.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 56
+2026-10-13 15:23:28.307 +05:30 [INF] SignalR Calling
+2026-10-13 15:24:51.305 +05:30 [INF] Application starting...
+2026-10-13 15:24:51.949 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:24:51.962 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:24:51.968 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 15:24:52.107 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 15:24:58.004 +05:30 [INF] Message received from queue.
+2026-10-13 15:24:58.010 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Receivable\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:24:58.228 +05:30 [INF] InstallPackage process started.###
+2026-10-13 15:24:58.238 +05:30 [ERR] Error during InstallPackage processing.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 56
+2026-10-13 15:24:58.371 +05:30 [INF] SignalR Calling
+2026-10-13 15:26:28.935 +05:30 [INF] Application starting...
+2026-10-13 15:26:31.245 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:26:31.648 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 15:26:31.667 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:26:31.761 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 15:26:39.061 +05:30 [INF] Message received from queue.
+2026-10-13 15:26:39.063 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Payable\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:26:39.351 +05:30 [INF] InstallPackage process started.###
+2026-10-13 15:27:44.522 +05:30 [ERR] Error during InstallPackage processing.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 56
+2026-10-13 15:27:44.677 +05:30 [INF] SignalR Calling
+2026-10-13 15:28:51.405 +05:30 [INF] Application starting...
+2026-10-13 15:28:59.004 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:28:59.051 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 15:28:59.068 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:28:59.083 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 15:29:05.368 +05:30 [INF] Message received from queue.
+2026-10-13 15:29:05.374 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Payable\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:29:05.651 +05:30 [INF] InstallPackage process started.###
+2026-10-13 15:31:03.163 +05:30 [INF] Application starting...
+2026-10-13 15:31:04.761 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:31:04.776 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:31:04.782 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 15:31:04.799 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 15:31:04.803 +05:30 [INF] Message received from queue.
+2026-10-13 15:31:04.805 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Payable\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:31:05.016 +05:30 [INF] InstallPackage process started.###
+2026-10-13 15:31:11.202 +05:30 [INF] InstallPackage started.
+2026-10-13 15:31:11.270 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Payable\" Version1 ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 15:31:11.414 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 15:31:11.453 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 15:31:11.461 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 15:31:21.546 +05:30 [INF] Received HTTP response headers after 10074.3081ms - 200
+2026-10-13 15:31:21.560 +05:30 [INF] End processing HTTP request after 10122.9359ms - 200
+2026-10-13 15:31:21.575 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"Account Payable\" Version1 ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 15:31:21.582 +05:30 [INF] Result : Fail, Command : Install Product "Account Payable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 15:31:21.596 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Payable" Version1 , Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 15:31:21.610 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 15:31:21.617 +05:30 [INF] InProgressKey Set
+2026-10-13 15:31:21.623 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-13 15:31:21.630 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 15:31:21.642 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 15:31:21.651 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 15:31:22.103 +05:30 [INF] Received HTTP response headers after 445.8337ms - 200
+2026-10-13 15:31:22.112 +05:30 [INF] End processing HTTP request after 470.5329ms - 200
+2026-10-13 15:31:22.165 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-13 15:31:22.168 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 15:31:22.171 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 15:31:22.279 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 15:31:22.490 +05:30 [INF] SignalR Calling
+2026-10-13 15:31:22.493 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 3:31:22 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 15:31:22.498 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:31:22.500 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:31:22.503 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:31:22.599 +05:30 [INF] Received HTTP response headers after 94.0801ms - 200
+2026-10-13 15:31:22.606 +05:30 [INF] End processing HTTP request after 105.8626ms - 200
+2026-10-13 15:31:22.609 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:31:33.203 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 15:41:58.879 +05:30 [INF] Application starting...
+2026-10-13 15:42:01.437 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 15:42:01.454 +05:30 [INF] Hosting environment: Development
+2026-10-13 15:42:01.458 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 15:42:01.475 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 15:42:07.749 +05:30 [INF] Message received from queue.
+2026-10-13 15:42:07.757 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"devpgbase114\",\"packageName\":\"Account Payable\",\"requestedBy\":\"admin\",\"repository\":\"AxiProduct\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 15:42:08.405 +05:30 [INF] InstallPackage process started.###
+2026-10-13 15:42:08.430 +05:30 [INF] InstallPackage started.
+2026-10-13 15:42:08.490 +05:30 [INF] Payload:
+{
+  "project": "devpgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Payable\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 15:42:08.559 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 15:42:08.580 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 15:42:08.591 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 15:49:09.975 +05:30 [INF] Received HTTP response headers after 421374.9039ms - 200
+2026-10-13 15:49:09.991 +05:30 [INF] End processing HTTP request after 421423.8342ms - 200
+2026-10-13 15:49:10.003 +05:30 [INF] Response JSON:
+{"project":"devpgbase114","username":"admin","command":"Install Product \"Account Payable\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 15:49:10.009 +05:30 [INF] Result : success, Command : Install Product "Account Payable" , Message : Command Executed Successfully
+2026-10-13 15:49:10.017 +05:30 [INF] API success. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Payable" 
+2026-10-13 15:49:10.029 +05:30 [INF] InProgressKey Set
+2026-10-13 15:49:10.036 +05:30 [INF] RedisKey {
+  "AccessCode": "devpgbase114",
+  "InMemoryKey": "devpgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-13 15:49:10.044 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 15:49:10.053 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 15:49:10.059 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 15:49:10.356 +05:30 [INF] Received HTTP response headers after 292.8938ms - 200
+2026-10-13 15:49:10.363 +05:30 [INF] End processing HTTP request after 311.41ms - 200
+2026-10-13 15:49:10.428 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027devpgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-13 15:49:10.436 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 15:49:10.444 +05:30 [INF] AxiClient API Calling
+2026-10-13 15:49:10.453 +05:30 [INF] Payload for DB:
+ {
+  "AxiAccId": "devpgbase114",
+  "PackageName": "Account Payable"
+}
+2026-10-13 15:49:10.464 +05:30 [INF] Calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-13 15:49:10.470 +05:30 [INF] Start processing HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-13 15:49:10.476 +05:30 [INF] Sending HTTP request POST http://localhost:8000/api/AxiClient/AxiUpdatePackages
+2026-10-13 15:49:14.615 +05:30 [INF] HTTP request failed after 4123.8355ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-13 15:49:14.741 +05:30 [INF] HTTP request failed after 4271.0338ms
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2026-10-13 15:49:14.803 +05:30 [ERR] Exception while calling API : http://localhost:8000/api/AxiClient/AxiUpdatePackages
+System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:8000)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at AxiInstallConsumerPackage.Services.ApiService.PostAsync(String url, Object payload) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\ApiService.cs:line 40
+2026-10-13 15:49:14.894 +05:30 [ERR] DBService failed. Message : No connection could be made because the target machine actively refused it. (localhost:8000)
+2026-10-13 15:49:14.903 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+2026-10-13 15:49:15.024 +05:30 [INF] SignalR Calling
+2026-10-13 15:49:15.030 +05:30 [INF] SignalR Request: { project = devpgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.","dt":"10/13/26 3:49:14 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 15:49:15.039 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:49:15.046 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:49:15.054 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:49:15.111 +05:30 [INF] Received HTTP response headers after 47.5053ms - 200
+2026-10-13 15:49:15.117 +05:30 [INF] End processing HTTP request after 71.2995ms - 200
+2026-10-13 15:49:15.178 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 15:49:17.855 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 16:38:27.158 +05:30 [INF] Application starting...
+2026-10-13 16:38:28.955 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 16:38:28.968 +05:30 [INF] Hosting environment: Development
+2026-10-13 16:38:28.974 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 16:38:29.074 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 16:44:05.088 +05:30 [INF] Application starting...
+2026-10-13 16:44:05.670 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 16:44:05.683 +05:30 [INF] Hosting environment: Development
+2026-10-13 16:44:05.688 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 16:44:05.824 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 16:44:24.353 +05:30 [INF] Message received from queue.
+2026-10-13 16:44:24.359 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Payable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 16:44:24.719 +05:30 [INF] InstallPackage process started.###
+2026-10-13 16:44:24.722 +05:30 [INF] InstallPackage started.
+2026-10-13 16:44:24.745 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Payable\"  Version\"{packageVersion}\"",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 16:44:24.776 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:44:24.791 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:44:24.797 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:57:00.664 +05:30 [INF] Application starting...
+2026-10-13 16:57:02.579 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-10-13 16:57:02.591 +05:30 [INF] Hosting environment: Development
+2026-10-13 16:57:02.596 +05:30 [INF] Content root path: D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\bin\Debug\net8.0
+2026-10-13 16:57:02.616 +05:30 [INF] RabbitMQ consumer started.
+2026-10-13 16:57:02.620 +05:30 [INF] Message received from queue.
+2026-10-13 16:57:02.625 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Payable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 16:57:02.949 +05:30 [INF] InstallPackage process started.###
+2026-10-13 16:57:02.955 +05:30 [INF] InstallPackage started.
+2026-10-13 16:57:02.988 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Payable\"  Version1",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 16:57:03.076 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:57:03.094 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:57:03.107 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:57:11.065 +05:30 [INF] Received HTTP response headers after 7947.8075ms - 200
+2026-10-13 16:57:11.079 +05:30 [INF] End processing HTTP request after 7993.5976ms - 200
+2026-10-13 16:57:11.089 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"admin","command":"Install Product \"Account Payable\"  Version1","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 16:57:11.096 +05:30 [INF] Result : Fail, Command : Install Product "Account Payable"  Version1, Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-13 16:57:11.106 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Payable"  Version1, Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-13 16:57:11.119 +05:30 [ERR] InstallPackage failed. Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-13 16:57:11.127 +05:30 [INF] InProgressKey Set
+2026-10-13 16:57:11.141 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Payable"
+}
+2026-10-13 16:57:11.147 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 16:57:11.153 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 16:57:11.162 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 16:57:11.554 +05:30 [INF] Received HTTP response headers after 382.7375ms - 200
+2026-10-13 16:57:11.562 +05:30 [INF] End processing HTTP request after 409.5666ms - 200
+2026-10-13 16:57:11.574 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Payable\u0027 not found."}
+2026-10-13 16:57:11.580 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 16:57:11.587 +05:30 [ERR] InstallPackage failed. Message : Exception : Failed to pull the Product files from the Git repository. The Product may not exist or could not be retrieved.
+2026-10-13 16:57:11.598 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 16:57:11.769 +05:30 [INF] SignalR Calling
+2026-10-13 16:57:11.773 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Payable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 4:57:11 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 16:57:11.782 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:57:11.784 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:57:11.792 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:57:11.858 +05:30 [INF] Received HTTP response headers after 62.2642ms - 200
+2026-10-13 16:57:11.863 +05:30 [INF] End processing HTTP request after 79.2513ms - 200
+2026-10-13 16:57:11.927 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:57:13.827 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 16:58:21.518 +05:30 [INF] Message received from queue.
+2026-10-13 16:58:21.545 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"admin\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 16:58:21.575 +05:30 [INF] InstallPackage process started.###
+2026-10-13 16:58:21.582 +05:30 [INF] InstallPackage started.
+2026-10-13 16:58:21.586 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\"  Version1",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 16:58:21.596 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:58:21.608 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:58:21.618 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 16:58:26.109 +05:30 [INF] Received HTTP response headers after 4479.6147ms - 200
+2026-10-13 16:58:26.114 +05:30 [INF] End processing HTTP request after 4506.1537ms - 200
+2026-10-13 16:58:26.122 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"admin","command":"Install Product \"Account Receivable\"  Version1","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 16:58:26.124 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable"  Version1, Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 16:58:26.126 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable"  Version1, Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 16:58:26.128 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 16:58:26.132 +05:30 [INF] InProgressKey Set
+2026-10-13 16:58:26.134 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 16:58:26.137 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 16:58:26.145 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 16:58:26.148 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 16:58:26.461 +05:30 [INF] Received HTTP response headers after 301.6301ms - 200
+2026-10-13 16:58:26.469 +05:30 [INF] End processing HTTP request after 324.1942ms - 200
+2026-10-13 16:58:26.532 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 16:58:26.542 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 16:58:26.550 +05:30 [ERR] InstallPackage failed. Message : Exception : Already Latest Version Version1 is installed. Try next versions.
+2026-10-13 16:58:26.563 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 16:58:26.580 +05:30 [INF] SignalR Calling
+2026-10-13 16:58:26.584 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 4:58:26 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 16:58:26.590 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:58:26.596 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:58:26.601 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:58:26.650 +05:30 [INF] Received HTTP response headers after 44.97ms - 200
+2026-10-13 16:58:26.656 +05:30 [INF] End processing HTTP request after 60.456ms - 200
+2026-10-13 16:58:26.716 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 16:58:27.123 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 17:01:52.827 +05:30 [INF] Message received from queue.
+2026-10-13 17:01:52.861 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Receivable\",\"requestedBy\":\"admin\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 17:01:52.880 +05:30 [INF] InstallPackage process started.###
+2026-10-13 17:01:52.889 +05:30 [INF] InstallPackage started.
+2026-10-13 17:01:52.895 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "admin",
+  "command": "Install Product \"Account Receivable\" ",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 17:01:52.905 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 17:01:52.915 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 17:01:52.926 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 17:06:08.149 +05:30 [INF] Received HTTP response headers after 255210.1626ms - 200
+2026-10-13 17:06:16.765 +05:30 [INF] End processing HTTP request after 263850.2622ms - 200
+2026-10-13 17:06:16.771 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"admin","command":"Install Product \"Account Receivable\" ","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 17:06:16.773 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:06:16.777 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable" , Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:06:16.781 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:06:16.783 +05:30 [INF] InProgressKey Set
+2026-10-13 17:06:16.785 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 17:06:16.795 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 17:06:16.802 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 17:06:16.810 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 17:06:17.145 +05:30 [INF] Received HTTP response headers after 324.7076ms - 200
+2026-10-13 17:06:17.156 +05:30 [INF] End processing HTTP request after 354.3034ms - 200
+2026-10-13 17:06:17.167 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 17:06:17.183 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 17:06:17.195 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:06:17.205 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 17:06:17.220 +05:30 [INF] SignalR Calling
+2026-10-13 17:06:17.221 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = admin, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 5:06:17 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 17:06:17.227 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:06:17.230 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:06:17.233 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:06:17.283 +05:30 [INF] Received HTTP response headers after 46.7264ms - 200
+2026-10-13 17:06:17.286 +05:30 [INF] End processing HTTP request after 55.972ms - 200
+2026-10-13 17:06:17.359 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:06:17.612 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 17:11:14.403 +05:30 [INF] Message received from queue.
+2026-10-13 17:11:14.407 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"karthik\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 17:11:14.413 +05:30 [INF] InstallPackage process started.###
+2026-10-13 17:11:14.418 +05:30 [INF] InstallPackage started.
+2026-10-13 17:11:14.420 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Account Receivable\"  Version1",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 17:11:14.423 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 17:11:14.426 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 17:11:14.429 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 17:14:56.690 +05:30 [INF] Received HTTP response headers after 222254.0818ms - 200
+2026-10-13 17:14:56.699 +05:30 [INF] End processing HTTP request after 222272.6862ms - 200
+2026-10-13 17:14:56.702 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"Account Receivable\"  Version1","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 17:14:56.703 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable"  Version1, Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:14:56.708 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable"  Version1, Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:14:56.721 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:14:56.729 +05:30 [INF] InProgressKey Set
+2026-10-13 17:14:56.734 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 17:14:56.736 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 17:14:56.740 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 17:14:56.743 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 17:14:57.138 +05:30 [INF] Received HTTP response headers after 392.296ms - 200
+2026-10-13 17:14:57.147 +05:30 [INF] End processing HTTP request after 406.9299ms - 200
+2026-10-13 17:14:57.164 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 17:14:57.185 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 17:14:57.203 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 17:14:57.206 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 17:14:57.221 +05:30 [INF] SignalR Calling
+2026-10-13 17:14:57.228 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 5:14:57 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 17:14:57.244 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:14:57.249 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:14:57.251 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:14:57.393 +05:30 [INF] Received HTTP response headers after 124.7305ms - 200
+2026-10-13 17:14:57.404 +05:30 [INF] End processing HTTP request after 154.725ms - 200
+2026-10-13 17:14:57.421 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 17:14:57.691 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 18:02:48.418 +05:30 [INF] Message received from queue.
+2026-10-13 18:02:53.452 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"karthik\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 18:02:53.491 +05:30 [INF] InstallPackage process started.###
+2026-10-13 18:02:53.497 +05:30 [INF] InstallPackage started.
+2026-10-13 18:02:53.506 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Account Receivable\"  Version1",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 18:02:53.527 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 18:02:53.544 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 18:02:53.556 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 18:07:03.441 +05:30 [INF] Received HTTP response headers after 249863.7511ms - 200
+2026-10-13 18:07:03.456 +05:30 [INF] End processing HTTP request after 249915.7471ms - 200
+2026-10-13 18:07:03.469 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"Account Receivable\"  Version1","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 18:07:03.482 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable"  Version1, Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:07:03.493 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable"  Version1, Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:07:03.507 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:07:03.513 +05:30 [INF] InProgressKey Set
+2026-10-13 18:07:03.523 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 18:07:03.538 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 18:07:03.547 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 18:07:03.555 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 18:07:03.840 +05:30 [INF] Received HTTP response headers after 270.0615ms - 200
+2026-10-13 18:07:03.850 +05:30 [INF] End processing HTTP request after 303.3805ms - 200
+2026-10-13 18:07:03.900 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 18:07:03.911 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 18:07:03.929 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:07:03.937 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 18:07:03.997 +05:30 [INF] SignalR Calling
+2026-10-13 18:07:04.045 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 6:07:03 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 18:07:04.081 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:07:04.092 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:07:04.107 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:07:04.160 +05:30 [INF] Received HTTP response headers after 47.6466ms - 200
+2026-10-13 18:07:04.168 +05:30 [INF] End processing HTTP request after 75.4867ms - 200
+2026-10-13 18:07:04.227 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:07:04.594 +05:30 [INF] Record inserted to AxActiveMessages successfully
+2026-10-13 18:23:30.720 +05:30 [INF] Message received from queue.
+2026-10-13 18:23:30.779 +05:30 [INF] Payload {"queuedata":"{\"requestId\":\"PKG-20260812051622-528\",\"appName\":\"pgbase114\",\"packageName\":\"Account Receivable\",\"packageVersion\":\"1\",\"requestedBy\":\"karthik\",\"repository\":\"Axi-Product\"}","queuejson":null,"queuename":"axiinstallpackagesqueue","signalrclient":"","apidesc":null,"timespandelay":0,"trace":false,"responsequeuename":null,"MsgExpirySecs":0}
+2026-10-13 18:23:30.884 +05:30 [INF] InstallPackage process started.###
+2026-10-13 18:23:30.892 +05:30 [INF] InstallPackage started.
+2026-10-13 18:23:30.904 +05:30 [INF] Payload:
+{
+  "project": "pgbase114",
+  "username": "karthik",
+  "command": "Install Product \"Account Receivable\"  Version1",
+  "trace": true,
+  "productid": "PKG-20260812051622-528"
+}
+2026-10-13 18:23:30.955 +05:30 [INF] Calling API : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 18:23:30.978 +05:30 [INF] Start processing HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 18:23:30.988 +05:30 [INF] Sending HTTP request POST http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand
+2026-10-13 18:27:37.805 +05:30 [INF] Received HTTP response headers after 246805.9099ms - 200
+2026-10-13 18:27:37.839 +05:30 [INF] End processing HTTP request after 246870.5277ms - 200
+2026-10-13 18:27:37.865 +05:30 [INF] Response JSON:
+{"project":"pgbase114","username":"karthik","command":"Install Product \"Account Receivable\"  Version1","trace":true,"productid":"PKG-20260812051622-528"}
+2026-10-13 18:27:37.875 +05:30 [INF] Result : Fail, Command : Install Product "Account Receivable"  Version1, Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:27:37.893 +05:30 [ERR] API business failure. Url : http://localhost/Axpert114scripts/AxInstallerRest.dll/datasnap/rest/TAXInstallerObj/ProcessCommand, Command : Install Product "Account Receivable"  Version1, Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:27:37.923 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:27:37.939 +05:30 [INF] InProgressKey Set
+2026-10-13 18:27:37.950 +05:30 [INF] RedisKey {
+  "AccessCode": "pgbase114",
+  "InMemoryKey": "pgbase114-inprogresspkg_Account_Receivable"
+}
+2026-10-13 18:27:37.957 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 18:27:37.976 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 18:27:37.983 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete
+2026-10-13 18:27:38.297 +05:30 [INF] Received HTTP response headers after 300.0742ms - 200
+2026-10-13 18:27:38.308 +05:30 [INF] End processing HTTP request after 332.8431ms - 200
+2026-10-13 18:27:38.327 +05:30 [ERR] API business failure. Url : https://agileqa.agilecloud.biz/ARM_Site/AxUtils/api/v1/AxRedisDelete, Response : {"success":false,"message":"Key \u0027pgbase114-inprogresspkg_Account_Receivable\u0027 not found."}
+2026-10-13 18:27:38.348 +05:30 [INF] 
+AxDeleteRedis API call failed
+2026-10-13 18:27:38.366 +05:30 [ERR] InstallPackage failed. Message :  InstallDataJson failed HTTP/1.1 400 Bad Request
+2026-10-13 18:27:38.392 +05:30 [ERR] Error during InstallPackage processing.
+System.Exception: The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.
+   at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 102
+2026-10-13 18:27:38.505 +05:30 [INF] SignalR Calling
+2026-10-13 18:27:38.537 +05:30 [INF] SignalR Request: { project = pgbase114, UserId = karthik, Message = [{"notifytype":"AxiExportPackage","type":"TStruct","icon":"","title":"Error in InstallPackage","message":"The AXI Account Receivable package could not be installed. Please review the installation logs for more details and try again. If the issue persists, contact your administrator.","dt":"10/13/26 6:27:38 PM","link":{"t":"","name":"","p":"","act":"load","axmsgid":""}}] }
+2026-10-13 18:27:38.545 +05:30 [INF] Calling API : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:27:38.549 +05:30 [INF] Start processing HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:27:38.563 +05:30 [INF] Sending HTTP request POST https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:27:38.618 +05:30 [INF] Received HTTP response headers after 49.1309ms - 200
+2026-10-13 18:27:38.623 +05:30 [INF] End processing HTTP request after 73.8484ms - 200
+2026-10-13 18:27:38.679 +05:30 [INF] API success. Url : https://agileqa.agilecloud.biz/ARM_Site/ARMNotificationHub/api/v1/SendSignalR
+2026-10-13 18:27:38.983 +05:30 [INF] Record inserted to AxActiveMessages successfully

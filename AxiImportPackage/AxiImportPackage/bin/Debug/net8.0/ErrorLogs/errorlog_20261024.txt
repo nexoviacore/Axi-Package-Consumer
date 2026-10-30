@@ -1,0 +1,4 @@
+[2026-10-24 15:46:46] Method: Error in InstallPackage
+Message: The AXI Account Payable package was installed successfully, but the installed package information could not be updated in the database. Please contact your administrator.
+StackTrace:    at AxiInstallConsumerPackage.Services.PackageImportService.ProcessPackageImport(String queueData) in D:\Axi-Package-Consumer-main\Axi-Package-Consumer-main\AxiImportPackage\AxiImportPackage\Services\PackageImportService.cs:line 109
+--------------------------------------------------
